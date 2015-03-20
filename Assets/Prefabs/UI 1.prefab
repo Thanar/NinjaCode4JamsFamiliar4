@@ -228,10 +228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dd9c1aa92a1af439e496baffd8bbb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
-  focus: {fileID: 0}
-  ammoObject: {fileID: 0}
-  ammo: {fileID: 0}
+  health: {fileID: 11438700}
+  focus: {fileID: 11481890}
+  ammoObject: {fileID: 138706}
+  ammo: {fileID: 11438702}
   player: {fileID: 0}
 --- !u!114 &11438696
 MonoBehaviour:
