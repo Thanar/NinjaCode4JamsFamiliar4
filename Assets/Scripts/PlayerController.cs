@@ -7,7 +7,7 @@ public class PlayerController : Character {
 
     public float focus;
     public float focusDecreaseRate = 0.1f;
-    public bool onFuacus;
+    public bool onFocus;
 
 
     public Vector3 newRotation = new Vector3(0,0,0);
@@ -69,18 +69,26 @@ public class PlayerController : Character {
 
     public void ActivateFocus()
     {
-        onFuacus = true;
+        onFocus = true;
+
+        Time.timeScale = 0.5f;
+        movementForceScale = 0.7f;
+
     }
 
     void UpdateStatus()
     {
-        if (onFuacus)
+        if (onFocus)
         {
             focus = Mathf.Clamp(focus - (focusDecreaseRate * Time.deltaTime), 0f, 1f);
             ui.SetFocus(focus);
             if (focus == 0)
             {
-                onFuacus = false;
+                onFocus = false;
+
+
+                Time.timeScale = 1f;
+                movementForceScale = 1f;
             }
         }
     }
