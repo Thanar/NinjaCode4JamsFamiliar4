@@ -21,7 +21,7 @@ public class PlayerController : Character {
 
     public Transform fistsPosition;
 
-    Character auxCharacter = null;
+    EnemyAI auxCharacter = null;
 
     public Vector3 pushForce = new Vector3();
 
@@ -52,7 +52,7 @@ public class PlayerController : Character {
             ActivateFocus();
         }
 
-        pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.1f);
+        pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.05f);
 
     }
 
@@ -121,13 +121,14 @@ public class PlayerController : Character {
                 {
                     foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.1f))
                     {
-                        auxCharacter = c.GetComponent<Character>();
+                        auxCharacter = c.GetComponent<EnemyAI>();
                         if (c)
                         {
                             Debug.Log("FALCON PUNCH");
                             fistsTimeReady = Time.time + fistsCooldown;
                             auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
                             auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
+                            auxCharacter.Push(transform.forward.normalized * 2);
                         }
                     }
                 }

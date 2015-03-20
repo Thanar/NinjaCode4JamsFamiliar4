@@ -18,6 +18,11 @@ public class EnemyAI : Character {
 
     Vector3 pushForce = new Vector3();
 
+    public void Push(Vector3 direction)
+    {
+        pushForce = direction + direction.normalized * maxSpeed;
+    }
+
 	void Start () {
         if (player == null)
         {
@@ -53,6 +58,9 @@ public class EnemyAI : Character {
                 }
             }
         }
+
+
+        pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.05f);
     }
 
     public void TakeWeapon(Weapon w)
@@ -85,17 +93,13 @@ public class EnemyAI : Character {
     {
         player2DDirection = (player.transform.position - transform.position).normalized;
         player2DDirection.y = 0;
-        if (Vector3.Project(rigidbody.velocity, player2DDirection).magnitude < maxSpeed)
-        {
-            rigidbody.AddForce(player2DDirection * charachterImpulse);
-        }
+        //if (Vector3.Project(rigidbody.velocity, player2DDirection).magnitude < maxSpeed)
+        //{
+        //    rigidbody.AddForce(player2DDirection * charachterImpulse);
+        //}
         rigidbody.velocity = player2DDirection * maxSpeed + pushForce;
     }
 
-    public void Push(Vector3 direction)
-    {
-        pushForce = direction + direction.normalized * maxSpeed;
-    }
 
 
     public override void Die()
