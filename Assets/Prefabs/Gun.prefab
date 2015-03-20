@@ -19,6 +19,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &179604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 479604}
+  m_Layer: 0
+  m_Name: BulletSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &415612
 Transform:
   m_ObjectHideFlags: 1
@@ -26,10 +41,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.8503561, y: 21.007391, z: 25.103941}
+  m_LocalPosition: {x: 33.0507622, y: 17.2152634, z: 14.3443918}
   m_LocalScale: {x: .100000001, y: .100000001, z: .400000006}
-  m_Children: []
+  m_Children:
+  - {fileID: 479604}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &479604
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: .578000009}
+  m_LocalScale: {x: 10, y: 10, z: 2.5}
+  m_Children: []
+  m_Father: {fileID: 415612}
   m_RootOrder: 0
 --- !u!23 &2315612
 Renderer:
@@ -85,6 +113,7 @@ MonoBehaviour:
   armorPenetration: 0
   nextTimeReady: 0
   cooldown: 1
+  bulletSpawnPoint: {fileID: 0}
   bulletPrefab: {fileID: 140786, guid: 8ff93ab23c6ff6448b546056c5b365fd, type: 2}
 --- !u!1001 &100100000
 Prefab:
