@@ -95,7 +95,7 @@ GameObject:
   - 54: {fileID: 5428234}
   m_Layer: 0
   m_Name: pj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,6 +498,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &166784
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 466784}
+  m_Layer: 0
+  m_Name: weapon position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &176424
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +634,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
   m_LocalPosition: {x: .0189999994, y: .884000003, z: .00600000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -949,7 +964,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.0900000036, y: -.745000005, z: -.00999999978}
   m_LocalScale: {x: 1, y: .455233127, z: 1.00000143}
-  m_Children: []
+  m_Children:
+  - {fileID: 466784}
   m_Father: {fileID: 465796}
   m_RootOrder: 1
 --- !u!4 &465790
@@ -996,14 +1012,26 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0130000003, y: -.289999992, z: .00200000009}
+  m_LocalRotation: {x: 1.21288693e-07, y: 1.16529648e-07, z: .719313502, w: .694685638}
+  m_LocalPosition: {x: .0130001623, y: -.289999962, z: .00199738145}
   m_LocalScale: {x: .169724002, y: .310917109, z: .127811998}
   m_Children:
   - {fileID: 465790}
   - {fileID: 465788}
   m_Father: {fileID: 465794}
   m_RootOrder: 1
+--- !u!4 &466784
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166784}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: -.707106829}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7.8239789, y: 7.06515217, z: 5.89191771}
+  m_Children: []
+  m_Father: {fileID: 465788}
+  m_RootOrder: 0
 --- !u!4 &476424
 Transform:
   m_ObjectHideFlags: 1
@@ -1465,7 +1493,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 944996d5f55d34746a496d531914b501, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1485,7 +1513,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 944996d5f55d34746a496d531914b501, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1874,14 +1902,16 @@ MonoBehaviour:
   fistsDamage: 5
   fistsArmorPenetration: 0
   ui: {fileID: 0}
-  MaxFocus: 0
-  focus: 0
+  MaxFocus: 1
+  focus: 1
   focusDecreaseRate: .100000001
   onFocus: 0
   weapon: {fileID: 0}
   hasWeapon: 0
   movementForceScale: 1
   fistsPosition: {fileID: 476424}
+  firstWeapon: {fileID: 465788}
+  pushForce: {x: 0, y: 0, z: 0}
 --- !u!136 &13628234
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -17,9 +17,10 @@ public class PlayerController : Character {
     Vector3 rayVector = new Vector3();
     
 
-    public float movementForceScale=1;
+    public float movementForceScale=1f;
 
     public Transform fistsPosition;
+    public Transform firstWeapon;
 
     Character auxCharacter = null;
 
@@ -140,8 +141,8 @@ public class PlayerController : Character {
     {
         onFocus = true;
 
-        Time.timeScale = 0.5f;
-        movementForceScale = 0.7f;
+        Time.timeScale = 0.3f;
+        movementForceScale = 1.7f;
 
     }
 
@@ -166,6 +167,41 @@ public class PlayerController : Character {
     {
         base.Damage(damage, armorPenetration);
         ui.SetHealth();
+    }
+
+
+    public void EquipThis(Weapon drop)
+    {
+        if (!hasWeapon)
+        {
+
+            drop.Taken();
+
+            weapon = drop;
+
+            hasWeapon = true;
+            weapon.transform.parent = firstWeapon;
+            weapon.transform.localPosition = Vector3.zero;
+
+            weapon.transform.localRotation = new Quaternion(0, 0, 0, 1);
+
+            weapon.gameObject.GetComponent<AutoRotation>().rotate = false;
+
+
+        }
+    }
+
+    public void DropActualWeapon()
+    {
+        if (hasWeapon)
+        {
+            weapon.Dropped();
+        }
+    }
+
+    public void getRedDrug()
+    {
+        focus = 1;
     }
 
 }
