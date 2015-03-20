@@ -20,4 +20,14 @@ public class Weapon : MonoBehaviour {
     {
 
     }
+
+    public virtual void Dropped()
+    {
+
+    }
+
+    public virtual void Taken()
+    {
+
+    }
 }

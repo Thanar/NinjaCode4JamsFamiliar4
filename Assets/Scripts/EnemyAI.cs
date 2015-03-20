@@ -46,17 +46,21 @@ public class EnemyAI : Character {
         weapon.transform.position = weaponTransform.position;
         weapon.transform.rotation = weaponTransform.rotation;
         weapon.transform.parent = weaponTransform;
+        weapon.Taken();
     }
 
     public void DropWeapon()
     {
-        this.weapon = null;
+
         hasWeapon = false;
         weapon.rigidbody.isKinematic = false;
         weapon.collider.enabled = true;
         //weapon.transform.position = weaponTransform.position;
         //weapon.transform.rotation = weaponTransform.rotation;
         weapon.transform.parent = null;
+        weapon.Dropped();
+        this.weapon = null;
+
     }
 
     void FixedUpdate()
