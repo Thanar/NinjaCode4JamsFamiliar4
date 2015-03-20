@@ -6,6 +6,8 @@ public class FireWeapon : Weapon {
     public float nextTimeReady = 0;
     public float cooldown = 1;
 
+    public Transform bulletSpawnPoint;
+
     public GameObject bulletPrefab;
 
     public override void Attack()
@@ -16,7 +18,7 @@ public class FireWeapon : Weapon {
             return;
         }
 
-        Bullet myBullet = ((GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation)).GetComponent<Bullet>();
+        Bullet myBullet = ((GameObject)Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation)).GetComponent<Bullet>();
 
         myBullet.damage = this.damage;
         myBullet.armorPenetration = this.armorPenetration;

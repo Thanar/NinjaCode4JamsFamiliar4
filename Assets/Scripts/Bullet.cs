@@ -18,6 +18,10 @@ public class Bullet : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        collision.gameObject.GetComponent<Character>().Damage(damage,armorPenetration);
+        Character other = collision.gameObject.GetComponent<Character>();
+        if (other)
+        {
+            other.Damage(damage,armorPenetration);
+        }
     }
 }
