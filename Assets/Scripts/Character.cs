@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Character : MonoBehaviour {
 
+    public float Maxhealth = 100;
     public float health = 100;
     public float armor = 0;
 
