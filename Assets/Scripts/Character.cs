@@ -16,8 +16,27 @@ public class Character : MonoBehaviour {
 	
 	}
 
-    public void Damage(float damage)
+    public void Damage(float damage, float armorPenetration = 0)
     {
+        float currentArmor = armor - armorPenetration;
 
+        if (currentArmor < 0)
+        {
+            currentArmor = 0;
+        }
+
+        damage = damage * (100 / (100 + currentArmor));
+
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public virtual void Die()
+    {
+        GameObject.Destroy(this.gameObject);
     }
 }

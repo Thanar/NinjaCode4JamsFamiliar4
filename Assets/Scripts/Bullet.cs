@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
-    public float damage;
-    public float armorPenetration;
+    public float damage=10;
+    public float armorPenetration=0;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,6 @@ public class Bullet : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        collision.gameObject.GetComponent<Character>().Damage(damage);
+        collision.gameObject.GetComponent<Character>().Damage(damage,armorPenetration);
     }
 }
