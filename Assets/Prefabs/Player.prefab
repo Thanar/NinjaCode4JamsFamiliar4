@@ -97,6 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1121853bc023a4bb0d07223d69ef39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  armor: 0
+  ui: {fileID: 0}
+  focus: 0
+  focusDecreaseRate: .100000001
+  onFuacus: 0
+  newRotation: {x: 0, y: 0, z: 0}
+  movementForceScale: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
