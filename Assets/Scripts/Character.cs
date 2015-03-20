@@ -16,7 +16,7 @@ public class Character : MonoBehaviour {
 	
 	}
 
-    public void Damage(float damage, float armorPenetration = 0)
+    public virtual void Damage(float damage, float armorPenetration = 0)
     {
         float currentArmor = armor - armorPenetration;
 
@@ -28,6 +28,7 @@ public class Character : MonoBehaviour {
         damage = damage * (100 / (100 + currentArmor));
 
         health -= damage;
+        
 
         if (health <= 0)
         {

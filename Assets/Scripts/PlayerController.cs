@@ -3,13 +3,22 @@ using System.Collections;
 
 public class PlayerController : Character {
 
+    public UI ui;
+
+    public float focus;
+    public float focusDecreaseRate = 0.1f;
+    public bool onFuacus;
+
+
     public Vector3 newRotation = new Vector3(0,0,0);
 
     Vector3 rayVector = new Vector3();
+    
 
 	// Use this for initialization
 	void Start () {
-	
+	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
+        ui.ToggleAmmo(false);
 	}
 
     void Update()
@@ -23,9 +32,15 @@ public class PlayerController : Character {
             Debug.Log(hit.transform.position);
             newRotation.y = Quaternion.LookRotation(hit.point - transform.position).eulerAngles.y;
             transform.eulerAngles = newRotation;
-
-
         }
+
+        UpdateStatus();
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ActivateFocus();
+        }
+
     }
 
     void FixedUpdate()
@@ -50,4 +65,28 @@ public class PlayerController : Character {
             rigidbody.AddForce(-Vector3.forward*1000);
         }
 	}
+
+    public void ActivateFocus()
+    {
+        onFuacus = true;
+    }
+
+    void UpdateStatus()
+    {
+        if (onFuacus)
+        {
+            focus = Mathf.Clamp(focus - (focusDecreaseRate * Time.deltaTime), 0f, 1f);
+            ui.SetFocus(focus);
+            if (focus == 0)
+            {
+                onFuacus = false;
+            }
+        }
+    }
+
+    public override void Damage(float damage, float armorPenetration = 0)
+    {
+        base.Damage(damage, armorPenetration);
+        ui.SetHealth(health);
+    }
 }
