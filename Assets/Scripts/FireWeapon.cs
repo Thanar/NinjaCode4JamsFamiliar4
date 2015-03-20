@@ -6,6 +6,9 @@ public class FireWeapon : Weapon {
     public float nextTimeReady = 0;
     public float cooldown = 1;
 
+    public int bulletsTotal = 30;
+    public int bulletsPerCharge = 12;
+
     public Transform bulletSpawnPoint;
 
     public GameObject bulletPrefab;
@@ -23,5 +26,7 @@ public class FireWeapon : Weapon {
         myBullet.damage = this.damage;
         myBullet.armorPenetration = this.armorPenetration;
         myBullet.rigidbody.velocity = transform.forward.normalized * 100;
+
+        nextTimeReady = Time.time + cooldown;
     }
 }

@@ -15,6 +15,8 @@ public class PlayerController : Character {
     Vector3 rayVector = new Vector3();
     
 
+    public float movementForceScale=1;
+
 	// Use this for initialization
 	void Start () {
 	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
@@ -47,22 +49,22 @@ public class PlayerController : Character {
     {
         if (Input.GetKey(KeyCode.A))
         {
-            rigidbody.AddForce(-Vector3.right*1000);
+            rigidbody.AddForce(-Vector3.right.normalized * 1000 * movementForceScale);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rigidbody.AddForce(Vector3.right*1000);
+            rigidbody.AddForce(Vector3.right.normalized * 1000 * movementForceScale);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            rigidbody.AddForce(Vector3.forward*1000);
+            rigidbody.AddForce(Vector3.forward.normalized * 1000 * movementForceScale);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            rigidbody.AddForce(-Vector3.forward*1000);
+            rigidbody.AddForce(-Vector3.forward.normalized * 1000 * movementForceScale);
         }
 	}
 

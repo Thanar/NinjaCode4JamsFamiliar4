@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    
+        Destroy(this.gameObject, 5);
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,10 @@ public class Bullet : MonoBehaviour {
         Character other = collision.gameObject.GetComponent<Character>();
         if (other)
         {
-            other.Damage(damage,armorPenetration);
+            other.Damage(damage, armorPenetration);
+
+            Destroy(this.gameObject);
+
         }
     }
 }
