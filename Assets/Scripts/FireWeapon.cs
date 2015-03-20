@@ -18,6 +18,8 @@ public class FireWeapon : Weapon {
 
         Bullet myBullet = ((GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation)).GetComponent<Bullet>();
 
+        myBullet.damage = this.damage;
+        myBullet.armorPenetration = this.armorPenetration;
         myBullet.rigidbody.velocity = transform.forward.normalized * 100;
     }
 }
