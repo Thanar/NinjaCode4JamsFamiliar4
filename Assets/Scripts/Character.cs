@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Weapon : MonoBehaviour {
+public class Character : MonoBehaviour {
 
-    public float damage = 10;
-    public float armorPenetration = 0;
+    public float health = 100;
+    public float armor = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour {
 	
 	}
 
-    public virtual void Attack()
+    public void Damage(float damage)
     {
 
     }

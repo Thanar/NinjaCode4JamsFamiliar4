@@ -106,7 +106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  armor: 0
   player: {fileID: 0}
+  weapon: {fileID: 0}
 --- !u!54 &157249239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -253,7 +256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  armor: 0
   player: {fileID: 0}
+  weapon: {fileID: 0}
 --- !u!54 &293454622
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -507,7 +513,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  armor: 0
   player: {fileID: 0}
+  weapon: {fileID: 0}
 --- !u!54 &892291453
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -654,7 +663,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  armor: 0
   player: {fileID: 0}
+  weapon: {fileID: 0}
 --- !u!54 &966971179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -724,7 +736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!1001 &1295303700
 Prefab:
   m_ObjectHideFlags: 0
@@ -876,8 +888,8 @@ Camera:
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 21.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -896,7 +908,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1376582610}
   m_LocalRotation: {x: .4393121, y: 0, z: 0, w: .898334503}
-  m_LocalPosition: {x: 0, y: 25.7999992, z: -24.1000004}
+  m_LocalPosition: {x: 0, y: 53.9000015, z: -41.5999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1040,7 +1052,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  armor: 0
   player: {fileID: 0}
+  weapon: {fileID: 0}
 --- !u!54 &1591096539
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1269,7 +1284,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!114 &1626390493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,6 +1297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1121853bc023a4bb0d07223d69ef39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  armor: 0
 --- !u!1 &1898083245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1331,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  armor: 0
   player: {fileID: 0}
+  weapon: {fileID: 0}
 --- !u!54 &1898083247
 Rigidbody:
   m_ObjectHideFlags: 0
