@@ -6,6 +6,9 @@ public class Character : MonoBehaviour {
     public float health = 100;
     public float armor = 0;
 
+    public float charachterImpulse = 10000;
+    public float maxSpeed = 2;
+
 	// Use this for initialization
 	void Start () {
 	

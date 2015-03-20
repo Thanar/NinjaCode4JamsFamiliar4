@@ -48,24 +48,36 @@ public class PlayerController : Character {
     {
         if (Input.GetKey(KeyCode.A))
         {
-            rigidbody.AddForce(-Vector3.right.normalized * 1000 * movementForceScale);
+            if (Vector3.Project(rigidbody.velocity, -Vector3.right).magnitude < maxSpeed)
+            {
+                rigidbody.AddForce(-Vector3.right.normalized * charachterImpulse * movementForceScale);
+            }
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rigidbody.AddForce(Vector3.right.normalized * 1000 * movementForceScale);
+            if (Vector3.Project(rigidbody.velocity, Vector3.right).magnitude < maxSpeed)
+            {
+                rigidbody.AddForce(Vector3.right.normalized * charachterImpulse * movementForceScale);
+            }
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            rigidbody.AddForce(Vector3.forward.normalized * 1000 * movementForceScale);
+            if (Vector3.Project(rigidbody.velocity, Vector3.forward).magnitude < maxSpeed)
+            {
+                rigidbody.AddForce(Vector3.forward.normalized * charachterImpulse * movementForceScale);
+            }
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            rigidbody.AddForce(-Vector3.forward.normalized * 1000 * movementForceScale);
+            if (Vector3.Project(rigidbody.velocity, -Vector3.forward).magnitude < maxSpeed)
+            {
+                rigidbody.AddForce(-Vector3.forward.normalized * charachterImpulse * movementForceScale);
+            }
         }
-	}
+    }
 
     public void ActivateFocus()
     {
