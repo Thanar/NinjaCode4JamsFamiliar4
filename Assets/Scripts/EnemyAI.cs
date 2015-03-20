@@ -96,7 +96,7 @@ public class EnemyAI : Character {
         //{
         //    rigidbody.AddForce(player2DDirection * charachterImpulse);
         //}
-        rigidbody.velocity = player2DDirection * maxSpeed + pushForce;
+        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce)+(Vector3.up * rigidbody.velocity.y);
     }
 
 
