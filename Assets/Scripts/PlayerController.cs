@@ -9,7 +9,6 @@ public class PlayerController : Character {
     public float focusDecreaseRate = 0.1f;
     public bool onFocus;
 
-
     public Vector3 newRotation = new Vector3(0,0,0);
 
     Vector3 rayVector = new Vector3();
@@ -96,6 +95,7 @@ public class PlayerController : Character {
     public override void Damage(float damage, float armorPenetration = 0)
     {
         base.Damage(damage, armorPenetration);
-        ui.SetHealth(health);
+        ui.SetHealth();
     }
+
 }

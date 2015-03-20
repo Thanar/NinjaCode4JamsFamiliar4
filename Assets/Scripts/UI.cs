@@ -11,9 +11,15 @@ public class UI : MonoBehaviour {
 
     public PlayerController player;
 
-    public void SetHealth(float value)
+
+
+
+    public void SetHealth()
     {
-        health.fillAmount = Mathf.Clamp(value* 0.001f, 0f, 1f);
+        health.fillAmount = player.health / player.Maxhealth;
+
+
+        Debug.Log("player.health: " + player.health + " - health.fillAmount: " + health.fillAmount);
     }
 
     public void SetFocus(float value)
