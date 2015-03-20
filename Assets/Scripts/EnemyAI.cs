@@ -15,12 +15,6 @@ public class EnemyAI : Character {
     Vector3 player2DDirection = new Vector3(0,0,0);
 
 
-    public float fistsTimeReady = 0;
-    public float fistsCooldown = 2;
-    public float fistsRange = 1;
-
-    public float fistsDamage = 5;
-    public float fistsArmorPenetration = 0;
 
 
 	void Start () {
@@ -53,7 +47,7 @@ public class EnemyAI : Character {
                     Debug.Log("FALCON PUNCH");
                     fistsTimeReady = Time.time + fistsCooldown;
                     player.Damage(fistsDamage,fistsArmorPenetration);
-                    player.rigidbody.AddForce((transform.forward.normalized+Vector3.up)*2,ForceMode.VelocityChange);
+                    player.rigidbody.AddForce((transform.forward.normalized+Vector3.up)*3,ForceMode.VelocityChange);
                 }
             }
         }
@@ -89,7 +83,10 @@ public class EnemyAI : Character {
     {
         player2DDirection = (player.transform.position - transform.position).normalized;
         player2DDirection.y = 0;
-        rigidbody.AddForce(player2DDirection*1000);
+        if (Vector3.Project(rigidbody.velocity, player2DDirection).magnitude < maxSpeed)
+        {
+            rigidbody.AddForce(player2DDirection * charachterImpulse);
+        }
     }
 
 
@@ -98,7 +95,10 @@ public class EnemyAI : Character {
     {
         //base.Die();
 
-        DropWeapon();
+        if (hasWeapon)
+        {
+            DropWeapon();
+        }
 
         GameObject.Destroy(this.gameObject);
     }
