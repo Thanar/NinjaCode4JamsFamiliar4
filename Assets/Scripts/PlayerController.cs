@@ -22,11 +22,14 @@ public class PlayerController : Character {
     public Transform fistsPosition;
     public Transform firstWeapon;
 
-    Character auxCharacter = null;
+    EnemyAI auxCharacter = null;
 
-    public Vector3 pushForce = new Vector3();
 
     Vector3 finalVelocity = new Vector3();
+
+
+
+    public GameObject specialAttackEffectPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -53,14 +56,54 @@ public class PlayerController : Character {
             ActivateFocus();
         }
 
-        pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.1f);
+        pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.05f);
 
+        if (Input.GetMouseButton(0))
+        {
+            if (hasWeapon)
+            {
+                weapon.Attack();
+            }
+            else
+            {
+                if (fistsTimeReady < Time.time)
+                {
+                    foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.1f))
+                    {
+                        auxCharacter = c.GetComponent<EnemyAI>();
+                        if (auxCharacter)
+                        {
+                            fistsTimeReady = Time.time + fistsCooldown;
+                            auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
+                            //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
+                            auxCharacter.Push(transform.forward.normalized * 50);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (focus > 0.2f)
+            {
+                focus -= 0.2f;
+                ui.SetFocus();
+                Instantiate(specialAttackEffectPrefab, transform.position, Quaternion.identity);
+                foreach (Collider c in Physics.OverlapSphere(transform.position, 5f))
+                {
+                    auxCharacter = c.GetComponent<EnemyAI>();
+                    if (auxCharacter)
+                    {
+                        auxCharacter.Damage(fistsDamage * 5, fistsArmorPenetration * 2);
+                        //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
+                        auxCharacter.Push((auxCharacter.transform.position - transform.position).normalized * 50);
+                    }
+                }
+            }
+        }
     }
 
-    public void Push(Vector3 direction)
-    {
-        pushForce = direction + direction.normalized * maxSpeed;
-    }
 
     void FixedUpdate()
     {
@@ -110,31 +153,7 @@ public class PlayerController : Character {
 
         rigidbody.velocity = finalVelocity+pushForce;
 
-        if (Input.GetMouseButton(0))
-        {
-            if (hasWeapon)
-            {
-                weapon.Attack();
-            }
-            else
-            {
-                if (fistsTimeReady < Time.time)
-                {
-                    foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.1f))
-                    {
-                        auxCharacter = c.GetComponent<Character>();
-                        if (c)
-                        {
-                            Debug.Log("FALCON PUNCH");
-                            fistsTimeReady = Time.time + fistsCooldown;
-                            auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
-                            auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
-                        }
-                    }
-                }
-            }
-            rigidbody.AddForce(-Vector3.forward.normalized * 1000 * movementForceScale);
-        }
+        
 	}
 
     public void ActivateFocus()
@@ -170,6 +189,7 @@ public class PlayerController : Character {
     }
 
 
+
     public void EquipThis(Weapon drop)
     {
         if (!hasWeapon)
@@ -202,6 +222,12 @@ public class PlayerController : Character {
     public void getRedDrug()
     {
         focus = 1;
+
+    public override void Die()
+    {
+        base.Die();
+        Application.LoadLevel("GameOver");
+
     }
 
 }
