@@ -100,8 +100,8 @@ MonoBehaviour:
   Maxhealth: 100
   health: 100
   armor: 0
-  charachterImpulse: 10000
-  maxSpeed: 2
+  charachterImpulse: 3000
+  maxSpeed: 8
   fistsTimeReady: 0
   fistsCooldown: 2
   fistsRange: 1
@@ -112,8 +112,10 @@ MonoBehaviour:
   focus: 1
   focusDecreaseRate: .100000001
   onFocus: 0
-  newRotation: {x: 0, y: 0, z: 0}
+  weapon: {fileID: 0}
+  hasWeapon: 0
   movementForceScale: 1
+  fistsPosition: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

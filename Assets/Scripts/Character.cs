@@ -7,8 +7,8 @@ public class Character : MonoBehaviour {
     public float health = 100;
     public float armor = 0;
 
-    public float charachterImpulse = 10000;
-    public float maxSpeed = 2;
+    public float charachterImpulse = 3000;
+    public float maxSpeed = 8;
 
 
     public float fistsTimeReady = 0;
