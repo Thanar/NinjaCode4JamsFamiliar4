@@ -2348,7 +2348,6 @@ MonoBehaviour:
   hasWeapon: 0
   movementForceScale: 1
   fistsPosition: {fileID: 523178743}
-  pushForce: {x: 0, y: 0, z: 0}
   specialAttackEffectPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47,
     type: 2}
 --- !u!1 &1635422932

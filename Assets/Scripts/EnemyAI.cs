@@ -16,7 +16,6 @@ public class EnemyAI : Character {
 
 
 
-    Vector3 pushForce = new Vector3();
 
     public void Push(Vector3 direction)
     {
