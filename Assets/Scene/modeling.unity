@@ -1742,6 +1742,7 @@ MonoBehaviour:
   movementForceScale: 1
   fistsPosition: {fileID: 807307305}
   pushForce: {x: 0, y: 0, z: 0}
+  specialAttackEffectPrefab: {fileID: 0}
 --- !u!95 &862314288
 Animator:
   serializedVersion: 3
@@ -2524,6 +2525,7 @@ MonoBehaviour:
   movementForceScale: 1
   fistsPosition: {fileID: 1940154554}
   pushForce: {x: 0, y: 0, z: 0}
+  specialAttackEffectPrefab: {fileID: 0}
 --- !u!95 &1199180180
 Animator:
   serializedVersion: 3

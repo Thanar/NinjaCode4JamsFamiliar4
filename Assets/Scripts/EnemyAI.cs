@@ -36,8 +36,16 @@ public class EnemyAI : Character {
 
     void Update()
     {
-        newRotation.y = Quaternion.LookRotation(player.transform.position - transform.position).eulerAngles.y;
-        transform.eulerAngles = newRotation;
+        if (player != null)
+        {
+            newRotation.y = Quaternion.LookRotation(player.transform.position - transform.position).eulerAngles.y;
+            transform.eulerAngles = newRotation;
+        }
+        else
+        {
+            return;
+        }
+
 
 
         if (hasWeapon)
