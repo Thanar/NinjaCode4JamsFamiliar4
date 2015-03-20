@@ -27,6 +27,10 @@ public class PlayerController : Character {
 
     Vector3 finalVelocity = new Vector3();
 
+
+
+    public GameObject specialAttackEffectPrefab;
+
 	// Use this for initialization
 	void Start () {
 	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
@@ -122,18 +126,36 @@ public class PlayerController : Character {
                     foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.1f))
                     {
                         auxCharacter = c.GetComponent<EnemyAI>();
-                        if (c)
+                        if (auxCharacter)
                         {
-                            Debug.Log("FALCON PUNCH");
                             fistsTimeReady = Time.time + fistsCooldown;
                             auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
-                            auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
+                            //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
                             auxCharacter.Push(transform.forward.normalized * 50);
                         }
                     }
                 }
             }
-            rigidbody.AddForce(-Vector3.forward.normalized * 1000 * movementForceScale);
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (focus > 0.2f)
+            {
+                focus -= 0.2f;
+                ui.SetFocus();
+
+                foreach (Collider c in Physics.OverlapSphere(transform.position, 5f))
+                {
+                    auxCharacter = c.GetComponent<EnemyAI>();
+                    if (auxCharacter)
+                    {
+                        auxCharacter.Damage(fistsDamage*5, fistsArmorPenetration*2);
+                        //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
+                        auxCharacter.Push((auxCharacter.transform.position - transform.position).normalized * 50);
+                    }
+                }
+            }
         }
 	}
 
