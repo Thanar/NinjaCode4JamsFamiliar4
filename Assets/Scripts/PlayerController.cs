@@ -12,7 +12,7 @@ public class PlayerController : Character {
     public Weapon weapon;
     public bool hasWeapon=false;
 
-    public Vector3 newRotation = new Vector3(0,0,0);
+    Vector3 newRotation = new Vector3(0,0,0);
 
     Vector3 rayVector = new Vector3();
     
@@ -104,7 +104,7 @@ public class PlayerController : Character {
                             Debug.Log("FALCON PUNCH");
                             fistsTimeReady = Time.time + fistsCooldown;
                             auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
-                            auxCharacter.rigidbody.AddForce((transform.forward.normalized + Vector3.up) * 3, ForceMode.VelocityChange);
+                            auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
                         }
                     }
                 }
