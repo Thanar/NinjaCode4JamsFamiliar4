@@ -1882,6 +1882,7 @@ MonoBehaviour:
   hasWeapon: 0
   movementForceScale: 1
   fistsPosition: {fileID: 476424}
+  firstWeapon: {fileID: 0}
   specialAttackEffectPrefab: {fileID: 0}
 --- !u!136 &13628234
 CapsuleCollider:
