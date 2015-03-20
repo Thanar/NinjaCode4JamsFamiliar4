@@ -4,13 +4,10 @@ using System.Collections;
 public class PlayerController : Character {
 
     public UI ui;
-
+    public float MaxFocus;
     public float focus;
     public float focusDecreaseRate = 0.1f;
     public bool onFocus;
-
-    public Weapon weapon;
-    public bool hasWeapon=false;
 
     public Vector3 newRotation = new Vector3(0,0,0);
 
@@ -18,12 +15,6 @@ public class PlayerController : Character {
     
 
     public float movementForceScale=1;
-
-
-    public Transform fistsPosition;
-
-    Character auxCharacter = null;
-    
 
 	// Use this for initialization
 	void Start () {
@@ -56,62 +47,24 @@ public class PlayerController : Character {
     {
         if (Input.GetKey(KeyCode.A))
         {
-            if (Vector3.Project(rigidbody.velocity, -Vector3.right).magnitude < maxSpeed)
-            {
-                rigidbody.AddForce(-Vector3.right.normalized * charachterImpulse * movementForceScale);
-            }
+            rigidbody.AddForce(-Vector3.right.normalized * 1000 * movementForceScale);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            if (Vector3.Project(rigidbody.velocity, Vector3.right).magnitude < maxSpeed)
-            {
-                rigidbody.AddForce(Vector3.right.normalized * charachterImpulse * movementForceScale);
-            }
+            rigidbody.AddForce(Vector3.right.normalized * 1000 * movementForceScale);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            if (Vector3.Project(rigidbody.velocity, Vector3.forward).magnitude < maxSpeed)
-            {
-                rigidbody.AddForce(Vector3.forward.normalized * charachterImpulse * movementForceScale);
-            }
+            rigidbody.AddForce(Vector3.forward.normalized * 1000 * movementForceScale);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            if (Vector3.Project(rigidbody.velocity, -Vector3.forward).magnitude < maxSpeed)
-            {
-                rigidbody.AddForce(-Vector3.forward.normalized * charachterImpulse * movementForceScale);
-            }
+            rigidbody.AddForce(-Vector3.forward.normalized * 1000 * movementForceScale);
         }
-
-        if (Input.GetMouseButton(0))
-        {
-            if (hasWeapon)
-            {
-                weapon.Attack();
-            }
-            else
-            {
-                if (fistsTimeReady < Time.time)
-                {
-                    foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.1f))
-                    {
-                        auxCharacter = c.GetComponent<Character>();
-                        if (c)
-                        {
-                            Debug.Log("FALCON PUNCH");
-                            fistsTimeReady = Time.time + fistsCooldown;
-                            auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
-                            auxCharacter.rigidbody.AddForce((transform.forward.normalized + Vector3.up) * 3, ForceMode.VelocityChange);
-                        }
-                    }
-                }
-            }
-        }
-    
-    }
+	}
 
     public void ActivateFocus()
     {
@@ -126,8 +79,8 @@ public class PlayerController : Character {
     {
         if (onFocus)
         {
-            focus = Mathf.Clamp(focus - (focusDecreaseRate * Time.deltaTime), 0f, 1f);
-            ui.SetFocus(focus);
+            focus = Mathf.Clamp(focus - (focusDecreaseRate * Time.deltaTime), 0f, MaxFocus);
+            ui.SetFocus();
             if (focus == 0)
             {
                 onFocus = false;
@@ -142,6 +95,7 @@ public class PlayerController : Character {
     public override void Damage(float damage, float armorPenetration = 0)
     {
         base.Damage(damage, armorPenetration);
-        ui.SetHealth(health);
+        ui.SetHealth();
     }
+
 }
