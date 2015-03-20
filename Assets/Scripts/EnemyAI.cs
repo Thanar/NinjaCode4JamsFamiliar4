@@ -4,12 +4,21 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour {
 
     public PlayerController player;
+
+    public Weapon weapon;
+
+
 	void Start () {
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         }
 	}
+
+    void Update()
+    {
+        weapon.Attack();
+    }
 
     void FixedUpdate()
     {
