@@ -46,7 +46,22 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 971c426139d42264cbedd27761b8ddae, type: 2}
   m_ParentStateMachine: {fileID: 110729310}
-  m_Position: {x: 84, y: 120, z: 0}
+  m_Position: {x: 216, y: 60, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110235484
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: IdleOnSunshine
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: b76f6801e4e3be947a66b4d971e54c84, type: 2}
+  m_ParentStateMachine: {fileID: 110729310}
+  m_Position: {x: 155, y: 245, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -72,11 +87,12 @@ StateMachine:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110229310}
+  m_DefaultState: {fileID: 110277380}
   m_States:
   - {fileID: 110229310}
   - {fileID: 110277380}
   - {fileID: 110205666}
+  - {fileID: 110235484}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}

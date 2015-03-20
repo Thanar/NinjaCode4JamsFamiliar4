@@ -143,8 +143,10 @@ MonoBehaviour:
   weapon: {fileID: 0}
   hasWeapon: 0
   movementForceScale: 1
-  fistsPosition: {fileID: 0}
+  fistsPosition: {fileID: 468916}
   pushForce: {x: 0, y: 0, z: 0}
+  specialAttackEffectPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47,
+    type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
