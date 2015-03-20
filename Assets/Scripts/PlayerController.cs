@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerController : Character {
 
     public UI ui;
-
+    public float MaxFocus;
     public float focus;
     public float focusDecreaseRate = 0.1f;
     public bool onFocus;
@@ -79,8 +79,8 @@ public class PlayerController : Character {
     {
         if (onFocus)
         {
-            focus = Mathf.Clamp(focus - (focusDecreaseRate * Time.deltaTime), 0f, 1f);
-            ui.SetFocus(focus);
+            focus = Mathf.Clamp(focus - (focusDecreaseRate * Time.deltaTime), 0f, MaxFocus);
+            ui.SetFocus();
             if (focus == 0)
             {
                 onFocus = false;

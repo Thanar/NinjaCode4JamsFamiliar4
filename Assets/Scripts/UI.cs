@@ -22,9 +22,11 @@ public class UI : MonoBehaviour {
         Debug.Log("player.health: " + player.health + " - health.fillAmount: " + health.fillAmount);
     }
 
-    public void SetFocus(float value)
+    public void SetFocus()
     {
-        focus.fillAmount = Mathf.Clamp(value, 0f, 1f);
+        focus.fillAmount = player.focus / player.MaxFocus;
+
+
     }
 
     public void ToggleAmmo(bool active)
