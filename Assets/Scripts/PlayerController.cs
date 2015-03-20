@@ -23,7 +23,7 @@ public class PlayerController : Character {
 
     Character auxCharacter = null;
 
-    Vector3 pushForce = new Vector3();
+    public Vector3 pushForce = new Vector3();
 
     Vector3 finalVelocity = new Vector3();
 
@@ -52,7 +52,7 @@ public class PlayerController : Character {
             ActivateFocus();
         }
 
-        pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.01f);
+        pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.1f);
 
     }
 
@@ -105,7 +105,7 @@ public class PlayerController : Character {
             finalVelocity.z -= maxSpeed;
         }
 
-        finalVelocity = finalVelocity.normalized * maxSpeed;
+        finalVelocity = finalVelocity.normalized * maxSpeed*movementForceScale;
 
         rigidbody.velocity = finalVelocity+pushForce;
 
