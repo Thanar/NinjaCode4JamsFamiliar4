@@ -18,6 +18,12 @@ public class Character : MonoBehaviour {
     public float fistsDamage = 5;
     public float fistsArmorPenetration = 0;
 
+    protected Vector3 pushForce = new Vector3();
+
+    public void Push(Vector3 direction)
+    {
+        pushForce = direction + direction.normalized * maxSpeed;
+    }
 	// Use this for initialization
 	void Start () {
 	

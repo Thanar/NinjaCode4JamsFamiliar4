@@ -23,7 +23,6 @@ public class PlayerController : Character {
 
     EnemyAI auxCharacter = null;
 
-    public Vector3 pushForce = new Vector3();
 
     Vector3 finalVelocity = new Vector3();
 
@@ -108,10 +107,6 @@ public class PlayerController : Character {
         }
     }
 
-    public void Push(Vector3 direction)
-    {
-        pushForce = direction + direction.normalized * maxSpeed;
-    }
 
     void FixedUpdate()
     {
@@ -194,6 +189,13 @@ public class PlayerController : Character {
     {
         base.Damage(damage, armorPenetration);
         ui.SetHealth();
+    }
+
+
+    public override void Die()
+    {
+        base.Die();
+        Application.LoadLevel("GameOver");
     }
 
 }
