@@ -226,6 +226,7 @@ public class PlayerController : Character {
     public void getRedDrug()
     {
         focus = 1;
+    }
 
     public override void Die()
     {
