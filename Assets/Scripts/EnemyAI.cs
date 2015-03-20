@@ -50,11 +50,11 @@ public class EnemyAI : Character {
             {
                 if(Vector3.Distance(transform.position,player.transform.position)<fistsRange)
                 {
-                    Debug.Log("FALCON PUNCH");
+                    //Debug.Log("FALCON PUNCH");
                     fistsTimeReady = Time.time + fistsCooldown;
                     player.Damage(fistsDamage,fistsArmorPenetration);
                     //player.rigidbody.AddForce((transform.forward.normalized+Vector3.up)*2,ForceMode.VelocityChange);
-                    player.Push(transform.forward.normalized * 2);
+                    player.Push(transform.forward.normalized * 20);
                 }
             }
         }
