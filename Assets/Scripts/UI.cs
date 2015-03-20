@@ -9,7 +9,9 @@ public class UI : MonoBehaviour {
     public GameObject ammoObject;
     public Image ammo;
 
-    void Start()
+    public Character player;
+
+    public void SetHealth(float value)
     {
 
     }
