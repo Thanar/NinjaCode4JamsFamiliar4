@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 100
   health: 100
   armor: 0
   charachterImpulse: 2800
@@ -445,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 100
   health: 100
   armor: 0
   charachterImpulse: 2800
@@ -882,58 +884,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 2129102212}
   m_GameObject: {fileID: 861727928}
---- !u!1001 &889439308
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.19000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: ui
-      value: 
-      objectReference: {fileID: 1726452190}
-    - target: {fileID: 11450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-      propertyPath: fistsPosition
-      value: 
-      objectReference: {fileID: 1627089663}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-  m_RootGameObject: {fileID: 1626390487}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &892291451
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 100
   health: 100
   armor: 0
   charachterImpulse: 2800
@@ -1190,6 +1141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 100
   health: 100
   armor: 0
   charachterImpulse: 2800
@@ -1736,6 +1688,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1001 &1410803130
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.19000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1726452190}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
+  m_RootGameObject: {fileID: 1626390487}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1423670235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 100
   health: 100
   armor: 0
   charachterImpulse: 2800
@@ -2162,7 +2163,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 150888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1626390492}
@@ -2183,7 +2184,7 @@ Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b,
     type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   m_GameObject: {fileID: 1626390487}
   serializedVersion: 2
   m_Mass: 60
@@ -2199,7 +2200,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2350888, guid: a9a30aebd1c82d04e8af39c0f91ae36b,
     type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   m_GameObject: {fileID: 1626390487}
   m_Enabled: 1
   m_CastShadows: 1
@@ -2220,7 +2221,7 @@ BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6550888, guid: a9a30aebd1c82d04e8af39c0f91ae36b,
     type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   m_GameObject: {fileID: 1626390487}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2233,14 +2234,14 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3350888, guid: a9a30aebd1c82d04e8af39c0f91ae36b,
     type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   m_GameObject: {fileID: 1626390487}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1626390492
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   m_GameObject: {fileID: 1626390487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.19000006, z: 0}
@@ -2254,13 +2255,14 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11450888, guid: a9a30aebd1c82d04e8af39c0f91ae36b,
     type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   m_GameObject: {fileID: 1626390487}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad1121853bc023a4bb0d07223d69ef39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 100
   health: 100
   armor: 0
   charachterImpulse: 3000
@@ -2271,6 +2273,7 @@ MonoBehaviour:
   fistsDamage: 5
   fistsArmorPenetration: 0
   ui: {fileID: 1726452190}
+  MaxFocus: 0
   focus: 0
   focusDecreaseRate: .100000001
   onFocus: 0
@@ -2282,7 +2285,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 116498, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1627089663}
@@ -2297,7 +2300,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 416498, guid: a9a30aebd1c82d04e8af39c0f91ae36b, type: 2}
-  m_PrefabInternal: {fileID: 889439308}
+  m_PrefabInternal: {fileID: 1410803130}
   m_GameObject: {fileID: 1627089662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: .851000011}
@@ -2543,6 +2546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 100
   health: 100
   armor: 0
   charachterImpulse: 2800

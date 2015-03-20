@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1121853bc023a4bb0d07223d69ef39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 100
   health: 100
   armor: 0
   charachterImpulse: 3000
@@ -135,13 +136,14 @@ MonoBehaviour:
   fistsDamage: 5
   fistsArmorPenetration: 0
   ui: {fileID: 0}
+  MaxFocus: 0
   focus: 0
   focusDecreaseRate: .100000001
   onFocus: 0
   weapon: {fileID: 0}
   hasWeapon: 0
   movementForceScale: 1
-  fistsPosition: {fileID: 0}
+  fistsPosition: {fileID: 416498}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
