@@ -47,7 +47,7 @@ public class EnemyAI : Character {
                     Debug.Log("FALCON PUNCH");
                     fistsTimeReady = Time.time + fistsCooldown;
                     player.Damage(fistsDamage,fistsArmorPenetration);
-                    player.rigidbody.AddForce((transform.forward.normalized+Vector3.up)*3,ForceMode.VelocityChange);
+                    player.rigidbody.AddForce((transform.forward.normalized+Vector3.up)*2,ForceMode.VelocityChange);
                 }
             }
         }
