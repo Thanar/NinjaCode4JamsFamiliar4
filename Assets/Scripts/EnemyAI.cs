@@ -16,6 +16,7 @@ public class EnemyAI : Character {
 
 
 
+    Vector3 pushForce = new Vector3();
 
 	void Start () {
         if (player == null)
@@ -47,7 +48,8 @@ public class EnemyAI : Character {
                     Debug.Log("FALCON PUNCH");
                     fistsTimeReady = Time.time + fistsCooldown;
                     player.Damage(fistsDamage,fistsArmorPenetration);
-                    player.rigidbody.AddForce((transform.forward.normalized+Vector3.up)*2,ForceMode.VelocityChange);
+                    //player.rigidbody.AddForce((transform.forward.normalized+Vector3.up)*2,ForceMode.VelocityChange);
+                    player.Push(transform.forward.normalized * 2);
                 }
             }
         }
@@ -87,8 +89,13 @@ public class EnemyAI : Character {
         {
             rigidbody.AddForce(player2DDirection * charachterImpulse);
         }
+        rigidbody.velocity = player2DDirection * maxSpeed + pushForce;
     }
 
+    public void Push(Vector3 direction)
+    {
+        pushForce = direction + direction.normalized * maxSpeed;
+    }
 
 
     public override void Die()

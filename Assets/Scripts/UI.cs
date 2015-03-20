@@ -19,7 +19,7 @@ public class UI : MonoBehaviour {
         health.fillAmount = player.health / player.Maxhealth;
 
 
-        Debug.Log("player.health: " + player.health + " - health.fillAmount: " + health.fillAmount);
+        //Debug.Log("player.health: " + player.health + " - health.fillAmount: " + health.fillAmount);
     }
 
     public void SetFocus()
