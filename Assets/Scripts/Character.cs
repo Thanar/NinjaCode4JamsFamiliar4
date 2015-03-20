@@ -9,6 +9,14 @@ public class Character : MonoBehaviour {
     public float charachterImpulse = 10000;
     public float maxSpeed = 2;
 
+
+    public float fistsTimeReady = 0;
+    public float fistsCooldown = 2;
+    public float fistsRange = 1;
+
+    public float fistsDamage = 5;
+    public float fistsArmorPenetration = 0;
+
 	// Use this for initialization
 	void Start () {
 	

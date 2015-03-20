@@ -9,6 +9,8 @@ public class PlayerController : Character {
     public float focusDecreaseRate = 0.1f;
     public bool onFocus;
 
+    public Weapon weapon;
+    public bool hasWeapon=false;
 
     public Vector3 newRotation = new Vector3(0,0,0);
 
@@ -16,6 +18,12 @@ public class PlayerController : Character {
     
 
     public float movementForceScale=1;
+
+
+    public Transform fistsPosition;
+
+    Character auxCharacter = null;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -77,6 +85,32 @@ public class PlayerController : Character {
                 rigidbody.AddForce(-Vector3.forward.normalized * charachterImpulse * movementForceScale);
             }
         }
+
+        if (Input.GetMouseButton(0))
+        {
+            if (hasWeapon)
+            {
+                weapon.Attack();
+            }
+            else
+            {
+                if (fistsTimeReady < Time.time)
+                {
+                    foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.1f))
+                    {
+                        auxCharacter = c.GetComponent<Character>();
+                        if (c)
+                        {
+                            Debug.Log("FALCON PUNCH");
+                            fistsTimeReady = Time.time + fistsCooldown;
+                            auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
+                            auxCharacter.rigidbody.AddForce((transform.forward.normalized + Vector3.up) * 3, ForceMode.VelocityChange);
+                        }
+                    }
+                }
+            }
+        }
+    
     }
 
     public void ActivateFocus()

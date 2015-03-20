@@ -15,12 +15,6 @@ public class EnemyAI : Character {
     Vector3 player2DDirection = new Vector3(0,0,0);
 
 
-    public float fistsTimeReady = 0;
-    public float fistsCooldown = 2;
-    public float fistsRange = 1;
-
-    public float fistsDamage = 5;
-    public float fistsArmorPenetration = 0;
 
 
 	void Start () {
