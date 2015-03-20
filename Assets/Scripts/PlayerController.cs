@@ -128,7 +128,7 @@ public class PlayerController : Character {
                             fistsTimeReady = Time.time + fistsCooldown;
                             auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
                             auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
-                            auxCharacter.Push(transform.forward.normalized * 2);
+                            auxCharacter.Push(transform.forward.normalized * 100);
                         }
                     }
                 }
