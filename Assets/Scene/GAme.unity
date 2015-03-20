@@ -396,7 +396,7 @@ MonoBehaviour:
   health: 100
   armor: 0
   player: {fileID: 0}
-  weapon: {fileID: 0}
+  weapon: {fileID: 97168404}
   hasWeapon: 0
 --- !u!54 &293454622
 Rigidbody:
@@ -1187,6 +1187,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11479084, guid: bad8e83748986db49a5d1af932320356, type: 2}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 97168404}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bad8e83748986db49a5d1af932320356, type: 2}
   m_RootGameObject: {fileID: 293454620}
