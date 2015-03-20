@@ -131,6 +131,11 @@ MonoBehaviour:
   weapon: {fileID: 0}
   hasWeapon: 0
   weaponTransform: {fileID: 452180}
+  fistsTimeReady: 0
+  fistsCooldown: 2
+  fistsRange: 2
+  fistsDamage: 5
+  fistsArmorPenetration: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
