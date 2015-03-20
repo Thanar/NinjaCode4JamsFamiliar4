@@ -23,6 +23,9 @@ public class PlayerController : Character {
 
     Character auxCharacter = null;
 
+    public Vector3 pushForce = new Vector3();
+
+    Vector3 finalVelocity = new Vector3();
 
 	// Use this for initialization
 	void Start () {
@@ -49,41 +52,62 @@ public class PlayerController : Character {
             ActivateFocus();
         }
 
+        pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.1f);
+
+    }
+
+    public void Push(Vector3 direction)
+    {
+        pushForce = direction + direction.normalized * maxSpeed;
     }
 
     void FixedUpdate()
     {
+        finalVelocity.Set(0,0,0);
         if (Input.GetKey(KeyCode.A))
         {
-            if (Vector3.Project(rigidbody.velocity, -Vector3.right).magnitude < maxSpeed)
-            {
-                rigidbody.AddForce(-Vector3.right.normalized * charachterImpulse * movementForceScale);
-            }
+            //if (Vector3.Project(rigidbody.velocity, -Vector3.right).magnitude < maxSpeed)
+            //{
+            //    rigidbody.AddForce(-Vector3.right.normalized * charachterImpulse * movementForceScale);
+            //}
+
+            //rigidbody.velocity = -Vector3.right.normalized * maxSpeed + pushForce;
+            finalVelocity.x -=  maxSpeed;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            if (Vector3.Project(rigidbody.velocity, Vector3.right).magnitude < maxSpeed)
-            {
-                rigidbody.AddForce(Vector3.right.normalized * charachterImpulse * movementForceScale);
-            }
+            //if (Vector3.Project(rigidbody.velocity, Vector3.right).magnitude < maxSpeed)
+            //{
+            //    rigidbody.AddForce(Vector3.right.normalized * charachterImpulse * movementForceScale);
+            //}
+            //rigidbody.velocity = Vector3.right.normalized * maxSpeed + pushForce;
+            finalVelocity.x += maxSpeed;
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            if (Vector3.Project(rigidbody.velocity, Vector3.forward).magnitude < maxSpeed)
-            {
-                rigidbody.AddForce(Vector3.forward.normalized * charachterImpulse * movementForceScale);
-            }
+            //if (Vector3.Project(rigidbody.velocity, Vector3.forward).magnitude < maxSpeed)
+            //{
+            //    rigidbody.AddForce(Vector3.forward.normalized * charachterImpulse * movementForceScale);
+            //}
+            //rigidbody.velocity = Vector3.forward.normalized * maxSpeed + pushForce;
+            finalVelocity.z += maxSpeed;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            if (Vector3.Project(rigidbody.velocity, -Vector3.forward).magnitude < maxSpeed)
-            {
-                rigidbody.AddForce(-Vector3.forward.normalized * charachterImpulse * movementForceScale);
-            }
+            //if (Vector3.Project(rigidbody.velocity, -Vector3.forward).magnitude < maxSpeed)
+            //{
+            //    rigidbody.AddForce(-Vector3.forward.normalized * charachterImpulse * movementForceScale);
+            //}
+            //rigidbody.velocity = -Vector3.forward.normalized * maxSpeed + pushForce;
+            finalVelocity.z -= maxSpeed;
         }
+
+        finalVelocity = finalVelocity.normalized * maxSpeed*movementForceScale;
+
+        rigidbody.velocity = finalVelocity+pushForce;
 
         if (Input.GetMouseButton(0))
         {
