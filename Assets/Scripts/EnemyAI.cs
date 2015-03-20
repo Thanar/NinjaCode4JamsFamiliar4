@@ -12,6 +12,15 @@ public class EnemyAI : Character {
 
 
     Vector3 newRotation = new Vector3(0, 0, 0);
+    Vector3 player2DDirection = new Vector3(0,0,0);
+
+
+    public float fistsTimeReady = 0;
+    public float fistsCooldown = 2;
+    public float fistsRange = 1;
+
+    public float fistsDamage = 5;
+    public float fistsArmorPenetration = 0;
 
 
 	void Start () {
@@ -34,6 +43,18 @@ public class EnemyAI : Character {
         if (hasWeapon)
         {
             weapon.Attack();
+        }
+        else
+        {
+            if (fistsTimeReady < Time.time)
+            {
+                if(Vector3.Distance(transform.position,player.transform.position)<fistsRange)
+                {
+                    fistsTimeReady = Time.time + fistsCooldown;
+                    player.Damage(fistsDamage,fistsArmorPenetration);
+                    player.rigidbody.AddForce(transform.forward.normalized * 10000);
+                }
+            }
         }
     }
 
@@ -65,7 +86,9 @@ public class EnemyAI : Character {
 
     void FixedUpdate()
     {
-        rigidbody.AddForce((player.transform.position-transform.position).normalized*1000);
+        player2DDirection = (player.transform.position - transform.position).normalized;
+        player2DDirection.y = 0;
+        rigidbody.AddForce(player2DDirection*1000);
     }
 
 
