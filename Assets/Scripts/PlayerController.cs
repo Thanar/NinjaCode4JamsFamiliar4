@@ -31,7 +31,6 @@ public class PlayerController : Character {
         Ray ray = Camera.main.ScreenPointToRay(rayVector);
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log(hit.transform.position);
             newRotation.y = Quaternion.LookRotation(hit.point - transform.position).eulerAngles.y;
             transform.eulerAngles = newRotation;
         }

@@ -223,6 +223,11 @@ MonoBehaviour:
   weapon: {fileID: 0}
   hasWeapon: 0
   weaponTransform: {fileID: 1315736208}
+  fistsTimeReady: 0
+  fistsCooldown: 2
+  fistsRange: 2
+  fistsDamage: 5
+  fistsArmorPenetration: 0
 --- !u!54 &157249239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -380,6 +385,11 @@ MonoBehaviour:
   weapon: {fileID: 97168404}
   hasWeapon: 0
   weaponTransform: {fileID: 1635422933}
+  fistsTimeReady: 0
+  fistsCooldown: 2
+  fistsRange: 2
+  fistsDamage: 5
+  fistsArmorPenetration: 0
 --- !u!54 &293454622
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -650,6 +660,11 @@ MonoBehaviour:
   weapon: {fileID: 0}
   hasWeapon: 0
   weaponTransform: {fileID: 806610266}
+  fistsTimeReady: 0
+  fistsCooldown: 2
+  fistsRange: 2
+  fistsDamage: 5
+  fistsArmorPenetration: 0
 --- !u!54 &892291453
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -803,6 +818,11 @@ MonoBehaviour:
   weapon: {fileID: 0}
   hasWeapon: 0
   weaponTransform: {fileID: 1553007847}
+  fistsTimeReady: 0
+  fistsCooldown: 2
+  fistsRange: 2
+  fistsDamage: 5
+  fistsArmorPenetration: 0
 --- !u!54 &966971179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1363,6 +1383,11 @@ MonoBehaviour:
   weapon: {fileID: 0}
   hasWeapon: 0
   weaponTransform: {fileID: 445514129}
+  fistsTimeReady: 0
+  fistsCooldown: 2
+  fistsRange: 2
+  fistsDamage: 5
+  fistsArmorPenetration: 0
 --- !u!54 &1591096539
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1608,6 +1633,7 @@ MonoBehaviour:
   health: 100
   armor: 0
   newRotation: {x: 0, y: 0, z: 0}
+  movementForceScale: 1
 --- !u!1 &1635422932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,6 +1700,11 @@ MonoBehaviour:
   weapon: {fileID: 0}
   hasWeapon: 0
   weaponTransform: {fileID: 1554383337}
+  fistsTimeReady: 0
+  fistsCooldown: 2
+  fistsRange: 2
+  fistsDamage: 5
+  fistsArmorPenetration: 0
 --- !u!54 &1898083247
 Rigidbody:
   m_ObjectHideFlags: 0
