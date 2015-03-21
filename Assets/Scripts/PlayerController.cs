@@ -44,6 +44,8 @@ public class PlayerController : Character {
 
 	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
         ui.ToggleAmmo(false);
+        ui.SetHealth();
+        ui.SetFocus();
 	}
 
     void Update()
@@ -264,17 +266,18 @@ public class PlayerController : Character {
         {
 
             drop.Taken();
-
+            
             weapon = drop;
-
+            weapon.gameObject.GetComponent<AutoRotation>().rotate = false;
             hasWeapon = true;
             weapon.transform.parent = firstWeapon;
             weapon.transform.localPosition = Vector3.zero;
+            weapon.transform.localScale = Vector3.one;
+            //weapon.transform.localRotation = Quaternion.identity;
+            weapon.transform.rotation = firstWeapon.transform.rotation;
+            //weapon.transform.eulerAngles = new Vector3(0, -90, 0);
 
-            weapon.transform.localRotation = new Quaternion(0, 0, 0, 1);
-            weapon.transform.eulerAngles = new Vector3(0, -90, 0);
-
-            weapon.gameObject.GetComponent<AutoRotation>().rotate = false;
+            
 
 
         }

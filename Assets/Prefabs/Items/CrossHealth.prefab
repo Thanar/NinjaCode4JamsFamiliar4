@@ -92,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75790024, y: 10.5903511, z: 17.1360016}
+  m_LocalPosition: {x: 2.61539197, y: 7.4505806e-09, z: -6.97464418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400664}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6805cad31d5786e439ed88ee387f7bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: .25
+  heal: 25
   parent: {fileID: 100662}
 --- !u!135 &13500662
 SphereCollider:
