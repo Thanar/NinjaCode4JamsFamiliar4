@@ -2266,7 +2266,7 @@ MonoBehaviour:
   ui: {fileID: 0}
   MaxFocus: 1
   focus: 1
-  focusDecreaseRate: .100000001
+  focusDecreaseRate: -.100000001
   onFocus: 0
   weapon: {fileID: 0}
   hasWeapon: 0

@@ -97,7 +97,8 @@ public class EnemyAI : Character {
         //weapon.collider.enabled = true;
         //weapon.transform.position = weaponTransform.position;
         //weapon.transform.rotation = weaponTransform.rotation;
-        weapon.transform.parent = null;
+        
+        
         weapon.Dropped();
         this.weapon = null;
 

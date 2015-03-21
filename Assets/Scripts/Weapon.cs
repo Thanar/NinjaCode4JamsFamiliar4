@@ -72,7 +72,9 @@ public class Weapon : MonoBehaviour {
 
     public virtual void Dropped()
     {
-
+        transform.parent = null;
+        dropWeapon.enabled = true;
+        dropWeapon.iAmDropped = true;
     }
 
     public virtual void Taken()
