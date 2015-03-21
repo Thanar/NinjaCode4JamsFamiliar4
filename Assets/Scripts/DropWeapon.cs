@@ -19,11 +19,21 @@ public class DropWeapon : MonoBehaviour {
         {
             
             PlayerController p = other.GetComponent<PlayerController>();
-
-            if (iAmDropped && !p.hasWeapon)
-            {Debug.Log("Player!");
-                p.EquipThis(w);
-                iAmDropped = false;
+            if (iAmDropped)
+            {
+                if (!p.hasWeapon)
+                {
+                    //Debug.Log("Player!");
+                    p.EquipThis(w);
+                    iAmDropped = false;
+                }
+                else if (w.GetType() == p.weapon.GetType())
+                {
+                    Debug.Log("Ammo");
+                    p.weapon.bulletsTotal += w.bulletsTotal + w.currentBullets;
+                    p.ui.SetAmmo(p.weapon);
+                    Destroy(this.gameObject);
+                }
             }
         }
     }

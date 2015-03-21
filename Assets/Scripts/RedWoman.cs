@@ -74,7 +74,7 @@ public class RedWoman : MonoBehaviour {
         {
             int itemIndex = Random.Range(0, items.Length);
             GameObject gO = GameObject.Instantiate(items[itemIndex]) as GameObject;
-            gO.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
+            gO.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
 
 
             //Debug.Log("Drop item "+items[itemIndex]);

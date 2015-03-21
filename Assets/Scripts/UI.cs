@@ -39,7 +39,7 @@ public class UI : MonoBehaviour {
 
     public void SetAmmo(Weapon w)
     {
-        ammo.text = w.currentBullets+"|"+w.bulletsTotal;
+        ammo.text = w.currentBullets+" | "+w.bulletsTotal;
     }
 
     public void SetReloading(float time)
