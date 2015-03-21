@@ -49,17 +49,17 @@ public class Weapon : MonoBehaviour {
             {
                 reloading = true;
                 StartCoroutine(FinishReloading(reloadTime));
-                bulletsTotal -= bulletsPerCharge;
                 if (bulletsTotal < 0)
                 {
                     bulletsTotal = 0;
                 }
 
                 currentBullets = bulletsPerCharge;
-                if (bulletsTotal < currentBullets)
+                if (bulletsTotal < bulletsPerCharge)
                 {
                     currentBullets = bulletsTotal;
                 }
+                bulletsTotal -= currentBullets;
                 nextTimeReady = Time.time + reloadTime + Random.Range(0, 0.1f);
             }
             else
