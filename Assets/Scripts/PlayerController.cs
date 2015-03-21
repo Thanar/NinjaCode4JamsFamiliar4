@@ -45,10 +45,8 @@ public class PlayerController : Character {
         rayVector = Input.mousePosition;
         rayVector.z = 10000;
         Ray ray = Camera.main.ScreenPointToRay(rayVector);
-        Debug.DrawRay(ray.origin, ray.direction*100f);
         if (Physics.Raycast(ray, out hit,1000f, LayerMask.GetMask("Floor")))
         {
-            Debug.Log(hit.point);
             newRotation.y = Quaternion.LookRotation(hit.point - transform.position).eulerAngles.y;
             transform.eulerAngles = newRotation;
         }
@@ -57,7 +55,14 @@ public class PlayerController : Character {
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            ActivateFocus();
+            if (onFocus)
+            {
+                DeactivateFocus();
+            }
+            else
+            {
+                ActivateFocus();
+            }
         }
 
         pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.05f);
