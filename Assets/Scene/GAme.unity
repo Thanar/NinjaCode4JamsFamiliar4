@@ -4838,6 +4838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 566045668}
+  RedWoman: {fileID: 1727139382}
   playerController: {fileID: 499497897}
   CameraAnimator: {fileID: 1376582617}
 --- !u!4 &272146296
@@ -17835,6 +17836,10 @@ Prefab:
       propertyPath: finishPosition
       value: 
       objectReference: {fileID: 375785260}
+    - target: {fileID: 101532, guid: 60f36023f0254824d8df88d6af1e3e17, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60f36023f0254824d8df88d6af1e3e17, type: 2}
   m_RootGameObject: {fileID: 1727139382}
@@ -32873,7 +32878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1727139383
 Transform:
   m_ObjectHideFlags: 0
