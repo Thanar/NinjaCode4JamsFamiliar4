@@ -2329,7 +2329,7 @@ MonoBehaviour:
   health: 10
   armor: 0
   charachterImpulse: 2800
-  maxSpeed: 8
+  maxSpeed: 6
   fistsTimeReady: 0
   fistsCooldown: 2
   fistsRange: 2

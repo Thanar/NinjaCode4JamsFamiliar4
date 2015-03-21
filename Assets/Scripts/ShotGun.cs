@@ -31,7 +31,7 @@ public class ShotGun : Weapon {
 
                 myBullet.damage = this.damage;
                 myBullet.armorPenetration = this.armorPenetration;
-                myBullet.rigidbody.velocity = (bulletSpawnPoint.forward + bulletSpawnPoint.right * Random.Range(-0.02f, 0.02f) + bulletSpawnPoint.up * Random.Range(-0.02f, 0.02f)).normalized * 100;
+                myBullet.rigidbody.velocity = (bulletSpawnPoint.forward + bulletSpawnPoint.right * Random.Range(-0.1f, 0.1f) + bulletSpawnPoint.up * Random.Range(-0.2f, 0.2f)).normalized * 100;
             }
 
                 nextTimeReady = Time.time + cooldown;

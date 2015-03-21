@@ -7,7 +7,8 @@ public class EnemySpawner : MonoBehaviour {
     public int wave = 1;
     public int wavesPerRound = 5;
     public float timeBetweenWaves = 20;
-    public int enemiesCurrentRound = 20;
+    public int enemiesCurrentRound = 10;
+    public int difficultyVariable = 10;
     public float timeNextWave=0;
 
     public GameObject[] enemies;
@@ -42,7 +43,7 @@ public class EnemySpawner : MonoBehaviour {
     {
         wave = 1;
         round++;
-        enemiesCurrentRound = 10 * round;
+        enemiesCurrentRound = difficultyVariable * round;
         SpawnWave();
     }
 
