@@ -375,7 +375,7 @@ MonoBehaviour:
   nextTimeReady: 0
   cooldown: .100000001
   reloadTime: 3
-  bulletsTotal: 100
+  bulletsTotal: 120
   currentBullets: 30
   bulletsPerCharge: 30
   bulletSpawnPoint: {fileID: 471650}
