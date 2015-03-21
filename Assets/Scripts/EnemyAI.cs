@@ -155,7 +155,7 @@ public class EnemyAI : Character {
 
         player2DDirection.Normalize();
 
-        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y);
+        rigidbody.velocity = (-player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y);
     }
 
     public void MoveTowardsPlayer()
