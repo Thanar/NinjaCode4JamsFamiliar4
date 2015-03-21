@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2340786}
   - 114: {fileID: 11417914}
   - 54: {fileID: 5479630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 4: {fileID: 469852}
   - 23: {fileID: 2369852}
   - 33: {fileID: 3369852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 479630}
   - 96: {fileID: 9679630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
