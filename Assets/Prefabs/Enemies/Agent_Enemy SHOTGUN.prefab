@@ -2190,8 +2190,8 @@ MonoBehaviour:
   armorPenetration: 0
   dropWeapon: {fileID: 0}
   nextTimeReady: 0
-  cooldown: 1
-  reloadTime: 3
+  cooldown: 1.5
+  reloadTime: 2
   bulletsTotal: 30
   currentBullets: 12
   bulletsPerCharge: 12

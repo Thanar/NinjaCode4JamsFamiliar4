@@ -124,7 +124,7 @@ public class PlayerController : Character {
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.G) && hasWeapon)
+            if (Input.GetKeyDown(KeyCode.Q) && hasWeapon)
             {
                 DropActualWeapon();
             }
@@ -244,19 +244,7 @@ public class PlayerController : Character {
     {
         if (ICanMove)
         {
-            if (LockRotation) 
-            {
-                switch (TypeJump)
-                {
-                    case 1: finalVelocity.z += maxSpeed; break;
-                    case 2: finalVelocity.x += maxSpeed; break;
-                    case 3: finalVelocity.z -= maxSpeed; break;
-                    case 4: finalVelocity.x -= maxSpeed; break;
-                    default: break;
-                }
-            
-            }
-            else
+            if (!LockRotation) 
             {
 
                 finalVelocity.Set(0, 0, 0);
@@ -452,21 +440,25 @@ public class PlayerController : Character {
         // Adelante
         if (gameObject.transform.rotation.eulerAngles.y >= 315 || gameObject.transform.rotation.eulerAngles.y <= 45)
         {
+            Push(Vector3.left);
             animator.SetTrigger("LeftJump");
         }
         // Derecha
         else if (gameObject.transform.rotation.eulerAngles.y >= 45 && gameObject.transform.rotation.eulerAngles.y <= 135)
         {
+            Push(Vector3.back);
             animator.SetTrigger("BackJump");
         }
         // Atras
         else if (gameObject.transform.rotation.eulerAngles.y >= 135 && gameObject.transform.rotation.eulerAngles.y <= 225)
         {
+            Push(Vector3.right);
             animator.SetTrigger("RightJump");
         }
         // Izquierda
         else if (gameObject.transform.rotation.eulerAngles.y >= 225 && gameObject.transform.rotation.eulerAngles.y <= 315)
         {
+            Push(Vector3.forward);
             animator.SetTrigger("ForwardJump");
         }
     }
@@ -476,23 +468,27 @@ public class PlayerController : Character {
         // D + Space
 
         // Adelante
-        if (gameObject.transform.rotation.eulerAngles.y >= (360 - 45) || gameObject.transform.rotation.eulerAngles.y <= 45)
+        if (gameObject.transform.rotation.eulerAngles.y >= 315 || gameObject.transform.rotation.eulerAngles.y <= 45)
         {
+            Push(Vector3.right);
             animator.SetTrigger("RightJump");
         }
         // Derecha
         else if (gameObject.transform.rotation.eulerAngles.y >= 45 && gameObject.transform.rotation.eulerAngles.y <= 135)
         {
+            Push(Vector3.forward);
             animator.SetTrigger("ForwardJump");
         }
         // Atras
-        else if (gameObject.transform.rotation.eulerAngles.y >= 135 && gameObject.transform.rotation.eulerAngles.y <= (135 + 45))
+        else if (gameObject.transform.rotation.eulerAngles.y >= 135 && gameObject.transform.rotation.eulerAngles.y <= 225)
         {
+            Push(Vector3.left);
             animator.SetTrigger("LeftJump");
         }
         // Izquierda
-        else if (gameObject.transform.rotation.eulerAngles.y >= (135 + 45) && gameObject.transform.rotation.eulerAngles.y <= (360 - 45))
+        else if (gameObject.transform.rotation.eulerAngles.y >= 225 && gameObject.transform.rotation.eulerAngles.y <= 315)
         {
+            Push(Vector3.back);
             animator.SetTrigger("BackJump");
         }
     }
@@ -503,23 +499,27 @@ public class PlayerController : Character {
         // S + Space
 
         // Adelante
-        if (gameObject.transform.rotation.eulerAngles.y >= (360 - 45) || gameObject.transform.rotation.eulerAngles.y <= 45)
+        if (gameObject.transform.rotation.eulerAngles.y >= 315 || gameObject.transform.rotation.eulerAngles.y <= 45)
         {
+            Push(Vector3.back);
             animator.SetTrigger("BackJump");
         }
             // Derecha
         else if (gameObject.transform.rotation.eulerAngles.y >= 45 && gameObject.transform.rotation.eulerAngles.y <= 135)
         {
+            Push(Vector3.right);
             animator.SetTrigger("RightJump");
         }
             // Atras
-        else if (gameObject.transform.rotation.eulerAngles.y >= 135 && gameObject.transform.rotation.eulerAngles.y <= (135 + 45))
+        else if (gameObject.transform.rotation.eulerAngles.y >= 135 && gameObject.transform.rotation.eulerAngles.y <= 225)
         {
-            animator.SetTrigger("BackJump");
+            Push(Vector3.forward);
+            animator.SetTrigger("ForwardJump");
         }
             // Izquierda
-        else if (gameObject.transform.rotation.eulerAngles.y >= (135 + 45) && gameObject.transform.rotation.eulerAngles.y <= (360 - 45))
+        else if (gameObject.transform.rotation.eulerAngles.y >= 225 && gameObject.transform.rotation.eulerAngles.y <= 315)
         {
+            Push(Vector3.left);
             animator.SetTrigger("LeftJump");
         }
     }
@@ -530,24 +530,27 @@ public class PlayerController : Character {
         // W + Space
 
         // Adelante
-        if (gameObject.transform.rotation.eulerAngles.y >= (360 - 45) ||     gameObject.transform.rotation.eulerAngles.y <= 45)
+        if (gameObject.transform.rotation.eulerAngles.y >= 315 || gameObject.transform.rotation.eulerAngles.y <= 45)
         {
-
+            Push(Vector3.forward);
             animator.SetTrigger("ForwardJump");
         }
             // Derecha
         else if (gameObject.transform.rotation.eulerAngles.y >= 45 && gameObject.transform.rotation.eulerAngles.y <= 135)
         {
+            Push(Vector3.left);
             animator.SetTrigger("LeftJump");
         }
             // Atras
-        else if (gameObject.transform.rotation.eulerAngles.y >= 135 && gameObject.transform.rotation.eulerAngles.y <= (135 + 45))
+        else if (gameObject.transform.rotation.eulerAngles.y >= 135 && gameObject.transform.rotation.eulerAngles.y <= 225)
         {
+            Push(Vector3.back);
             animator.SetTrigger("BackJump");
         }
             // Izquierda
-        else if (gameObject.transform.rotation.eulerAngles.y >= (135 + 45) && gameObject.transform.rotation.eulerAngles.y <= (360 - 45))
+        else if (gameObject.transform.rotation.eulerAngles.y >= 225 && gameObject.transform.rotation.eulerAngles.y <= 315)
         {
+            Push(Vector3.right);
             animator.SetTrigger("RightJump");
         }
     }
