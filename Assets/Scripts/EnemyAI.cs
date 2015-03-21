@@ -50,6 +50,12 @@ public class EnemyAI : Character {
         if (hasWeapon)
         {
             weapon.Attack();
+            if (weapon.IsDepleted())
+            {
+                weapon.Dropped();
+                hasWeapon = false;
+                weapon = null;
+            }
         }
         else
         {

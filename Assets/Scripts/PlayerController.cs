@@ -221,6 +221,8 @@ public class PlayerController : Character {
         if (hasWeapon)
         {
             weapon.Dropped();
+            weapon = null;
+            hasWeapon = false;
         }
     }
 

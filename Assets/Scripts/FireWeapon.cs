@@ -55,4 +55,10 @@ public class FireWeapon : Weapon {
         }
 
     }
+
+    public override bool IsDepleted()
+    {
+        //return base.IsDepleted();
+        return bulletsTotal <= 0;
+    }
 }
