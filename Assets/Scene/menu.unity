@@ -231,7 +231,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press <color=white>W A S D</color> to move <color=white>Meox</color>
+  m_Text: 'Press <color=white>W A S D</color> to move <color=white>Player</color>
 
     Press <color=white>Left Click</color> to <color=white> shoot </color>
 
