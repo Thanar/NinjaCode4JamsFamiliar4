@@ -749,7 +749,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.31999993, y: 2.18000007, z: -9.02000046}
+  m_LocalPosition: {x: -.768126667, y: .372999996, z: -18.1442871}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 445552}
@@ -2186,7 +2186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f47754af1ee8494a8f45a41d21258c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   armorPenetration: 0
   dropWeapon: {fileID: 0}
   nextTimeReady: 0
@@ -2205,7 +2205,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179504}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7af186551f1ec3e4a8de521938d2577a, type: 3}
   m_Name: 

@@ -268,8 +268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f47754af1ee8494a8f45a41d21258c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   armorPenetration: 0
+  dropWeapon: {fileID: 0}
   nextTimeReady: 0
   cooldown: 1
   reloadTime: 3
@@ -278,6 +279,8 @@ MonoBehaviour:
   bulletsPerCharge: 12
   bulletSpawnPoint: {fileID: 466430}
   bulletPrefab: {fileID: 140786, guid: 8ff93ab23c6ff6448b546056c5b365fd, type: 2}
+  reloading: 0
+  depleted: 0
 --- !u!135 &13566422
 SphereCollider:
   m_ObjectHideFlags: 1

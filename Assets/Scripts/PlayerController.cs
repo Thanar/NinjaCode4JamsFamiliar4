@@ -50,8 +50,23 @@ public class PlayerController : Character {
 
     public GameObject focusEffect;
 
+    /// <summary>
+    /// 0 - No | 1 - Forward | 2 - Right | 3 - Back | 4 - Left
+    /// </summary>
+    public int TypeJump = 0;
 
-
+    public void setTypeJump(int value)
+    {
+        if (value >= 0 && value < 5)
+        {
+            TypeJump = value;
+        }
+        else
+        {
+            Debug.Log("ERROR TypeJump");
+            TypeJump = 0;
+        }
+    }
 
     public bool LockRotation = false;
 
@@ -229,74 +244,88 @@ public class PlayerController : Character {
     {
         if (ICanMove)
         {
-
-
-            finalVelocity.Set(0, 0, 0);
-            if (Input.GetKey(KeyCode.A))
+            if (LockRotation) 
             {
-                //if (Vector3.Project(rigidbody.velocity, -Vector3.right).magnitude < maxSpeed)
-                //{
-                //    rigidbody.AddForce(-Vector3.right.normalized * charachterImpulse * movementForceScale);
-                //}
-
-                //rigidbody.velocity = -Vector3.right.normalized * maxSpeed + pushForce;
-                finalVelocity.x -= maxSpeed;
-
-                if (Input.GetKey(KeyCode.Space))
+                switch (TypeJump)
                 {
-                    LeftJumpAnimation();
+                    case 1: finalVelocity.z += maxSpeed; break;
+                    case 2: finalVelocity.x += maxSpeed; break;
+                    case 3: finalVelocity.z -= maxSpeed; break;
+                    case 4: finalVelocity.x -= maxSpeed; break;
+                    default: break;
                 }
+            
             }
-
-            if (Input.GetKey(KeyCode.D))
+            else
             {
-                //if (Vector3.Project(rigidbody.velocity, Vector3.right).magnitude < maxSpeed)
-                //{
-                //    rigidbody.AddForce(Vector3.right.normalized * charachterImpulse * movementForceScale);
-                //}
-                //rigidbody.velocity = Vector3.right.normalized * maxSpeed + pushForce;
-                finalVelocity.x += maxSpeed;
 
-                if (Input.GetKey(KeyCode.Space))
+                finalVelocity.Set(0, 0, 0);
+                if (Input.GetKey(KeyCode.A))
                 {
-                    RightJumpAnimation();
+                    //if (Vector3.Project(rigidbody.velocity, -Vector3.right).magnitude < maxSpeed)
+                    //{
+                    //    rigidbody.AddForce(-Vector3.right.normalized * charachterImpulse * movementForceScale);
+                    //}
+
+                    //rigidbody.velocity = -Vector3.right.normalized * maxSpeed + pushForce;
+                    finalVelocity.x -= maxSpeed;
+
+                    if (Input.GetKey(KeyCode.Space))
+                    {
+                        LeftJumpAnimation();
+                    }
                 }
-            }
 
-            if (Input.GetKey(KeyCode.W))
-            {
-                //if (Vector3.Project(rigidbody.velocity, Vector3.forward).magnitude < maxSpeed)
-                //{
-                //    rigidbody.AddForce(Vector3.forward.normalized * charachterImpulse * movementForceScale);
-                //}
-                //rigidbody.velocity = Vector3.forward.normalized * maxSpeed + pushForce;
-                finalVelocity.z += maxSpeed;
-
-                if (Input.GetKey(KeyCode.Space))
+                if (Input.GetKey(KeyCode.D))
                 {
-                    Debug.Log("JUMP!");
-                    ForwardJumpAnimation();
+                    //if (Vector3.Project(rigidbody.velocity, Vector3.right).magnitude < maxSpeed)
+                    //{
+                    //    rigidbody.AddForce(Vector3.right.normalized * charachterImpulse * movementForceScale);
+                    //}
+                    //rigidbody.velocity = Vector3.right.normalized * maxSpeed + pushForce;
+                    finalVelocity.x += maxSpeed;
+
+                    if (Input.GetKey(KeyCode.Space))
+                    {
+                        RightJumpAnimation();
+                    }
                 }
-            }
 
-            if (Input.GetKey(KeyCode.S))
-            {
-                //if (Vector3.Project(rigidbody.velocity, -Vector3.forward).magnitude < maxSpeed)
-                //{
-                //    rigidbody.AddForce(-Vector3.forward.normalized * charachterImpulse * movementForceScale);
-                //}
-                //rigidbody.velocity = -Vector3.forward.normalized * maxSpeed + pushForce;
-                finalVelocity.z -= maxSpeed;
-
-                if (Input.GetKey(KeyCode.Space))
+                if (Input.GetKey(KeyCode.W))
                 {
-                    BackJumpAnimation();
+                    //if (Vector3.Project(rigidbody.velocity, Vector3.forward).magnitude < maxSpeed)
+                    //{
+                    //    rigidbody.AddForce(Vector3.forward.normalized * charachterImpulse * movementForceScale);
+                    //}
+                    //rigidbody.velocity = Vector3.forward.normalized * maxSpeed + pushForce;
+                    finalVelocity.z += maxSpeed;
+
+                    if (Input.GetKey(KeyCode.Space))
+                    {
+                        Debug.Log("JUMP!");
+                        ForwardJumpAnimation();
+                    }
                 }
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    //if (Vector3.Project(rigidbody.velocity, -Vector3.forward).magnitude < maxSpeed)
+                    //{
+                    //    rigidbody.AddForce(-Vector3.forward.normalized * charachterImpulse * movementForceScale);
+                    //}
+                    //rigidbody.velocity = -Vector3.forward.normalized * maxSpeed + pushForce;
+                    finalVelocity.z -= maxSpeed;
+
+                    if (Input.GetKey(KeyCode.Space))
+                    {
+                        BackJumpAnimation();
+                    }
+                }
+
+                finalVelocity = finalVelocity.normalized * maxSpeed * movementForceScale;
+
+                rigidbody.velocity = finalVelocity + pushForce;
             }
-
-            finalVelocity = finalVelocity.normalized * maxSpeed * movementForceScale;
-
-            rigidbody.velocity = finalVelocity + pushForce;
         }
     }
 
@@ -331,6 +360,10 @@ public class PlayerController : Character {
                 ui.SetFocus();
                 DeactivateFocus();
             }
+        }
+        else
+        {
+            AddFocus(-focusDecreaseRate * Time.deltaTime);
         }
     }
 

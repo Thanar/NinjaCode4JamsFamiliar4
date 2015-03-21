@@ -157,7 +157,7 @@ public class EnemyAI : Character {
 
     public void MoveTowardsPlayer()
     {
-        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y);
+        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y)+rigidbody.velocity*0.01f;
     }
 
     public void MoveAlongPlayer()
@@ -179,8 +179,9 @@ public class EnemyAI : Character {
             DropWeapon();
         }
 
-        Instantiate(ragdoll, transform.position, transform.rotation);
-        
+        EnemyRagdollController erc =  (Instantiate(ragdoll, transform.position, transform.rotation) as GameObject).GetComponent<EnemyRagdollController>();
+        erc.mainRigidbody.velocity = rigidbody.velocity;
+
         GameObject.Destroy(this.gameObject);
     }
 }
