@@ -25,6 +25,16 @@ public class PlayerController : Character {
     public Transform fistsPosition;
     public Transform firstWeapon;
 
+
+    public GameObject lollipopRed;
+    public GameObject lollipopBlue;
+
+    public void DisableLollipops()
+    {
+        lollipopBlue.SetActive(false);
+        lollipopRed.SetActive(false);
+    }
+
     EnemyAI auxCharacter = null;
 
 

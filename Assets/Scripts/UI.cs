@@ -47,7 +47,12 @@ public class UI : MonoBehaviour {
         if (player.Chosing < 3)
         {
             InfoInGame.SetActive(false);
-
+            ChoseLolipop.SetActive(true);
+        }
+        else
+        {
+            InfoInGame.SetActive(true);
+            ChoseLolipop.SetActive(false);
         }
 
     }

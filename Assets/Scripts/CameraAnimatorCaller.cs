@@ -8,6 +8,9 @@ public class CameraAnimatorCaller : MonoBehaviour {
     public void FinishGoodElectionAnimation()
     {
         playerController.ICanMove = true;
+        playerController.DisableLollipops();
+
+        playerController.introGameController.ChooseYet = true;
     }
 
 

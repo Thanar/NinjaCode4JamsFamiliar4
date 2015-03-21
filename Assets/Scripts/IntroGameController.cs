@@ -25,7 +25,6 @@ public class IntroGameController : MonoBehaviour {
 
     internal void Chosen()
     {
-        Debug.Log("Chooooooooooosen");
         if(playerController.Chosing == 3)
         {
             CameraAnimator.SetTrigger("Good Election");
@@ -33,5 +32,8 @@ public class IntroGameController : MonoBehaviour {
         {
             CameraAnimator.SetTrigger("Bad Election");
         }
+
+
+
     }
 }
