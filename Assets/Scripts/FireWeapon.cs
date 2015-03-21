@@ -29,7 +29,7 @@ public class FireWeapon : Weapon {
 
             myBullet.damage = this.damage;
             myBullet.armorPenetration = this.armorPenetration;
-            myBullet.rigidbody.velocity = transform.forward.normalized * 100;
+            myBullet.rigidbody.velocity = bulletSpawnPoint.forward.normalized * 100;
 
             nextTimeReady = Time.time + cooldown;
 

@@ -16,6 +16,7 @@ public class GrenadeLauncher : FireWeapon {
 
     public override void Attack()
     {
+        Debug.Log("LAUNCH");
         if (nextTimeReady > Time.time)
         {
             return;
