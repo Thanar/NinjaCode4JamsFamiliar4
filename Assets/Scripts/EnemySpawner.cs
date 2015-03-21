@@ -6,9 +6,9 @@ public class EnemySpawner : MonoBehaviour {
     public int round=1;
     public int wave = 1;
     public int wavesPerRound = 5;
-    public float timeBetweenWaves = 20;
+    public float timeBetweenWaves = 30;
     public int enemiesCurrentRound = 10;
-    public int difficultyVariable = 10;
+    public int difficultyVariable = 5;
     public float timeNextWave=0;
 
     public GameObject[] enemies;
