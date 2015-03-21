@@ -157,7 +157,7 @@ public class EnemyAI : Character {
 
     public void MoveTowardsPlayer()
     {
-        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y);
+        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y)+rigidbody.velocity*0.01f;
     }
 
     public void MoveAlongPlayer()
