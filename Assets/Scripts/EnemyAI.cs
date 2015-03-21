@@ -67,7 +67,7 @@ public class EnemyAI : Character {
                     fistsTimeReady = Time.time + fistsCooldown;
                     player.Damage(fistsDamage,fistsArmorPenetration);
                     //player.rigidbody.AddForce((transform.forward.normalized+Vector3.up)*2,ForceMode.VelocityChange);
-                    player.Push(transform.forward.normalized * 20);
+                    player.Push(transform.forward.normalized * 5);
                 }
             }
         }
