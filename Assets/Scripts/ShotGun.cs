@@ -42,6 +42,8 @@ public class ShotGun : Weapon {
         {
             if (bulletsTotal > 0)
             {
+                reloading = true;
+                StartCoroutine(FinishReloading(reloadTime));
                 bulletsTotal -= bulletsPerCharge;
                 if (bulletsTotal < 0)
                 {

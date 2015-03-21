@@ -102,6 +102,7 @@ public class EnemyAI : Character {
         
         
         weapon.Dropped();
+        weapon.transform.position = new Vector3(weapon.transform.position.x, 0.5f, weapon.transform.position.z);
         this.weapon = null;
 
     }

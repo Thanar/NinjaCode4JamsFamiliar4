@@ -9,6 +9,7 @@ public class UI : MonoBehaviour {
     public GameObject ammoObject;
     public Text ammo;
     public GameObject reloading;
+    public Text currentRound;
 
     public GameObject ChoseLolipop;
     public GameObject InfoInGame;
@@ -16,6 +17,10 @@ public class UI : MonoBehaviour {
     public PlayerController player;
 
 
+    public void SetRound(EnemySpawner es)
+    {
+        currentRound.text = "Round: " + es.round + "Enemies On Screen: "+es.enemiesOnScreen;
+    }
 
     public void SetHealth()
     {
