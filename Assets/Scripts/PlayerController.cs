@@ -191,6 +191,10 @@ public class PlayerController : Character {
                             pushDirection = pushDirection.normalized * 30;
                             auxCharacter.Push(pushDirection);
                         }
+                        else
+                        {
+                            c..rigidbody.AddForce((c.transform.position - transform.position) * 10, ForceMode.VelocityChange);
+                        }
                     }
                 }
             }
