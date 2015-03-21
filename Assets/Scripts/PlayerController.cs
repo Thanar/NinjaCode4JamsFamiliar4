@@ -80,6 +80,8 @@ public class PlayerController : Character {
 
             if (Input.GetMouseButton(0))
             {
+
+                Debug.Log("PJ Mouse 0");
                 if (hasWeapon)
                 {
                     weapon.Attack();
