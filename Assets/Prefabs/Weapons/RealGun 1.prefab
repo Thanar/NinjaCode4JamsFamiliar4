@@ -256,14 +256,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   armorPenetration: 0
+  dropWeapon: {fileID: 0}
   nextTimeReady: 0
-  cooldown: 1
+  cooldown: .5
   reloadTime: 3
   bulletsTotal: 30
   currentBullets: 12
   bulletsPerCharge: 12
   bulletSpawnPoint: {fileID: 422820}
   bulletPrefab: {fileID: 140786, guid: 8ff93ab23c6ff6448b546056c5b365fd, type: 2}
+  reloading: 0
+  depleted: 0
 --- !u!114 &11443178
 MonoBehaviour:
   m_ObjectHideFlags: 1
