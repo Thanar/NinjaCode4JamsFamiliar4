@@ -192,6 +192,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110295424
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: punch
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: c3537b27a9e92364d89c53f3b9a184a3, type: 2}
+  m_ParentStateMachine: {fileID: 110729310}
+  m_Position: {x: 623, y: 305, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110729310
 StateMachine:
   serializedVersion: 2
@@ -204,6 +219,7 @@ StateMachine:
   - {fileID: 110235484}
   - {fileID: 110257470}
   - {fileID: 110278188}
+  - {fileID: 110295424}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
