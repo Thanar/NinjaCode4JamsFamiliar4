@@ -4,7 +4,7 @@ using System.Collections;
 public class IntroGameController : MonoBehaviour {
 
     public GameObject SpawnPoint;
-
+    public GameObject RedWoman;
 
     public PlayerController playerController;
     public Animator CameraAnimator;
@@ -13,6 +13,7 @@ public class IntroGameController : MonoBehaviour {
     {
         playerController.ICanMove = true;
         SpawnPoint.SetActive(true);
+        RedWoman.SetActive(true);
     }
 
 

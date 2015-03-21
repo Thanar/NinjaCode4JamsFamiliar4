@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        timeNextWave = Time.time + 6f;
 	}
 	
 	// Update is called once per frame
