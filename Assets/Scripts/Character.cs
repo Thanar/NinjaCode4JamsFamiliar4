@@ -19,6 +19,7 @@ public class Character : MonoBehaviour {
     public float fistsArmorPenetration = 0;
 
     protected Vector3 pushForce = new Vector3();
+    public GameObject fistAttackEffectPrefab;
 
     public void Push(Vector3 direction)
     {

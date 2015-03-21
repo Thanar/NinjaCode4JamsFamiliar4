@@ -63,6 +63,7 @@ public class EnemyAI : Character {
             {
                 if(Vector3.Distance(transform.position,player.transform.position)<fistsRange)
                 {
+                    Instantiate(fistAttackEffectPrefab,player.transform.position,Quaternion.identity);
                     //Debug.Log("FALCON PUNCH");
                     fistsTimeReady = Time.time + fistsCooldown;
                     player.Damage(fistsDamage,fistsArmorPenetration);

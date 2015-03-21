@@ -68,6 +68,7 @@ public class PlayerController : Character {
             {
                 if (fistsTimeReady < Time.time)
                 {
+                    Instantiate(fistAttackEffectPrefab, fistsPosition.position, fistsPosition.rotation);
                     foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.5f))
                     {
                         auxCharacter = c.GetComponent<EnemyAI>();
@@ -77,6 +78,7 @@ public class PlayerController : Character {
                             auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
                             //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
                             auxCharacter.Push(transform.forward.normalized * 10);
+                            
                         }
                     }
                 }

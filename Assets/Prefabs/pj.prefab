@@ -1901,6 +1901,8 @@ MonoBehaviour:
   fistsRange: 1
   fistsDamage: 5
   fistsArmorPenetration: 0
+  fistAttackEffectPrefab: {fileID: 100000, guid: 57572ea9bf8e036409d3fee8cb4338c8,
+    type: 2}
   ui: {fileID: 0}
   MaxFocus: 1
   focus: 1
