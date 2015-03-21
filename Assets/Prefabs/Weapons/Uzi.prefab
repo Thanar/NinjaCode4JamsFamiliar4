@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 438914}
   - 33: {fileID: 3338916}
-  - 65: {fileID: 6538918}
   - 23: {fileID: 2338916}
   m_Layer: 0
   m_Name: Cube
@@ -27,7 +26,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 438916}
   - 33: {fileID: 3338918}
-  - 65: {fileID: 6538920}
   - 23: {fileID: 2338918}
   m_Layer: 0
   m_Name: Cube
@@ -64,7 +62,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 438920}
   - 33: {fileID: 3338920}
-  - 65: {fileID: 6538922}
   - 23: {fileID: 2338920}
   m_Layer: 0
   m_Name: Cube
@@ -82,7 +79,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 438922}
   - 33: {fileID: 3338922}
-  - 136: {fileID: 13638924}
   - 23: {fileID: 2338922}
   m_Layer: 0
   m_Name: Cylinder
@@ -100,7 +96,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 438924}
   - 33: {fileID: 3338924}
-  - 65: {fileID: 6538924}
   - 23: {fileID: 2338924}
   m_Layer: 0
   m_Name: Cube
@@ -155,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138918}
   m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 6.0999999, y: .959999979, z: .360000014}
+  m_LocalPosition: {x: -12.51299, y: .553558469, z: -9.78683853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438920}
@@ -349,54 +344,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138924}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6538918
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138914}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &6538920
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138916}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &6538922
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138920}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &6538924
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138924}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11407778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -460,19 +407,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .233713746
   m_Center: {x: .100000001, y: .0599999987, z: 0}
---- !u!136 &13638924
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138922}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -4546,7 +4546,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 566045668}
-  ChooseYet: 0
   playerController: {fileID: 499497897}
   CameraAnimator: {fileID: 1376582617}
 --- !u!4 &272146296
@@ -12915,7 +12914,7 @@ MonoBehaviour:
   round: 1
   wave: 1
   wavesPerRound: 5
-  timeBetweenWaves: 20
+  timeBetweenWaves: 10
   enemiesCurrentRound: 20
   timeNextWave: 10
   enemies:
@@ -27249,7 +27248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 499497897}
-  sensitivity: .100000001
+  sensitivity: .00100000005
 --- !u!95 &1376582617
 Animator:
   serializedVersion: 3
