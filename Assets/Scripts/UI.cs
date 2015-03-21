@@ -37,7 +37,7 @@ public class UI : MonoBehaviour {
         ammoObject.SetActive(active);
     }
 
-    public void SetAmmo(FireWeapon w)
+    public void SetAmmo(Weapon w)
     {
         ammo.text = w.currentBullets+"|"+w.bulletsTotal;
     }
