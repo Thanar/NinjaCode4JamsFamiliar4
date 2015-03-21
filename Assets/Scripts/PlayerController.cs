@@ -68,7 +68,7 @@ public class PlayerController : Character {
             {
                 if (fistsTimeReady < Time.time)
                 {
-                    foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.1f))
+                    foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.5f))
                     {
                         auxCharacter = c.GetComponent<EnemyAI>();
                         if (auxCharacter)
@@ -208,6 +208,7 @@ public class PlayerController : Character {
             weapon.transform.localPosition = Vector3.zero;
 
             weapon.transform.localRotation = new Quaternion(0, 0, 0, 1);
+            weapon.transform.eulerAngles = new Vector3(0, -90, 0);
 
             weapon.gameObject.GetComponent<AutoRotation>().rotate = false;
 

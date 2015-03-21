@@ -12,7 +12,7 @@ public class Character : MonoBehaviour {
 
 
     public float fistsTimeReady = 0;
-    public float fistsCooldown = 2;
+    public float fistsCooldown = 1;
     public float fistsRange = 1;
 
     public float fistsDamage = 5;

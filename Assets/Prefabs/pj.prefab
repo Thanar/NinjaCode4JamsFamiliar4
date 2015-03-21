@@ -95,7 +95,7 @@ GameObject:
   - 54: {fileID: 5428234}
   m_Layer: 0
   m_Name: pj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,7 +691,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.01000023, y: 0, z: 12.6000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 410354}
@@ -1883,7 +1883,8 @@ MonoBehaviour:
   movementForceScale: 1
   fistsPosition: {fileID: 476424}
   firstWeapon: {fileID: 0}
-  specialAttackEffectPrefab: {fileID: 0}
+  specialAttackEffectPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47,
+    type: 2}
 --- !u!136 &13628234
 CapsuleCollider:
   m_ObjectHideFlags: 1
