@@ -45,7 +45,7 @@ public class Character : MonoBehaviour {
         }
 
         damage = damage * (100 / (100 + currentArmor));
-
+        
         health -= damage;
         
 

@@ -6,7 +6,7 @@ public class PlayerController : Character {
     public UI ui;
     public float MaxFocus;
     public float focus;
-    public float focusDecreaseRate = 0.1f;
+    public float focusDecreaseRate = -0.1f;
     public bool onFocus;
 
     public Weapon weapon;
@@ -195,14 +195,26 @@ public class PlayerController : Character {
     {
         if (onFocus)
         {
-            focus -= focusDecreaseRate * Time.deltaTime;
-            ui.SetFocus();
+            AddFocus(focusDecreaseRate * Time.deltaTime);
             if (focus <= 0)
             {
                 focus = 0;
+                ui.SetFocus();
                 DeactivateFocus();
             }
         }
+    }
+
+    public void AddFocus(float value)
+    {
+        focus = Mathf.Clamp(focus + value, 0f, 1f);
+        ui.SetFocus();
+    }
+
+    public void AddHealth(float value)
+    {
+        health = Mathf.Clamp(health + value, 0, 100);
+        ui.SetHealth();
     }
 
     public override void Damage(float damage, float armorPenetration = 0)
@@ -243,11 +255,6 @@ public class PlayerController : Character {
             weapon = null;
             hasWeapon = false;
         }
-    }
-
-    public void getRedDrug()
-    {
-        focus = 1;
     }
 
     public override void Die()

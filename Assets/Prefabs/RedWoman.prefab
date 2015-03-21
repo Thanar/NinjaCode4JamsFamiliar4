@@ -2165,6 +2165,8 @@ MonoBehaviour:
   finishPosition: {fileID: 0}
   items:
   - {fileID: 150940, guid: dc944b4f29ec3d944bc9e2a2b56197bb, type: 2}
+  - {fileID: 100662, guid: 0462adb152f1a6140b6b14624ddb9d7b, type: 2}
+  - {fileID: 190342, guid: 7082c8db25da655468bc2c4414252d57, type: 2}
   speed: .0500000007
   progress: 0
   dropRate: .25

@@ -4,6 +4,7 @@ using System.Collections;
 public class Heal : MonoBehaviour {
 
     public float heal = 25f;
+    public GameObject parent;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +19,8 @@ public class Heal : MonoBehaviour {
         {
 
             PlayerController p = other.GetComponent<PlayerController>();
-            p.health += heal;
-            Destroy(this.gameObject);
+            p.AddHealth(heal);
+            Destroy(parent);
 
             
         }

@@ -35,10 +35,14 @@ public class RedWoman : MonoBehaviour {
         if (ready)
         {
             AdvanceToFinishPosition();
-            if (Random.Range(0f,1f) < dropRate * Time.deltaTime)
+            if (readyToDrop)
             {
-                DropPresent();
+                if (Random.Range(0f, 1f) < dropRate * Time.deltaTime)
+                {
+                    DropPresent();
+                }    
             }
+            
 
         }
     }
@@ -73,7 +77,7 @@ public class RedWoman : MonoBehaviour {
             gO.transform.position = new Vector3(transform.position.x, 0.3f, transform.position.z);
 
 
-            Debug.Log("Drop item");
+            //Debug.Log("Drop item "+items[itemIndex]);
         }
     }
 
