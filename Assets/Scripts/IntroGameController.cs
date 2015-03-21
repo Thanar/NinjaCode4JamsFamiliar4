@@ -8,6 +8,7 @@ public class IntroGameController : MonoBehaviour {
     public bool ChooseYet = false;
 
     public PlayerController playerController;
+    public Animator CameraAnimator;
 
     void Update()
     {
@@ -21,4 +22,16 @@ public class IntroGameController : MonoBehaviour {
     }
 
 
+
+    internal void Chosen()
+    {
+        Debug.Log("Chooooooooooosen");
+        if(playerController.Chosing == 3)
+        {
+            CameraAnimator.SetTrigger("Good Election");
+        }else if (playerController.Chosing == 4)
+        {
+            CameraAnimator.SetTrigger("Bad Election");
+        }
+    }
 }

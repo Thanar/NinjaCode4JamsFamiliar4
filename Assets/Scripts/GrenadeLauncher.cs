@@ -16,7 +16,6 @@ public class GrenadeLauncher : FireWeapon {
 
     public override void Attack()
     {
-        Debug.Log("LAUNCH");
         if (nextTimeReady > Time.time)
         {
             return;
@@ -29,6 +28,6 @@ public class GrenadeLauncher : FireWeapon {
         myBullet.explosionTime = Time.time + 5;
         myBullet.rigidbody.velocity = transform.forward.normalized * 10 + Vector3.up;
 
-        nextTimeReady = Time.time + cooldown;
+        nextTimeReady = Time.time + cooldown + Random.Range(0,0.1f);
     }
 }

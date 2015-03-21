@@ -9,8 +9,10 @@ public class UI : MonoBehaviour {
     public GameObject ammoObject;
     public Image ammo;
 
-    public PlayerController player;
+    public GameObject ChoseLolipop;
+    public GameObject InfoInGame;
 
+    public PlayerController player;
 
 
 
@@ -38,4 +40,16 @@ public class UI : MonoBehaviour {
     {
         ammo.fillAmount = Mathf.Clamp(value * 0.001f, 0f, 1f);
     }
+
+
+    public void Update()
+    {
+        if (player.Chosing < 3)
+        {
+            InfoInGame.SetActive(false);
+
+        }
+
+    }
+
 }
