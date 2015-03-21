@@ -4752,7 +4752,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 280639344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .449999988, y: 1, z: 18.3400002}
+  m_LocalPosition: {x: .449999988, y: 1.10000002, z: 18.3400002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1485882766}
@@ -10241,7 +10241,7 @@ MonoBehaviour:
   armorPenetration: 0
   dropWeapon: {fileID: 0}
   nextTimeReady: 0
-  cooldown: 1
+  cooldown: .5
   reloadTime: 3
   bulletsTotal: 30
   currentBullets: 12
@@ -10373,7 +10373,7 @@ MonoBehaviour:
   ui: {fileID: 417818226}
   MaxFocus: 1
   focus: 1
-  focusDecreaseRate: .100000001
+  focusDecreaseRate: -.100000001
   onFocus: 0
   weapon: {fileID: 0}
   hasWeapon: 0
@@ -17880,7 +17880,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 839973944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.6099997, y: 1, z: .100000001}
+  m_LocalPosition: {x: -11.6099997, y: 1.10000002, z: .100000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1485882766}
@@ -36826,7 +36826,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1834226979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.8900003, y: 1, z: .0299999993}
+  m_LocalPosition: {x: 11.8900003, y: 1.10000002, z: .0299999993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1485882766}

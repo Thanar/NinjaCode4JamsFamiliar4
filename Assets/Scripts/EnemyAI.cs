@@ -131,14 +131,8 @@ public class EnemyAI : Character {
         }
         else
         {
-            if (health > 10)
-            {
                 MoveTowardsPlayer();
-            }
-            else
-            {
-                MoveAwayFromPlayer();
-            }
+            
         }
     }
 
