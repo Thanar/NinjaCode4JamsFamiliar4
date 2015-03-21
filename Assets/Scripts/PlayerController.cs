@@ -316,6 +316,7 @@ public class PlayerController : Character {
             weapon = drop;
             weapon.gameObject.GetComponent<AutoRotation>().rotate = false;
             hasWeapon = true;
+            ui.ToggleAmmo(true);
             weapon.transform.parent = firstWeapon;
             weapon.transform.localPosition = Vector3.zero;
             weapon.transform.localScale = Vector3.one;
