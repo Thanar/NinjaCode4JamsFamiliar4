@@ -12,7 +12,7 @@ GameObject:
   - 136: {fileID: 13690342}
   - 23: {fileID: 2390342}
   - 114: {fileID: 11490342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 490338}
   - 95: {fileID: 9590342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: redPill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,9 +43,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490340}
-  - 108: {fileID: 10890342}
+  - 119: {fileID: 11962420}
   m_Layer: 0
-  m_Name: Point light
+  m_Name: Projector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,8 +97,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190340}
-  m_LocalRotation: {x: -.044560913, y: -.0946448445, z: -.158074722, w: .981870234}
-  m_LocalPosition: {x: .0250000004, y: .187000006, z: -.0320000015}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: -.00999999978, y: 2.20000005, z: .0399999991}
   m_LocalScale: {x: 1.59937513, y: 1.59937561, z: 1.59937561}
   m_Children: []
   m_Father: {fileID: 490342}
@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.63000011, y: .779999971, z: 6.5}
+  m_LocalPosition: {x: .180000007, y: .5, z: -2.76099992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490340}
@@ -159,41 +159,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!108 &10890342
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190340}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
-  m_Intensity: 1.60000002
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
 --- !u!114 &11490342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,6 +172,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focus: .25
   parent: {fileID: 190342}
+--- !u!119 &11962420
+Projector:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190340}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_NearClipPlane: .800000012
+  m_FarClipPlane: 29.9300003
+  m_FieldOfView: 37.4000015
+  m_AspectRatio: 1
+  m_Orthographic: 0
+  m_OrthographicSize: 7.65999985
+  m_Material: {fileID: 2100000, guid: a9cdb98423c19412bbac43b1fb623c48, type: 2}
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!136 &13690342
 CapsuleCollider:
   m_ObjectHideFlags: 1
