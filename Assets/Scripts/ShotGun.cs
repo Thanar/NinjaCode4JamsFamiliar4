@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShotGun : FireWeapon {
+public class ShotGun : Weapon {
+
 
 	// Use this for initialization
 	void Start () {

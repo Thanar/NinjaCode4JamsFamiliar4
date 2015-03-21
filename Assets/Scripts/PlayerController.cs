@@ -100,11 +100,11 @@ public class PlayerController : Character {
                 if (hasWeapon)
                 {
                     weapon.Attack();
-                    ui.SetAmmo((FireWeapon)weapon);
-                    if (((FireWeapon)weapon).reloading)
+                    ui.SetAmmo(weapon);
+                    if ((weapon).reloading)
                     {
-                        ui.SetReloading(((FireWeapon)weapon).reloadTime);
-                        ((FireWeapon)weapon).reloading = false;
+                        ui.SetReloading((weapon).reloadTime);
+                        (weapon).reloading = false;
                     }
                 }
                 else
