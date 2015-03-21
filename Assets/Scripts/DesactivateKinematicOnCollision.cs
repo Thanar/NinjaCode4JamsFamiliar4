@@ -8,7 +8,7 @@ public class DesactivateKinematicOnCollision : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.relativeVelocity.magnitude >= 30)
+        if (collision.relativeVelocity.magnitude >= 10)
         {
             
             // Sonar crash de roto
