@@ -181,8 +181,8 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Time: 1
-  m_StartWidth: .00999999978
-  m_EndWidth: .00100000005
+  m_StartWidth: .0199999996
+  m_EndWidth: .00999999978
   m_Colors:
     m_Color[0]:
       serializedVersion: 2

@@ -37,7 +37,10 @@ public class Grenade : MonoBehaviour {
                 }
                 else
                 {
-                    c.rigidbody.velocity=((c.transform.position - transform.position).normalized * 5);
+                    if (c.rigidbody)
+                    {
+                        c.rigidbody.velocity = ((c.transform.position - transform.position).normalized * 5);
+                    }
                 }
             }
             Destroy(this.gameObject);

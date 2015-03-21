@@ -166,7 +166,7 @@ public class PlayerController : Character {
 
         finalVelocity = finalVelocity.normalized * maxSpeed*movementForceScale;
 
-        rigidbody.velocity = finalVelocity+pushForce;
+        rigidbody.velocity = finalVelocity+pushForce+rigidbody.velocity.y*Vector3.up;
 
         
 	}
