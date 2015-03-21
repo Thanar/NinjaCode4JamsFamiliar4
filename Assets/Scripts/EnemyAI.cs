@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyAI : Character {
 
+    public GameObject ragdoll;
+
     public PlayerController player;
 
     public Weapon weapon;
@@ -177,6 +179,7 @@ public class EnemyAI : Character {
             DropWeapon();
         }
 
+        Instantiate(ragdoll, transform.position, transform.rotation);
         GameObject.Destroy(this.gameObject);
     }
 }

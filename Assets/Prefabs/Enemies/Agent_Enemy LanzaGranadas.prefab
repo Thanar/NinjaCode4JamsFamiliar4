@@ -2170,6 +2170,7 @@ MonoBehaviour:
   fistsArmorPenetration: 0
   fistAttackEffectPrefab: {fileID: 100000, guid: 57572ea9bf8e036409d3fee8cb4338c8,
     type: 2}
+  ragdoll: {fileID: 145496, guid: 21fbbf40878ec4845991db8b3732dc70, type: 2}
   player: {fileID: 0}
   weapon: {fileID: 11479108}
   hasWeapon: 0
