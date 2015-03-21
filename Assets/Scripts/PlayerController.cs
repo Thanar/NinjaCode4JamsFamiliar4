@@ -272,6 +272,9 @@ public class PlayerController : Character {
             weapon = drop;
             weapon.gameObject.GetComponent<AutoRotation>().rotate = false;
             hasWeapon = true;
+
+            weapon.dropWeapon.enabled = false;
+
             weapon.transform.parent = firstWeapon;
             weapon.transform.localPosition = Vector3.zero;
             weapon.transform.localScale = Vector3.one;

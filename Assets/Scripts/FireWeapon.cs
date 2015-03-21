@@ -61,4 +61,11 @@ public class FireWeapon : Weapon {
         //return base.IsDepleted();
         return bulletsTotal <= 0;
     }
+
+    public override void Dropped()
+    {
+        base.Dropped();
+        dropWeapon.enabled = true;
+
+    }
 }

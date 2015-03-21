@@ -8,11 +8,13 @@ public class DropWeapon : MonoBehaviour {
     public void Start()
     {
         w = gameObject.GetComponent<Weapon>();
+        w.dropWeapon = this;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("triger: " + other.tag);
+        
+        //Debug.Log("triger: " + other.tag);
         if (other.tag == "Player")
         {
             

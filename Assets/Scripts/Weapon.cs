@@ -5,6 +5,7 @@ public class Weapon : MonoBehaviour {
 
     public float damage = 10;
     public float armorPenetration = 0;
+    public DropWeapon dropWeapon;
 
 	// Use this for initialization
 	void Start () {
