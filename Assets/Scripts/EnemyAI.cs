@@ -179,8 +179,9 @@ public class EnemyAI : Character {
             DropWeapon();
         }
 
-        Instantiate(ragdoll, transform.position, transform.rotation);
-        
+        EnemyRagdollController erc =  (Instantiate(ragdoll, transform.position, transform.rotation) as GameObject).GetComponent<EnemyRagdollController>();
+        erc.mainRigidbody.velocity = rigidbody.velocity;
+
         GameObject.Destroy(this.gameObject);
     }
 }
