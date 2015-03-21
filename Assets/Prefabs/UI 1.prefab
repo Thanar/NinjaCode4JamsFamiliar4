@@ -299,8 +299,8 @@ MonoBehaviour:
   ammoObject: {fileID: 138706}
   ammo: {fileID: 11462288}
   reloading: {fileID: 162286}
-  ChoseLolipop: {fileID: 0}
-  InfoInGame: {fileID: 0}
+  ChoseLolipop: {fileID: 120274}
+  InfoInGame: {fileID: 137746}
   player: {fileID: 0}
 --- !u!114 &11420272
 MonoBehaviour:
@@ -327,7 +327,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Choose one lolipop carefully
+  m_Text: 'Press D to get blue lolipop
+
+    Press A to get red lolipop
+
+
+    - Space to accept decission -'
 --- !u!114 &11438696
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -186,13 +186,13 @@ public class PlayerController : Character {
 
             if (Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("SPAAAACE");
+                //Debug.Log("SPAAAACE");
                 Chosing += 2;
             }
         }
         else if (Chosing == 3 || Chosing == 4)
         {
-            Debug.Log("CHONSEN");
+            //Debug.Log("CHONSEN");
             introGameController.Chosen();
         }
     }

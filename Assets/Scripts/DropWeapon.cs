@@ -5,7 +5,7 @@ public class DropWeapon : MonoBehaviour {
     public bool iAmDropped;
     public Weapon w;
 
-    public void Start()
+    public void Awake()
     {
         w = gameObject.GetComponent<Weapon>();
         w.dropWeapon = this;
