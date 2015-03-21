@@ -5,7 +5,7 @@ public class CameraAnimatorCaller : MonoBehaviour {
 
     public PlayerController playerController;
 
-    public float sensitivity= 0.0001f;
+    public float sensitivity= 0.001f;
 
     public void FinishGoodElectionAnimation()
     {
