@@ -65,6 +65,11 @@ public class PlayerController : Character {
             }
         }
 
+        if (!onFocus)
+        {
+            focus += focusDecreaseRate * Time.deltaTime * 0.5f;
+        }
+
         pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.05f);
 
         if (Input.GetMouseButton(0))
