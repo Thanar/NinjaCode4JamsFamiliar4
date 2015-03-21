@@ -16,6 +16,9 @@ public class FireWeapon : Weapon {
 
     public GameObject bulletPrefab;
 
+    public bool reloading = false;
+    public bool depleted = false;
+
     public override void Attack()
     {
         base.Attack();
@@ -37,8 +40,11 @@ public class FireWeapon : Weapon {
         }
         else
         {
+            
             if (bulletsTotal > 0)
             {
+                reloading = true;
+                StartCoroutine(FinishReloading(reloadTime));
                 bulletsTotal -= bulletsPerCharge;
                 if (bulletsTotal < 0)
                 {
@@ -52,8 +58,18 @@ public class FireWeapon : Weapon {
                 }
                 nextTimeReady = Time.time + reloadTime + Random.Range(0, 0.1f);
             }
+            else
+            {
+                depleted = true;
+            }
         }
 
+    }
+
+    public IEnumerator FinishReloading(float time)
+    {
+        yield return new WaitForSeconds(time);
+        reloading = false;
     }
 
     public override bool IsDepleted()

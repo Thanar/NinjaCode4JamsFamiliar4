@@ -7,7 +7,8 @@ public class UI : MonoBehaviour {
     public Image health;
     public Image focus;
     public GameObject ammoObject;
-    public Image ammo;
+    public Text ammo;
+    public GameObject reloading;
 
     public GameObject ChoseLolipop;
     public GameObject InfoInGame;
@@ -36,11 +37,23 @@ public class UI : MonoBehaviour {
         ammoObject.SetActive(active);
     }
 
-    public void SetAmmo(float value)
+    public void SetAmmo(FireWeapon w)
     {
-        ammo.fillAmount = Mathf.Clamp(value * 0.001f, 0f, 1f);
+        ammo.text = w.currentBullets+"|"+w.bulletsTotal;
     }
 
+    public void SetReloading(float time)
+    {
+        reloading.SetActive(true);
+        StartCoroutine(DeactivateReloadingDeferred(time));
+    }
+
+
+    public IEnumerator DeactivateReloadingDeferred(float time)
+    {
+        yield return new WaitForSeconds(time);
+        reloading.SetActive(false);
+    }
 
     public void Update()
     {
