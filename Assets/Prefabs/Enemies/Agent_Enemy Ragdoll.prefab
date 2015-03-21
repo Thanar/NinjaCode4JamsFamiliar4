@@ -28,7 +28,7 @@ GameObject:
   - 114: {fileID: 11445570}
   - 136: {fileID: 13645570}
   m_Layer: 0
-  m_Name: Agent_Enemy
+  m_Name: Agent_Enemy Ragdoll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

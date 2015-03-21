@@ -91,6 +91,11 @@ public class PlayerController : Character {
                 }
             }
 
+            if (Input.GetKeyDown(KeyCode.G) && hasWeapon)
+            {
+                DropActualWeapon();
+            }
+
             pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.05f);
 
             if (Input.GetMouseButton(0))
@@ -340,8 +345,11 @@ public class PlayerController : Character {
         if (hasWeapon)
         {
             weapon.Dropped();
+            weapon.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+            weapon.transform.position -= transform.forward;
             weapon = null;
             hasWeapon = false;
+            ui.ToggleAmmo(false);
         }
     }
 
