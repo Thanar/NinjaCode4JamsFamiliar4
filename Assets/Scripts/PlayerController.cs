@@ -9,7 +9,7 @@ public class PlayerController : Character {
     public UI ui;
     public float MaxFocus;
     public float focus;
-    public float focusDecreaseRate = 0.1f;
+    public float focusDecreaseRate = -0.1f;
     public bool onFocus;
 
     public Weapon weapon;
@@ -47,6 +47,8 @@ public class PlayerController : Character {
 
 	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
         ui.ToggleAmmo(false);
+        ui.SetHealth();
+        ui.SetFocus();
 	}
 
     void Update()
@@ -83,6 +85,8 @@ public class PlayerController : Character {
 
             if (Input.GetMouseButton(0))
             {
+
+                //Debug.Log("PJ Mouse 0");
                 if (hasWeapon)
                 {
                     weapon.Attack();
@@ -256,14 +260,26 @@ public class PlayerController : Character {
     {
         if (onFocus)
         {
-            focus -= focusDecreaseRate * Time.deltaTime;
-            ui.SetFocus();
+            AddFocus(focusDecreaseRate * Time.deltaTime);
             if (focus <= 0)
             {
                 focus = 0;
+                ui.SetFocus();
                 DeactivateFocus();
             }
         }
+    }
+
+    public void AddFocus(float value)
+    {
+        focus = Mathf.Clamp(focus + value, 0f, 1f);
+        ui.SetFocus();
+    }
+
+    public void AddHealth(float value)
+    {
+        health = Mathf.Clamp(health + value, 0, 100);
+        ui.SetHealth();
     }
 
     public override void Damage(float damage, float armorPenetration = 0)
@@ -280,17 +296,18 @@ public class PlayerController : Character {
         {
 
             drop.Taken();
-
+            
             weapon = drop;
-
+            weapon.gameObject.GetComponent<AutoRotation>().rotate = false;
             hasWeapon = true;
             weapon.transform.parent = firstWeapon;
             weapon.transform.localPosition = Vector3.zero;
+            weapon.transform.localScale = Vector3.one;
+            //weapon.transform.localRotation = Quaternion.identity;
+            weapon.transform.rotation = firstWeapon.transform.rotation;
+            //weapon.transform.eulerAngles = new Vector3(0, -90, 0);
 
-            weapon.transform.localRotation = new Quaternion(0, 0, 0, 1);
-            weapon.transform.eulerAngles = new Vector3(0, -90, 0);
-
-            weapon.gameObject.GetComponent<AutoRotation>().rotate = false;
+            
 
 
         }
@@ -304,11 +321,6 @@ public class PlayerController : Character {
             weapon = null;
             hasWeapon = false;
         }
-    }
-
-    public void getRedDrug()
-    {
-        focus = 1;
     }
 
     public override void Die()

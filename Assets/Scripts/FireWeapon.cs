@@ -31,7 +31,7 @@ public class FireWeapon : Weapon {
             myBullet.armorPenetration = this.armorPenetration;
             myBullet.rigidbody.velocity = bulletSpawnPoint.forward.normalized * 100;
 
-            nextTimeReady = Time.time + cooldown;
+            nextTimeReady = Time.time + cooldown + Random.Range(0, 0.1f);
 
             currentBullets--;
         }
@@ -50,7 +50,7 @@ public class FireWeapon : Weapon {
                 {
                     currentBullets = bulletsTotal;
                 }
-                nextTimeReady = Time.time + reloadTime;
+                nextTimeReady = Time.time + reloadTime + Random.Range(0, 0.1f);
             }
         }
 

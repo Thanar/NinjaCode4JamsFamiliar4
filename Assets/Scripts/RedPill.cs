@@ -3,7 +3,8 @@ using System.Collections;
 
 public class RedPill : MonoBehaviour {
 
-    public float focus = 25f;
+    public float focus = 0.25f;
+    public GameObject parent;
 
     // Use this for initialization
     void Start()
@@ -19,8 +20,8 @@ public class RedPill : MonoBehaviour {
         {
 
             PlayerController p = other.GetComponent<PlayerController>();
-            p.focus += focus;
-            Destroy(this.gameObject);
+            p.AddFocus(focus);
+            Destroy(parent);
 
 
         }

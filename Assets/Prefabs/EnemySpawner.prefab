@@ -48,6 +48,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 145496, guid: 58bc9399284cc9641bef852595306662, type: 2}
   - {fileID: 145496, guid: 04bfa0f086fa1444db78b990bcd6745a, type: 2}
+  - {fileID: 145496, guid: 8c842d13ec875d84e9c5b91be8aeed94, type: 2}
+  - {fileID: 145496, guid: b1751489bea6ea8418119fc75b359e99, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
