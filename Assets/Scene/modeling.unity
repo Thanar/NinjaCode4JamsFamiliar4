@@ -4798,7 +4798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c999efd6e5c541459eb09c92aace85d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focus: .25
+  focus: .75
   parent: {fileID: 254281374}
 --- !u!1 &1160775391
 GameObject:

@@ -84,7 +84,7 @@ public class PlayerController : Character {
 	// Use this for initialization
 	void Start () {
         ICanMove = false;
-
+        Chosing = 0;
 
 	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
         ui.ToggleAmmo(false);
@@ -190,6 +190,13 @@ public class PlayerController : Character {
                             pushDirection.y = 0;
                             pushDirection = pushDirection.normalized * 30;
                             auxCharacter.Push(pushDirection);
+                        }
+                        else
+                        {
+                            if (c.rigidbody && !c.rigidbody.isKinematic)
+                            {
+                                c.rigidbody.AddForce((c.transform.position - transform.position) * 10, ForceMode.VelocityChange);
+                            }
                         }
                     }
                 }

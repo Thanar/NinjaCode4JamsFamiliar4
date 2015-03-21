@@ -17,6 +17,8 @@ public class EnemySpawner : MonoBehaviour {
 
     public int enemiesOnScreen = 0;
 
+    public UI ui;
+
 	// Use this for initialization
 	void Start () {
         timeNextWave = Time.time + 6f;
@@ -43,6 +45,7 @@ public class EnemySpawner : MonoBehaviour {
     {
         wave = 1;
         round++;
+        ui.SetRound(this);
         enemiesCurrentRound = difficultyVariable * round;
         SpawnWave();
     }
@@ -55,12 +58,14 @@ public class EnemySpawner : MonoBehaviour {
             int spawnPointID = Random.Range(0,spawnPoints.Length);
             Instantiate(enemies[enemyID], spawnPoints[spawnPointID].position + (Vector3.right * Random.Range(-1f, 1f)) + (Vector3.forward * Random.Range(-1f, 1f)), spawnPoints[spawnPointID].rotation);
             enemiesOnScreen++;
+            ui.SetRound(this);
         }
     }
 
     public void enemyDied()
     {
         enemiesOnScreen--;
+        ui.SetRound(this);
         if (enemiesOnScreen == 0 && wave > wavesPerRound)
         {
             NextRound();
