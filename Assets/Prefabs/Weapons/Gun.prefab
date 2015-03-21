@@ -129,7 +129,9 @@ MonoBehaviour:
   armorPenetration: 0
   nextTimeReady: 0
   cooldown: 1
+  reloadTime: 3
   bulletsTotal: 30
+  currentBullets: 12
   bulletsPerCharge: 12
   bulletSpawnPoint: {fileID: 479604}
   bulletPrefab: {fileID: 140786, guid: 8ff93ab23c6ff6448b546056c5b365fd, type: 2}

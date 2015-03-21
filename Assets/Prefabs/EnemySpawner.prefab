@@ -44,14 +44,15 @@ MonoBehaviour:
   wavesPerRound: 5
   timeBetweenWaves: 20
   enemiesCurrentRound: 20
-  timeNextWave: 0
+  timeNextWave: 10
   enemies:
   - {fileID: 145496, guid: 58bc9399284cc9641bef852595306662, type: 2}
+  - {fileID: 145496, guid: 04bfa0f086fa1444db78b990bcd6745a, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  enemiesOnScreen: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -31,6 +31,8 @@ public class PlayerController : Character {
 
     public GameObject specialAttackEffectPrefab;
 
+    public GameObject focusEffect;
+
 	// Use this for initialization
 	void Start () {
 	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
@@ -43,7 +45,7 @@ public class PlayerController : Character {
         rayVector = Input.mousePosition;
         rayVector.z = 10000;
         Ray ray = Camera.main.ScreenPointToRay(rayVector);
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit,1000f, LayerMask.GetMask("Floor")))
         {
             newRotation.y = Quaternion.LookRotation(hit.point - transform.position).eulerAngles.y;
             transform.eulerAngles = newRotation;
@@ -53,7 +55,14 @@ public class PlayerController : Character {
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            ActivateFocus();
+            if (onFocus)
+            {
+                DeactivateFocus();
+            }
+            else
+            {
+                ActivateFocus();
+            }
         }
 
         pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.05f);
@@ -169,21 +178,29 @@ public class PlayerController : Character {
         Time.timeScale = 0.3f;
         movementForceScale = 1.7f;
 
+        focusEffect.SetActive(true);
+    }
+
+    public void DeactivateFocus()
+    {
+
+        focusEffect.SetActive(false);
+        onFocus = false;
+
+        Time.timeScale = 1f;
+        movementForceScale = 1f;
     }
 
     void UpdateStatus()
     {
         if (onFocus)
         {
-            focus = Mathf.Clamp(focus - (focusDecreaseRate * Time.deltaTime), 0f, MaxFocus);
+            focus -= focusDecreaseRate * Time.deltaTime;
             ui.SetFocus();
-            if (focus == 0)
+            if (focus <= 0)
             {
-                onFocus = false;
-
-
-                Time.timeScale = 1f;
-                movementForceScale = 1f;
+                focus = 0;
+                DeactivateFocus();
             }
         }
     }

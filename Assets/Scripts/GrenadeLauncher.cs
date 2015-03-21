@@ -21,7 +21,7 @@ public class GrenadeLauncher : FireWeapon {
             return;
         }
 
-        Bullet myBullet = ((GameObject)Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation)).GetComponent<Bullet>();
+        Grenade myBullet = ((GameObject)Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation)).GetComponent<Grenade>();
 
         myBullet.damage = this.damage;
         myBullet.armorPenetration = this.armorPenetration;
