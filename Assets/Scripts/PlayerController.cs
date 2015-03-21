@@ -106,6 +106,10 @@ public class PlayerController : Character {
                         ui.SetReloading(((FireWeapon)weapon).reloadTime);
                         ((FireWeapon)weapon).reloading = false;
                     }
+                    else if (((FireWeapon)weapon).depleted)
+                    {
+                        
+                    }
                 }
                 else
                 {
@@ -304,7 +308,12 @@ public class PlayerController : Character {
         ui.SetHealth();
     }
 
-
+    public void RemoveWeapon()
+    {
+        hasWeapon = false;
+        Destroy(weapon.gameObject);
+        weapon = null;
+    }
 
     public void EquipThis(Weapon drop)
     {
