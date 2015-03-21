@@ -333,7 +333,7 @@ MonoBehaviour:
   ammoObject: {fileID: 138706}
   ammo: {fileID: 11462288}
   reloading: {fileID: 162286}
-  currentRound: {fileID: 0}
+  currentRound: {fileID: 11490976}
   ChoseLolipop: {fileID: 120274}
   InfoInGame: {fileID: 137746}
   player: {fileID: 0}
@@ -1124,7 +1124,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -99.5999985, y: -26.2999992}
+  m_AnchoredPosition: {x: 0, y: -28.7999992}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
