@@ -13,6 +13,8 @@ public class CameraAnimatorCaller : MonoBehaviour {
         playerController.DisableLollipops();
 
         playerController.introGameController.ChooseYet();
+
+        this.GetComponent<Animator>().enabled = false;
     }
 
 
