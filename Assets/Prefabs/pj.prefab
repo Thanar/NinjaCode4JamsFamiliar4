@@ -1913,7 +1913,8 @@ MonoBehaviour:
   movementForceScale: 1
   fistsPosition: {fileID: 476424}
   firstWeapon: {fileID: 489486}
-  specialAttackEffectPrefab: {fileID: 0}
+  specialAttackEffectPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47,
+    type: 2}
 --- !u!136 &13628234
 CapsuleCollider:
   m_ObjectHideFlags: 1

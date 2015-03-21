@@ -91,10 +91,7 @@ public class PlayerController : Character {
             {
                 focus -= 0.2f;
                 ui.SetFocus();
-                if (specialAttackEffectPrefab != null)
-                {
                     Instantiate(specialAttackEffectPrefab, transform.position, Quaternion.identity);    
-                }
                 Vector3 pushDirection;
                 foreach (Collider c in Physics.OverlapSphere(transform.position, 5f))
                 {
