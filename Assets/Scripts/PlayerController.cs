@@ -193,7 +193,7 @@ public class PlayerController : Character {
                         }
                         else
                         {
-                            c..rigidbody.AddForce((c.transform.position - transform.position) * 10, ForceMode.VelocityChange);
+                            c.rigidbody.AddForce((c.transform.position - transform.position) * 10, ForceMode.VelocityChange);
                         }
                     }
                 }
