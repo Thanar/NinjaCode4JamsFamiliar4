@@ -276,8 +276,6 @@ GameObject:
   - 4: {fileID: 401532}
   - 95: {fileID: 9501574}
   - 114: {fileID: 11401574}
-  - 136: {fileID: 13601574}
-  - 54: {fileID: 5401574}
   m_Layer: 0
   m_Name: RedWoman
   m_TagString: Untagged
@@ -922,7 +920,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalPosition: {x: -12.8000002, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 401546}
@@ -2135,21 +2133,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158712}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5401574
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101532}
-  serializedVersion: 2
-  m_Mass: 60
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!95 &9501574
 Animator:
   serializedVersion: 3
@@ -2159,7 +2142,7 @@ Animator:
   m_GameObject: {fileID: 101532}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d5df00090ca9aba45acbbefdcdd2489f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 45e1a094c8c43144b854229f41387517, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2173,43 +2156,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 101532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad1121853bc023a4bb0d07223d69ef39, type: 3}
+  m_Script: {fileID: 11500000, guid: 3594820ab6d397640a662c759b73b53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maxhealth: 100
-  health: 100
-  armor: 0
-  charachterImpulse: 3000
-  maxSpeed: 8
-  fistsTimeReady: 0
-  fistsCooldown: 2
-  fistsRange: 1
-  fistsDamage: 5
-  fistsArmorPenetration: 0
-  ui: {fileID: 0}
-  MaxFocus: 0
-  focus: 0
-  focusDecreaseRate: .100000001
-  onFocus: 0
-  weapon: {fileID: 0}
-  hasWeapon: 0
-  movementForceScale: 1
-  fistsPosition: {fileID: 401530}
-  firstWeapon: {fileID: 0}
-  specialAttackEffectPrefab: {fileID: 0}
---- !u!136 &13601574
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101532}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .34246105
-  m_Height: 2.08751106
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  d1: 0
+  d2: 0
+  startPosition: {fileID: 0}
+  finishPosition: {fileID: 0}
+  items:
+  - {fileID: 150940, guid: dc944b4f29ec3d944bc9e2a2b56197bb, type: 2}
+  speed: .0500000007
+  progress: 0
+  dropRate: .100000001
+  ready: 0
+  minDistanceToDrop: 6
+  readyToDrop: 0
+  waitTime: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
