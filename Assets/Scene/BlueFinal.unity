@@ -1635,7 +1635,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "All your life you wait these moment. But didn't take advantage ...\n\r\nThe
     rest of your life you will live a lie, programming day and night till you fall
-    on your dirty bed , alone and abandoned."
+    on your dirty bed alone and abandoned."
 --- !u!222 &1962614727
 CanvasRenderer:
   m_ObjectHideFlags: 0
