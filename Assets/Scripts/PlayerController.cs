@@ -422,11 +422,12 @@ public class PlayerController : Character {
 
     public override void Die()
     {
-        base.Die();
-        Application.LoadLevel("GameOver");
-
+        animator.SetTrigger("Fin");
     }
-
+    public void loadGameOver()
+    {
+        Application.LoadLevel("GameOver");
+    }
     public void RemoveWeapon()
     {
         hasWeapon = false;
