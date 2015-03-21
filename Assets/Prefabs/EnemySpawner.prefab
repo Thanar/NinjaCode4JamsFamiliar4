@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &406454
 Transform:
   m_ObjectHideFlags: 1
@@ -42,7 +42,7 @@ MonoBehaviour:
   round: 1
   wave: 1
   wavesPerRound: 5
-  timeBetweenWaves: 20
+  timeBetweenWaves: 10
   enemiesCurrentRound: 20
   timeNextWave: 10
   enemies:

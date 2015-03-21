@@ -5,22 +5,15 @@ public class IntroGameController : MonoBehaviour {
 
     public GameObject SpawnPoint;
 
-    public bool ChooseYet = false;
 
     public PlayerController playerController;
     public Animator CameraAnimator;
 
-    void Update()
+    public void ChooseYet()
     {
-        if (ChooseYet)
-        {
-            playerController.ICanMove = true;
-            SpawnPoint.SetActive(true);
-        }
-
-
+        playerController.ICanMove = true;
+        SpawnPoint.SetActive(true);
     }
-
 
 
     internal void Chosen()

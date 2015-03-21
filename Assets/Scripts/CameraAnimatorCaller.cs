@@ -5,14 +5,16 @@ public class CameraAnimatorCaller : MonoBehaviour {
 
     public PlayerController playerController;
 
-    public float sensitivity= 0.1f;
+    public float sensitivity= 0.001f;
 
     public void FinishGoodElectionAnimation()
     {
         playerController.ICanMove = true;
         playerController.DisableLollipops();
 
-        playerController.introGameController.ChooseYet = true;
+        playerController.introGameController.ChooseYet();
+
+        this.GetComponent<Animator>().enabled = false;
     }
 
 

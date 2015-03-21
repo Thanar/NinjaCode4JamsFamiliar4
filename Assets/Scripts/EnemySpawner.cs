@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour {
     {
         wave = 1;
         round++;
-        enemiesCurrentRound = 10 + 10 * round;
+        enemiesCurrentRound = 10 * round;
         SpawnWave();
     }
 
