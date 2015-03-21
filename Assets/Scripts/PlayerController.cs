@@ -109,7 +109,7 @@ public class PlayerController : Character {
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.G) && hasWeapon)
+            if (Input.GetKeyDown(KeyCode.Q) && hasWeapon)
             {
                 DropActualWeapon();
             }
