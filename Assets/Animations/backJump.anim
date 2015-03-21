@@ -24019,7 +24019,7 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
   m_Events:
-  - time: 0
+  - time: .13333334
     functionName: DisableRotation
     data: 
     objectReferenceParameter: {fileID: 0}
