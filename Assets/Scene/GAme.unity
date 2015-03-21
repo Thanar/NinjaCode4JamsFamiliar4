@@ -21719,6 +21719,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 499497896}
+    - target: {fileID: 11400734, guid: 74f447731ef762d4db0c6464947e10df, type: 2}
+      propertyPath: sensitivity
+      value: 9.99999975e-05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74f447731ef762d4db0c6464947e10df, type: 2}
   m_RootGameObject: {fileID: 1621701277}
@@ -27249,6 +27253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 499497897}
+  sensitivity: 9.99999975e-05
 --- !u!95 &1376582617
 Animator:
   serializedVersion: 3
