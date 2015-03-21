@@ -31,7 +31,10 @@ public class PlayerController : Character {
     Vector3 finalVelocity = new Vector3();
 
     public bool ICanMove = false;
-    public bool Chosing = true;
+    /// <summary>
+    /// 0 - elegiendo| 1 - eligiendo ROJO | 2 - eligiendo AZUL | 3 - ROJO elegido | 4 - AZUL elegido
+    /// </summary>
+    public int Chosing = 0;
 
     public GameObject specialAttackEffectPrefab;
 
@@ -130,22 +133,47 @@ public class PlayerController : Character {
                 }
             }
         }
-        else if(Chosing)
+        else if(Chosing == 0)
         {
             if (Input.GetKey(KeyCode.A))
             {
                 animator.SetTrigger("Roja");
 
-                if (Input.GetKey(KeyCode.Space))
-                {
-                    introGameController.ChooseYet = true;
-                }
+                Chosing = 1;
             }
 
             if (Input.GetKey(KeyCode.D))
             {
                 animator.SetTrigger("Azul");
+                Chosing = 2;
             }
+        }
+        else if (Chosing == 1 || Chosing == 2)
+        {
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                animator.SetTrigger("Roja");
+
+                Chosing = 1;
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                animator.SetTrigger("Azul");
+                Chosing = 2;
+            }
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Debug.Log("SPAAAACE");
+                Chosing += 2;
+            }
+        }
+        else if (Chosing == 3 || Chosing == 4)
+        {
+            Debug.Log("CHONSEN");
+            introGameController.Chosen();
         }
     }
 
