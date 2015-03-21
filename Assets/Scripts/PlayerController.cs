@@ -57,11 +57,11 @@ public class PlayerController : Character {
 
     public void EnableRotation()
     {
-        LockRotation = false;
+        LockRotation = true;
     }
     public void DisableRotation()
     {
-        LockRotation = true;
+        LockRotation = false;
     }
 
 	// Use this for initialization

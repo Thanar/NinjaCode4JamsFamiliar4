@@ -27249,6 +27249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 499497897}
+  sensitivity: .100000001
 --- !u!95 &1376582617
 Animator:
   serializedVersion: 3
