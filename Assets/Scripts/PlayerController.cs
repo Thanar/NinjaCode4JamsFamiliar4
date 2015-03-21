@@ -193,7 +193,10 @@ public class PlayerController : Character {
                         }
                         else
                         {
-                            c.rigidbody.AddForce((c.transform.position - transform.position) * 10, ForceMode.VelocityChange);
+                            if (c.rigidbody && !c.rigidbody.isKinematic)
+                            {
+                                c.rigidbody.AddForce((c.transform.position - transform.position) * 10, ForceMode.VelocityChange);
+                            }
                         }
                     }
                 }
