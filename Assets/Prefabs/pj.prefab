@@ -2280,6 +2280,7 @@ MonoBehaviour:
   specialAttackEffectPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47,
     type: 2}
   focusEffect: {fileID: 164818}
+  LockRotation: 0
 --- !u!135 &13524024
 SphereCollider:
   m_ObjectHideFlags: 1
