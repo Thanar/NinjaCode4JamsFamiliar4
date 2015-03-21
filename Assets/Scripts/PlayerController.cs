@@ -84,7 +84,7 @@ public class PlayerController : Character {
 	// Use this for initialization
 	void Start () {
         ICanMove = false;
-
+        Chosing = 0;
 
 	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
         ui.ToggleAmmo(false);

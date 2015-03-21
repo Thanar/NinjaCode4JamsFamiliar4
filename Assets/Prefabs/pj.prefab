@@ -2276,10 +2276,11 @@ MonoBehaviour:
   lollipopRed: {fileID: 124024}
   lollipopBlue: {fileID: 124018}
   ICanMove: 0
-  Chosing: 1
+  Chosing: 0
   specialAttackEffectPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47,
     type: 2}
   focusEffect: {fileID: 164818}
+  TypeJump: 0
   LockRotation: 0
 --- !u!135 &13524024
 SphereCollider:

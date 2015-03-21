@@ -20,7 +20,7 @@ public class CameraAnimatorCaller : MonoBehaviour {
 
     public void FinishBadElectionAnimation()
     {
-
+        Application.LoadLevel(2);
     }
 
     void Update()
