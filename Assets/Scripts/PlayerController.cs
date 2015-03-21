@@ -31,6 +31,8 @@ public class PlayerController : Character {
 
     public GameObject specialAttackEffectPrefab;
 
+    public GameObject focusEffect;
+
 	// Use this for initialization
 	void Start () {
 	    //CUANDO SE PONGAN LAS ARMAS QUITAR ESTA LINEA
@@ -169,21 +171,29 @@ public class PlayerController : Character {
         Time.timeScale = 0.3f;
         movementForceScale = 1.7f;
 
+        focusEffect.SetActive(true);
+    }
+
+    public void DeactivateFocus()
+    {
+
+        focusEffect.SetActive(false);
+        onFocus = false;
+
+        Time.timeScale = 1f;
+        movementForceScale = 1f;
     }
 
     void UpdateStatus()
     {
         if (onFocus)
         {
-            focus = Mathf.Clamp(focus - (focusDecreaseRate * Time.deltaTime), 0f, MaxFocus);
+            focus -= focusDecreaseRate * Time.deltaTime;
             ui.SetFocus();
-            if (focus == 0)
+            if (focus <= 0)
             {
-                onFocus = false;
-
-
-                Time.timeScale = 1f;
-                movementForceScale = 1f;
+                focus = 0;
+                DeactivateFocus();
             }
         }
     }
