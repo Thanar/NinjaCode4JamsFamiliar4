@@ -1897,7 +1897,7 @@ MonoBehaviour:
   charachterImpulse: 3000
   maxSpeed: 8
   fistsTimeReady: 0
-  fistsCooldown: 2
+  fistsCooldown: .5
   fistsRange: 1
   fistsDamage: 5
   fistsArmorPenetration: 0
