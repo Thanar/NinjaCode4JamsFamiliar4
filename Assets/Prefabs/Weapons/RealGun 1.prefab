@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &122820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 422820}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &150938
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,9 +41,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 450940}
   - 114: {fileID: 11443178}
-  - 114: {fileID: 11418858}
   - 114: {fileID: 11418860}
   - 135: {fileID: 13518860}
+  - 114: {fileID: 11422820}
   m_Layer: 0
   m_Name: RealGun 1
   m_TagString: Untagged
@@ -70,6 +85,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &422820
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .296999991, y: .0670000017, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 450940}
+  m_RootOrder: 3
 --- !u!4 &450938
 Transform:
   m_ObjectHideFlags: 1
@@ -89,12 +116,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150940}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: -.707106829}
-  m_LocalPosition: {x: .259000003, y: .372999996, z: 1.40100002}
+  m_LocalPosition: {x: -1.3316052, y: 16.3549366, z: -7.46677208}
   m_LocalScale: {x: .833940744, y: 1.00053108, z: 1.19868302}
   m_Children:
   - {fileID: 450938}
   - {fileID: 450942}
   - {fileID: 450944}
+  - {fileID: 422820}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &450942
@@ -202,19 +230,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150944}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11418858
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d28d3067981c3d419a919746dff4072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  armorPenetration: 0
 --- !u!114 &11418860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,6 +243,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iAmDropped: 1
   w: {fileID: 0}
+--- !u!114 &11422820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42bf3057f2bdd54cbd7ee55db71eed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  armorPenetration: 0
+  nextTimeReady: 0
+  cooldown: 1
+  reloadTime: 3
+  bulletsTotal: 30
+  currentBullets: 12
+  bulletsPerCharge: 12
+  bulletSpawnPoint: {fileID: 422820}
+  bulletPrefab: {fileID: 140786, guid: 8ff93ab23c6ff6448b546056c5b365fd, type: 2}
 --- !u!114 &11443178
 MonoBehaviour:
   m_ObjectHideFlags: 1

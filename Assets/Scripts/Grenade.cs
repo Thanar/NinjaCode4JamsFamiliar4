@@ -33,7 +33,11 @@ public class Grenade : MonoBehaviour {
                 {
                     auxCharacter.Damage(damage, armorPenetration);
                     //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
-                    auxCharacter.Push((auxCharacter.transform.position - transform.position).normalized * 50);
+                    auxCharacter.Push((auxCharacter.transform.position - transform.position).normalized * 5);
+                }
+                else
+                {
+                    c.rigidbody.velocity=((c.transform.position - transform.position).normalized * 5);
                 }
             }
             Destroy(this.gameObject);

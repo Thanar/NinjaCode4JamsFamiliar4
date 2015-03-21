@@ -93,8 +93,8 @@ public class EnemyAI : Character {
     {
 
         hasWeapon = false;
-        weapon.rigidbody.isKinematic = false;
-        weapon.collider.enabled = true;
+        //weapon.rigidbody.isKinematic = false;
+        //weapon.collider.enabled = true;
         //weapon.transform.position = weaponTransform.position;
         //weapon.transform.rotation = weaponTransform.rotation;
         weapon.transform.parent = null;

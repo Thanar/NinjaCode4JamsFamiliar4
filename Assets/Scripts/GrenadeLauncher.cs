@@ -25,6 +25,7 @@ public class GrenadeLauncher : FireWeapon {
 
         myBullet.damage = this.damage;
         myBullet.armorPenetration = this.armorPenetration;
+        myBullet.explosionTime = Time.time + 5;
         myBullet.rigidbody.velocity = transform.forward.normalized * 10 + Vector3.up;
 
         nextTimeReady = Time.time + cooldown;
