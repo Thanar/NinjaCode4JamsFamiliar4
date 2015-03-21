@@ -30,4 +30,9 @@ public class Weapon : MonoBehaviour {
     {
 
     }
+
+    public virtual bool IsDepleted()
+    {
+        return false;
+    }
 }

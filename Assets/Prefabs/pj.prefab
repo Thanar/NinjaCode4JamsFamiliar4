@@ -1897,10 +1897,12 @@ MonoBehaviour:
   charachterImpulse: 3000
   maxSpeed: 8
   fistsTimeReady: 0
-  fistsCooldown: 2
+  fistsCooldown: .5
   fistsRange: 1
   fistsDamage: 5
   fistsArmorPenetration: 0
+  fistAttackEffectPrefab: {fileID: 100000, guid: 57572ea9bf8e036409d3fee8cb4338c8,
+    type: 2}
   ui: {fileID: 0}
   MaxFocus: 1
   focus: 1
@@ -1911,7 +1913,8 @@ MonoBehaviour:
   movementForceScale: 1
   fistsPosition: {fileID: 476424}
   firstWeapon: {fileID: 489486}
-  specialAttackEffectPrefab: {fileID: 0}
+  specialAttackEffectPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47,
+    type: 2}
 --- !u!136 &13628234
 CapsuleCollider:
   m_ObjectHideFlags: 1

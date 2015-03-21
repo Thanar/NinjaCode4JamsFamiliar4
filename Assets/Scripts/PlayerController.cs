@@ -73,10 +73,12 @@ public class PlayerController : Character {
                         auxCharacter = c.GetComponent<EnemyAI>();
                         if (auxCharacter)
                         {
+                            Instantiate(fistAttackEffectPrefab, fistsPosition.position, fistsPosition.rotation);
                             fistsTimeReady = Time.time + fistsCooldown;
                             auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
                             //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
-                            auxCharacter.Push(transform.forward.normalized * 50);
+                            auxCharacter.Push(transform.forward.normalized * 10);
+                            
                         }
                     }
                 }
@@ -89,11 +91,8 @@ public class PlayerController : Character {
             {
                 focus -= 0.2f;
                 ui.SetFocus();
-                if (specialAttackEffectPrefab != null)
-                {
                     Instantiate(specialAttackEffectPrefab, transform.position, Quaternion.identity);    
-                }
-                
+                Vector3 pushDirection;
                 foreach (Collider c in Physics.OverlapSphere(transform.position, 5f))
                 {
                     auxCharacter = c.GetComponent<EnemyAI>();
@@ -101,7 +100,10 @@ public class PlayerController : Character {
                     {
                         auxCharacter.Damage(fistsDamage * 5, fistsArmorPenetration * 2);
                         //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
-                        auxCharacter.Push((auxCharacter.transform.position - transform.position).normalized * 50);
+                        pushDirection = (auxCharacter.transform.position - transform.position);
+                        pushDirection.y = 0;
+                        pushDirection = pushDirection.normalized * 30;
+                        auxCharacter.Push(pushDirection);
                     }
                 }
             }
@@ -221,6 +223,8 @@ public class PlayerController : Character {
         if (hasWeapon)
         {
             weapon.Dropped();
+            weapon = null;
+            hasWeapon = false;
         }
     }
 
