@@ -26,7 +26,7 @@ public class Grenade : MonoBehaviour {
         {
             Character auxCharacter;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            foreach (Collider c in Physics.OverlapSphere(transform.position, 5f))
+            foreach (Collider c in Physics.OverlapSphere(transform.position, 2.5f))
             {
                 auxCharacter = c.GetComponent<Character>();
                 if (auxCharacter)
@@ -37,9 +37,9 @@ public class Grenade : MonoBehaviour {
                 }
                 else
                 {
-                    if (c.rigidbody)
+                    if (c.rigidbody && !c.rigidbody.isKinematic)
                     {
-                        c.rigidbody.velocity = ((c.transform.position - transform.position).normalized * 5);
+                        c.rigidbody.velocity = ((c.transform.position - transform.position).normalized * 10);
                     }
                 }
             }
