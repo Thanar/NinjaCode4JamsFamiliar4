@@ -361,6 +361,10 @@ public class PlayerController : Character {
                 DeactivateFocus();
             }
         }
+        else
+        {
+            AddFocus(-focusDecreaseRate * Time.deltaTime);
+        }
     }
 
     public void AddFocus(float value)
