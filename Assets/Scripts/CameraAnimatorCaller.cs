@@ -12,7 +12,7 @@ public class CameraAnimatorCaller : MonoBehaviour {
         playerController.ICanMove = true;
         playerController.DisableLollipops();
 
-        playerController.introGameController.ChooseYet = true;
+        playerController.introGameController.ChooseYet();
     }
 
 
