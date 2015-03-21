@@ -26,7 +26,7 @@ public class Grenade : MonoBehaviour {
         {
             Character auxCharacter;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            foreach (Collider c in Physics.OverlapSphere(transform.position, 5f))
+            foreach (Collider c in Physics.OverlapSphere(transform.position, 2.5f))
             {
                 auxCharacter = c.GetComponent<Character>();
                 if (auxCharacter)
