@@ -374,7 +374,7 @@ MonoBehaviour:
   dropWeapon: {fileID: 0}
   nextTimeReady: 0
   cooldown: .100000001
-  reloadTime: 3
+  reloadTime: 1.5
   bulletsTotal: 120
   currentBullets: 30
   bulletsPerCharge: 30
