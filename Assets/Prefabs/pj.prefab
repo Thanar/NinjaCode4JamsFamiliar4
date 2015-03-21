@@ -1931,7 +1931,7 @@ TrailRenderer:
   m_SortingOrder: 0
   m_Time: .300000012
   m_StartWidth: 1
-  m_EndWidth: 1
+  m_EndWidth: .00999999978
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
@@ -1948,7 +1948,7 @@ TrailRenderer:
     m_Color[4]:
       serializedVersion: 2
       rgba: 16777215
-  m_MinVertexDistance: .100000001
+  m_MinVertexDistance: .00999999978
   m_Autodestruct: 0
 --- !u!114 &11476424
 MonoBehaviour:

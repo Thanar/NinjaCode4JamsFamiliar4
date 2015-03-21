@@ -45,8 +45,10 @@ public class PlayerController : Character {
         rayVector = Input.mousePosition;
         rayVector.z = 10000;
         Ray ray = Camera.main.ScreenPointToRay(rayVector);
-        if (Physics.Raycast(ray, out hit,LayerMask.NameToLayer("Floor")))
+        Debug.DrawRay(ray.origin, ray.direction*100f);
+        if (Physics.Raycast(ray, out hit,1000f, LayerMask.GetMask("Floor")))
         {
+            Debug.Log(hit.point);
             newRotation.y = Quaternion.LookRotation(hit.point - transform.position).eulerAngles.y;
             transform.eulerAngles = newRotation;
         }
