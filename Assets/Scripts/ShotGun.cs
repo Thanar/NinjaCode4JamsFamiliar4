@@ -16,7 +16,7 @@ public class ShotGun : Weapon {
 
     public override void Attack()
     {
-        base.Attack();
+        //base.Attack();
         if (nextTimeReady > Time.time)
         {
             return;
@@ -31,7 +31,7 @@ public class ShotGun : Weapon {
 
                 myBullet.damage = this.damage;
                 myBullet.armorPenetration = this.armorPenetration;
-                myBullet.rigidbody.velocity = (bulletSpawnPoint.forward + bulletSpawnPoint.right * Random.Range(-0.1f, 0.1f) + bulletSpawnPoint.up * Random.Range(-0.2f, 0.2f)).normalized * 100;
+                myBullet.rigidbody.velocity = (bulletSpawnPoint.forward + bulletSpawnPoint.right * Random.Range(-0.1f, 0.1f) ).normalized * 100;
             }
 
                 nextTimeReady = Time.time + cooldown;
