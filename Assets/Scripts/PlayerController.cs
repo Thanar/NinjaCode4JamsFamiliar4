@@ -101,6 +101,10 @@ public class PlayerController : Character {
                 {
                     weapon.Attack();
                     ui.SetAmmo(weapon);
+                    if (weapon.depleted)
+                    {
+                        RemoveWeapon();
+                    }else
                     if ((weapon).reloading)
                     {
                         ui.SetReloading((weapon).reloadTime);
@@ -345,6 +349,13 @@ public class PlayerController : Character {
         base.Die();
         Application.LoadLevel("GameOver");
 
+    }
+
+    public void RemoveWeapon()
+    {
+        hasWeapon = false;
+        Destroy(weapon.gameObject);
+        weapon = null;
     }
 
 }
