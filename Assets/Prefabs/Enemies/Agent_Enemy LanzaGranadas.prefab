@@ -2131,7 +2131,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!95 &9545570
 Animator:
   serializedVersion: 3
@@ -2214,6 +2214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   armorPenetration: 0
+  dropWeapon: {fileID: 0}
   nextTimeReady: 0
   cooldown: 2
   reloadTime: 10
@@ -2222,6 +2223,8 @@ MonoBehaviour:
   bulletsPerCharge: 10000
   bulletSpawnPoint: {fileID: 479112}
   bulletPrefab: {fileID: 176788, guid: dfbe284de56d70f4ab315a4aaac27584, type: 2}
+  reloading: 0
+  depleted: 0
 --- !u!135 &13579104
 SphereCollider:
   m_ObjectHideFlags: 1
