@@ -735,7 +735,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145494}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: -.707106829}
   m_LocalPosition: {x: 0, y: 0, z: .616000175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -749,7 +749,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.43508816, y: -1.36223149, z: -1.00840855}
+  m_LocalPosition: {x: -.688678443, y: 2.52276373, z: -6.21040249}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 445552}
@@ -1266,9 +1266,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179108}
-  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .833940744, y: 1.00053108, z: 1.19868302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479110}
   - {fileID: 479106}
@@ -2158,8 +2158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maxhealth: 100
-  health: 100
+  Maxhealth: 10
+  health: 10
   armor: 0
   charachterImpulse: 2800
   maxSpeed: 8
@@ -2214,6 +2214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   armorPenetration: 0
+  dropWeapon: {fileID: 0}
   nextTimeReady: 0
   cooldown: 2
   reloadTime: 10
@@ -2222,6 +2223,8 @@ MonoBehaviour:
   bulletsPerCharge: 10000
   bulletSpawnPoint: {fileID: 479112}
   bulletPrefab: {fileID: 176788, guid: dfbe284de56d70f4ab315a4aaac27584, type: 2}
+  reloading: 0
+  depleted: 0
 --- !u!135 &13579104
 SphereCollider:
   m_ObjectHideFlags: 1

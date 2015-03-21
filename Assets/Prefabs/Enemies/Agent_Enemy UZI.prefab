@@ -2323,8 +2323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988f7a0b3b6b78d4cb4b2a97926ec677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maxhealth: 100
-  health: 100
+  Maxhealth: 10
+  health: 10
   armor: 0
   charachterImpulse: 2800
   maxSpeed: 8
@@ -2366,6 +2366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   armorPenetration: 0
+  dropWeapon: {fileID: 0}
   nextTimeReady: 0
   cooldown: .100000001
   reloadTime: 3
@@ -2374,6 +2375,8 @@ MonoBehaviour:
   bulletsPerCharge: 30
   bulletSpawnPoint: {fileID: 453162}
   bulletPrefab: {fileID: 140786, guid: 8ff93ab23c6ff6448b546056c5b365fd, type: 2}
+  reloading: 0
+  depleted: 0
 --- !u!136 &13645570
 CapsuleCollider:
   m_ObjectHideFlags: 1
