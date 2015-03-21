@@ -490,27 +490,27 @@ public class PlayerController : Character {
 
     public void ForwardJumpAnimation()
     {
-
+        
         // W + Space
-
+        Debug.Log(gameObject.transform.rotation.eulerAngles.y);
         // Adelante
-        if (gameObject.transform.rotation.y >= (360 - 45) && gameObject.transform.rotation.y <= 45)
+        if (gameObject.transform.rotation.eulerAngles.y >= (360 - 45) && gameObject.transform.rotation.eulerAngles.y <= 45)
         {
-            
+
             animator.SetTrigger("ForwardJump");
         }
             // Derecha
-        else if (gameObject.transform.rotation.y >= 45 && gameObject.transform.rotation.y <= 135)
+        else if (gameObject.transform.rotation.eulerAngles.y >= 45 && gameObject.transform.rotation.eulerAngles.y <= 135)
         {
             animator.SetTrigger("RightJump");
         }
             // Atras
-        else if (gameObject.transform.rotation.y >= 135 && gameObject.transform.rotation.y <= (135 + 45))
+        else if (gameObject.transform.rotation.eulerAngles.y >= 135 && gameObject.transform.rotation.eulerAngles.y <= (135 + 45))
         {
             animator.SetTrigger("BackJump");
         }
             // Izquierda
-        else if (gameObject.transform.rotation.y >= (135 + 45) && gameObject.transform.rotation.y <= (360 - 45))
+        else if (gameObject.transform.rotation.eulerAngles.y >= (135 + 45) && gameObject.transform.rotation.eulerAngles.y <= (360 - 45))
         {
             animator.SetTrigger("LeftJump");
         }

@@ -180,6 +180,7 @@ public class EnemyAI : Character {
         }
 
         Instantiate(ragdoll, transform.position, transform.rotation);
+        
         GameObject.Destroy(this.gameObject);
     }
 }
