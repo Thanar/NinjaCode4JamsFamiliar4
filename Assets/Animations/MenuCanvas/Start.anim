@@ -259,4 +259,11 @@ AnimationClip:
     classID: 114
     script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_EulerEditorCurves: []
-  m_Events: []
+  m_Events:
+  - time: .0666666701
+    functionName: play
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
