@@ -1600,7 +1600,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '#######'
+  m_Text: 0
 --- !u!222 &308471860
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3209,6 +3209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c529552b51a868347aecc928c32e6dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GJManager: {fileID: 0}
   newScoreText: {fileID: 948799797}
   player1: {fileID: 1704107779}
   rounds1: {fileID: 871266055}
@@ -3223,6 +3224,7 @@ MonoBehaviour:
   yourRounds: {fileID: 837569389}
   yourKills: {fileID: 210147352}
   newScore: 0
+  verified: 0
 --- !u!1 &1780203585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,7 +3284,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '######'
+  m_Text: 0
 --- !u!222 &1780203588
 CanvasRenderer:
   m_ObjectHideFlags: 0
