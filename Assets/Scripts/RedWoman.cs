@@ -45,7 +45,7 @@ public class RedWoman : MonoBehaviour {
                 if (Random.Range(0f, 1f) < dropRate * Time.deltaTime)
                 {
                     DropPresent();
-                    int i = Random.Range(0, 1);
+                    int i = Random.Range(0, sonidos.Length);
                     AudioSource j = sonidos[i];
                     j.Play();
                     
