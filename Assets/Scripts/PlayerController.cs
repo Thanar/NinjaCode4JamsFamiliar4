@@ -122,6 +122,14 @@ public class PlayerController : Character {
 
         if (ICanMove)
         {
+
+            if (health <= 0)
+            {
+                ICanMove = false;
+                return;
+            }
+
+
             // Si no está bloqueada la rotación
             if (LockRotation == false)
             {
@@ -282,6 +290,13 @@ public class PlayerController : Character {
     {
         if (ICanMove)
         {
+
+            if (health <= 0)
+            {
+                ICanMove = false;
+                return;
+            }
+
             if (!LockRotation) 
             {
 
