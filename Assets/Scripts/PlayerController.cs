@@ -168,6 +168,8 @@ public class PlayerController : Character {
 
                             }
                         }
+
+                        animator.SetTrigger("Punch");
                     }
                 }
 
@@ -266,6 +268,8 @@ public class PlayerController : Character {
 
                     //rigidbody.velocity = -Vector3.right.normalized * maxSpeed + pushForce;
                     finalVelocity.x -= maxSpeed;
+                    animator.SetTrigger("Moving");
+                    
 
                     if (Input.GetKey(KeyCode.Space))
                     {
@@ -282,6 +286,9 @@ public class PlayerController : Character {
                     //rigidbody.velocity = Vector3.right.normalized * maxSpeed + pushForce;
                     finalVelocity.x += maxSpeed;
 
+                    animator.SetTrigger("Moving");
+
+
                     if (Input.GetKey(KeyCode.Space))
                     {
                         RightJumpAnimation();
@@ -296,6 +303,9 @@ public class PlayerController : Character {
                     //}
                     //rigidbody.velocity = Vector3.forward.normalized * maxSpeed + pushForce;
                     finalVelocity.z += maxSpeed;
+
+                    animator.SetTrigger("Moving");
+
 
                     if (Input.GetKey(KeyCode.Space))
                     {
@@ -313,10 +323,18 @@ public class PlayerController : Character {
                     //rigidbody.velocity = -Vector3.forward.normalized * maxSpeed + pushForce;
                     finalVelocity.z -= maxSpeed;
 
+                    animator.SetTrigger("Moving");
+
+
                     if (Input.GetKey(KeyCode.Space))
                     {
                         BackJumpAnimation();
                     }
+                }
+
+                if (finalVelocity == Vector3.zero)
+                {
+                    animator.SetTrigger("Idle");
                 }
 
                 finalVelocity = finalVelocity.normalized * maxSpeed * movementForceScale;
@@ -402,9 +420,10 @@ public class PlayerController : Character {
             //weapon.transform.localRotation = Quaternion.identity;
             weapon.transform.rotation = firstWeapon.transform.rotation;
             //weapon.transform.eulerAngles = new Vector3(0, -90, 0);
-
+            weapon.laserSightActivate = true;
             
 
+            animator.SetTrigger("Weapon");
 
         }
     }
@@ -416,9 +435,12 @@ public class PlayerController : Character {
             weapon.Dropped();
             weapon.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
             weapon.transform.position -= transform.forward;
+            weapon.laserSightActivate = false;
             weapon = null;
             hasWeapon = false;
             ui.ToggleAmmo(false);
+
+            animator.SetTrigger("NoWeapon");
         }
     }
 
@@ -431,7 +453,7 @@ public class PlayerController : Character {
     public void flai()
     {
         Time.timeScale = 1f;
-        rigidbody.AddForce(Vector3.up * 10,ForceMode.VelocityChange);
+        rigidbody.AddForce(Vector3.up * 100,ForceMode.VelocityChange);
     }
 
     public void loadGameOver()
@@ -441,6 +463,7 @@ public class PlayerController : Character {
     public void RemoveWeapon()
     {
         hasWeapon = false;
+        weapon.laserSightActivate = false;
         Destroy(weapon.gameObject);
         weapon = null;
     }

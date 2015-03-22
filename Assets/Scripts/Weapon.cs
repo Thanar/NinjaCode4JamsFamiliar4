@@ -24,6 +24,41 @@ public class Weapon : MonoBehaviour {
     public bool reloading = false;
     public bool depleted = false;
 
+    public LineRenderer laserSight;
+    public bool laserSightActivate = false;
+
+    public virtual void Start()
+    {
+        laserSightActivate = false;
+    }
+
+    public virtual void Update()
+    {
+        if (laserSightActivate)
+        {
+            RaycastHit hit;
+            Ray ray = new Ray(bulletSpawnPoint.position, bulletSpawnPoint.forward);
+            if (Physics.Raycast(ray, out hit))
+            {
+
+                laserSight.SetPosition(0, bulletSpawnPoint.position);
+                laserSight.SetPosition(1, hit.point);
+            }
+            else
+            {
+
+                laserSight.SetPosition(0, bulletSpawnPoint.position);
+                laserSight.SetPosition(1, bulletSpawnPoint.position+bulletSpawnPoint.forward*1000);
+            }
+        }
+        else
+        {
+            laserSight.SetPosition(0, Vector3.zero);
+            laserSight.SetPosition(1, Vector3.zero);
+        }
+
+    }
+
     public virtual void Attack()
     {
         if (nextTimeReady > Time.time)
