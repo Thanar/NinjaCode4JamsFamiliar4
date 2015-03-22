@@ -377,7 +377,6 @@ GameObject:
   - 33: {fileID: 16402633}
   - 23: {fileID: 16402632}
   - 54: {fileID: 16402631}
-  - 114: {fileID: 16402630}
   - 65: {fileID: 16402629}
   m_Layer: 0
   m_Name: Quad
@@ -411,19 +410,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &16402630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483156, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 16402627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &16402631
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -789,7 +775,6 @@ GameObject:
   - 33: {fileID: 43394400}
   - 23: {fileID: 43394399}
   - 54: {fileID: 43394398}
-  - 114: {fileID: 43394397}
   - 65: {fileID: 43394396}
   m_Layer: 0
   m_Name: Quad
@@ -823,19 +808,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &43394397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483172, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43394394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &43394398
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2527,7 +2499,6 @@ GameObject:
   - 33: {fileID: 137690902}
   - 23: {fileID: 137690901}
   - 54: {fileID: 137690900}
-  - 114: {fileID: 137690899}
   - 65: {fileID: 137690898}
   m_Layer: 0
   m_Name: Quad
@@ -2561,19 +2532,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &137690899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483146, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 137690896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &137690900
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4215,7 +4173,6 @@ GameObject:
   - 33: {fileID: 270238325}
   - 23: {fileID: 270238324}
   - 54: {fileID: 270238323}
-  - 114: {fileID: 270238322}
   - 65: {fileID: 270238321}
   m_Layer: 0
   m_Name: Quad
@@ -4249,19 +4206,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &270238322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483192, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 270238319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &270238323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5291,7 +5235,6 @@ GameObject:
   - 33: {fileID: 299963762}
   - 23: {fileID: 299963761}
   - 54: {fileID: 299963760}
-  - 114: {fileID: 299963759}
   - 65: {fileID: 299963758}
   m_Layer: 0
   m_Name: Quad
@@ -5325,19 +5268,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &299963759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483174, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 299963756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &299963760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6364,6 +6294,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 348429446}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &353973524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100144, guid: 60f36023f0254824d8df88d6af1e3e17, type: 2}
+  m_PrefabInternal: {fileID: 882273519}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 353973525}
+  - 82: {fileID: 353973526}
+  m_Layer: 0
+  m_Name: sonido2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &353973525
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400144, guid: 60f36023f0254824d8df88d6af1e3e17, type: 2}
+  m_PrefabInternal: {fileID: 882273519}
+  m_GameObject: {fileID: 353973524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1727139383}
+  m_RootOrder: 3
+--- !u!82 &353973526
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200144, guid: 60f36023f0254824d8df88d6af1e3e17,
+    type: 2}
+  m_PrefabInternal: {fileID: 882273519}
+  m_GameObject: {fileID: 353973524}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: db4e761aa50629e4d924b3e87d6866f1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: .409999996
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &355506348
 GameObject:
   m_ObjectHideFlags: 0
@@ -7898,7 +7915,6 @@ GameObject:
   - 33: {fileID: 393191275}
   - 23: {fileID: 393191274}
   - 54: {fileID: 393191273}
-  - 114: {fileID: 393191272}
   - 65: {fileID: 393191271}
   m_Layer: 0
   m_Name: Quad
@@ -7932,19 +7948,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &393191272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483164, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 393191269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &393191273
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8108,7 +8111,6 @@ GameObject:
   - 33: {fileID: 406994848}
   - 23: {fileID: 406994847}
   - 54: {fileID: 406994846}
-  - 114: {fileID: 406994845}
   - 65: {fileID: 406994844}
   m_Layer: 0
   m_Name: Quad
@@ -8142,19 +8144,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &406994845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483148, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 406994842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &406994846
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8404,7 +8393,6 @@ GameObject:
   - 33: {fileID: 419494388}
   - 23: {fileID: 419494387}
   - 54: {fileID: 419494386}
-  - 114: {fileID: 419494385}
   - 65: {fileID: 419494384}
   m_Layer: 0
   m_Name: Quad
@@ -8438,19 +8426,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &419494385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483162, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 419494382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &419494386
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8507,7 +8482,6 @@ GameObject:
   - 33: {fileID: 421472088}
   - 23: {fileID: 421472087}
   - 54: {fileID: 421472086}
-  - 114: {fileID: 421472085}
   - 65: {fileID: 421472084}
   m_Layer: 0
   m_Name: Quad
@@ -8541,19 +8515,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &421472085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483134, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 421472082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &421472086
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10463,7 +10424,6 @@ GameObject:
   - 33: {fileID: 513866659}
   - 23: {fileID: 513866658}
   - 54: {fileID: 513866657}
-  - 114: {fileID: 513866656}
   - 65: {fileID: 513866655}
   m_Layer: 0
   m_Name: Quad
@@ -10497,19 +10457,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &513866656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483158, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 513866653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &513866657
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11550,7 +11497,6 @@ GameObject:
   - 33: {fileID: 545678433}
   - 23: {fileID: 545678432}
   - 54: {fileID: 545678431}
-  - 114: {fileID: 545678430}
   - 65: {fileID: 545678429}
   m_Layer: 0
   m_Name: Quad
@@ -11584,19 +11530,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &545678430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483144, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 545678427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &545678431
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12693,7 +12626,6 @@ GameObject:
   - 33: {fileID: 637180396}
   - 23: {fileID: 637180395}
   - 54: {fileID: 637180394}
-  - 114: {fileID: 637180393}
   - 65: {fileID: 637180392}
   m_Layer: 0
   m_Name: Quad
@@ -12727,19 +12659,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &637180393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483182, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 637180390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &637180394
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13395,7 +13314,6 @@ GameObject:
   - 33: {fileID: 691695840}
   - 23: {fileID: 691695839}
   - 54: {fileID: 691695838}
-  - 114: {fileID: 691695837}
   - 65: {fileID: 691695836}
   m_Layer: 0
   m_Name: Quad
@@ -13429,19 +13347,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &691695837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483152, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 691695834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &691695838
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14323,7 +14228,6 @@ GameObject:
   - 33: {fileID: 711862390}
   - 23: {fileID: 711862389}
   - 54: {fileID: 711862388}
-  - 114: {fileID: 711862387}
   - 65: {fileID: 711862386}
   m_Layer: 0
   m_Name: Quad
@@ -14357,19 +14261,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &711862387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483170, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 711862384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &711862388
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18807,7 +18698,6 @@ GameObject:
   - 33: {fileID: 994676773}
   - 23: {fileID: 994676772}
   - 54: {fileID: 994676771}
-  - 114: {fileID: 994676770}
   - 65: {fileID: 994676769}
   m_Layer: 0
   m_Name: Quad
@@ -18841,19 +18731,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &994676770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483136, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 994676767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &994676771
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19517,7 +19394,6 @@ GameObject:
   - 33: {fileID: 1035996387}
   - 23: {fileID: 1035996386}
   - 54: {fileID: 1035996385}
-  - 114: {fileID: 1035996384}
   - 65: {fileID: 1035996383}
   m_Layer: 0
   m_Name: Quad
@@ -19551,19 +19427,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1035996384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483154, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1035996381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1035996385
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20192,7 +20055,6 @@ GameObject:
   - 33: {fileID: 1079283287}
   - 23: {fileID: 1079283286}
   - 54: {fileID: 1079283285}
-  - 114: {fileID: 1079283284}
   - 65: {fileID: 1079283283}
   m_Layer: 0
   m_Name: Quad
@@ -20226,19 +20088,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1079283284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483142, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079283281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1079283285
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21084,7 +20933,6 @@ GameObject:
   - 33: {fileID: 1161473409}
   - 23: {fileID: 1161473408}
   - 54: {fileID: 1161473407}
-  - 114: {fileID: 1161473406}
   - 65: {fileID: 1161473405}
   m_Layer: 0
   m_Name: Quad
@@ -21118,19 +20966,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1161473406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483150, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1161473403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1161473407
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21719,7 +21554,6 @@ GameObject:
   - 33: {fileID: 1198346718}
   - 23: {fileID: 1198346717}
   - 54: {fileID: 1198346716}
-  - 114: {fileID: 1198346715}
   - 65: {fileID: 1198346714}
   m_Layer: 0
   m_Name: Quad
@@ -21753,19 +21587,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1198346715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483186, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1198346712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1198346716
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22189,7 +22010,6 @@ GameObject:
   - 33: {fileID: 1217977231}
   - 23: {fileID: 1217977230}
   - 54: {fileID: 1217977229}
-  - 114: {fileID: 1217977228}
   - 65: {fileID: 1217977227}
   m_Layer: 0
   m_Name: Quad
@@ -22223,19 +22043,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1217977228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483166, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1217977225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1217977229
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23894,7 +23701,6 @@ GameObject:
   - 33: {fileID: 1273827024}
   - 23: {fileID: 1273827023}
   - 54: {fileID: 1273827022}
-  - 114: {fileID: 1273827021}
   - 65: {fileID: 1273827020}
   m_Layer: 0
   m_Name: Quad
@@ -23928,19 +23734,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1273827021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483180, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1273827018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1273827022
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24644,6 +24437,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1297548332}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1297703189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100142, guid: 60f36023f0254824d8df88d6af1e3e17, type: 2}
+  m_PrefabInternal: {fileID: 882273519}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1297703190}
+  - 82: {fileID: 1297703191}
+  m_Layer: 0
+  m_Name: sonido1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1297703190
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400142, guid: 60f36023f0254824d8df88d6af1e3e17, type: 2}
+  m_PrefabInternal: {fileID: 882273519}
+  m_GameObject: {fileID: 1297703189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1727139383}
+  m_RootOrder: 2
+--- !u!82 &1297703191
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200142, guid: 60f36023f0254824d8df88d6af1e3e17,
+    type: 2}
+  m_PrefabInternal: {fileID: 882273519}
+  m_GameObject: {fileID: 1297703189}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 79966fdd0e8840349abf6b80411ca6c4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: .409999996
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1307528931
 GameObject:
   m_ObjectHideFlags: 0
@@ -24878,7 +24758,6 @@ GameObject:
   - 33: {fileID: 1317086465}
   - 23: {fileID: 1317086464}
   - 54: {fileID: 1317086463}
-  - 114: {fileID: 1317086462}
   - 65: {fileID: 1317086461}
   m_Layer: 0
   m_Name: Quad
@@ -24912,19 +24791,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1317086462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483178, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1317086459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1317086463
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30877,7 +30743,6 @@ GameObject:
   - 33: {fileID: 1627549008}
   - 23: {fileID: 1627549007}
   - 54: {fileID: 1627549006}
-  - 114: {fileID: 1627549005}
   - 65: {fileID: 1627549004}
   m_Layer: 0
   m_Name: Quad
@@ -30911,19 +30776,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1627549005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483176, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1627549002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1627549006
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31083,7 +30935,6 @@ GameObject:
   - 33: {fileID: 1637962157}
   - 23: {fileID: 1637962156}
   - 54: {fileID: 1637962155}
-  - 114: {fileID: 1637962154}
   - 65: {fileID: 1637962153}
   m_Layer: 0
   m_Name: Quad
@@ -31117,19 +30968,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1637962154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483160, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1637962151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1637962155
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32470,7 +32308,6 @@ GameObject:
   - 33: {fileID: 1713609024}
   - 23: {fileID: 1713609023}
   - 54: {fileID: 1713609022}
-  - 114: {fileID: 1713609021}
   - 65: {fileID: 1713609020}
   m_Layer: 0
   m_Name: Quad
@@ -32504,19 +32341,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1713609021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483184, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1713609018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1713609022
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32900,6 +32724,8 @@ Transform:
   m_Children:
   - {fileID: 935681314}
   - {fileID: 1702313832}
+  - {fileID: 1297703190}
+  - {fileID: 353973525}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &1727139384
@@ -32918,6 +32744,9 @@ MonoBehaviour:
   d2: 0
   startPosition: {fileID: 1430594590}
   finishPosition: {fileID: 375785260}
+  sonidos:
+  - {fileID: 1297703191}
+  - {fileID: 353973526}
   items:
   - {fileID: 150940, guid: dc944b4f29ec3d944bc9e2a2b56197bb, type: 2}
   - {fileID: 100662, guid: 0462adb152f1a6140b6b14624ddb9d7b, type: 2}
@@ -34046,7 +33875,6 @@ GameObject:
   - 33: {fileID: 1763991819}
   - 23: {fileID: 1763991818}
   - 54: {fileID: 1763991817}
-  - 114: {fileID: 1763991816}
   - 65: {fileID: 1763991815}
   m_Layer: 0
   m_Name: Quad
@@ -34080,19 +33908,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1763991816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483140, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763991813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1763991817
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34736,7 +34551,6 @@ GameObject:
   - 33: {fileID: 1780420620}
   - 23: {fileID: 1780420619}
   - 54: {fileID: 1780420618}
-  - 114: {fileID: 1780420617}
   - 65: {fileID: 1780420616}
   m_Layer: 0
   m_Name: Quad
@@ -34770,19 +34584,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1780420617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483168, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1780420614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1780420618
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35162,7 +34963,6 @@ GameObject:
   - 33: {fileID: 1795770467}
   - 23: {fileID: 1795770466}
   - 54: {fileID: 1795770465}
-  - 114: {fileID: 1795770464}
   - 65: {fileID: 1795770463}
   m_Layer: 0
   m_Name: Quad
@@ -35196,19 +34996,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1795770464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483188, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1795770461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1795770465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35923,7 +35710,6 @@ GameObject:
   - 33: {fileID: 1830686351}
   - 23: {fileID: 1830686350}
   - 54: {fileID: 1830686349}
-  - 114: {fileID: 1830686348}
   - 65: {fileID: 1830686347}
   m_Layer: 0
   m_Name: Quad
@@ -35957,19 +35743,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1830686348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483190, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1830686345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &1830686349
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40164,7 +39937,6 @@ GameObject:
   - 33: {fileID: 2108796391}
   - 23: {fileID: 2108796390}
   - 54: {fileID: 2108796389}
-  - 114: {fileID: 2108796388}
   - 65: {fileID: 2108796387}
   m_Layer: 0
   m_Name: Quad
@@ -40198,19 +39970,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .973613441, y: .977578044, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2108796388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11483138, guid: 4a74c5534f8cc0a43b2cdbb06747f01c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2108796385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2023734c5aa1356408a552b26ac0fe51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrashSound: {fileID: 0}
 --- !u!54 &2108796389
 Rigidbody:
   m_ObjectHideFlags: 0
