@@ -33,6 +33,7 @@ public class PlayerController : Character {
     public AudioSource punchHit;
 
     public AudioSource tiempoBala;
+    public AudioSource sonidoPulso;
 
     public void DisableLollipops()
     {
@@ -207,6 +208,7 @@ public class PlayerController : Character {
                     ui.SetFocus();
                     Instantiate(specialAttackEffectPrefab, transform.position, Quaternion.identity);
                     Vector3 pushDirection;
+                    sonidoPulso.Play();
                     foreach (Collider c in Physics.OverlapSphere(transform.position, 5f))
                     {
                         auxCharacter = c.GetComponent<EnemyAI>();
@@ -477,6 +479,7 @@ public class PlayerController : Character {
     public override void Die()
     {
         Time.timeScale = 0.3f;
+        //DropActualWeapon();
         animator.SetTrigger("Fin");
     }
 

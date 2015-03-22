@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
+    public AudioSource[] sounds;
+
     public float damage=10;
     public float armorPenetration=0;
 
@@ -19,6 +21,8 @@ public class Bullet : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         Character other = collision.gameObject.GetComponent<Character>();
+        int i = Random.Range(0, sounds.Length);
+        sounds[i].Play();
         if (other)
         {
             other.Damage(damage, armorPenetration);
