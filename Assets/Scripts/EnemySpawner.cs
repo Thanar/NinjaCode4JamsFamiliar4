@@ -19,8 +19,12 @@ public class EnemySpawner : MonoBehaviour {
 
     public UI ui;
 
+    public int kills = 0;
+
+
 	// Use this for initialization
 	void Start () {
+        kills = 0;
         timeNextWave = Time.time + 6f;
 	}
 	
@@ -75,10 +79,23 @@ public class EnemySpawner : MonoBehaviour {
     public void enemyDied()
     {
         enemiesOnScreen--;
+        kills++;
         ui.SetRound(this);
         if (enemiesOnScreen <= 0 && wave > wavesPerRound)
         {
             NextRound();
         }
+    }
+
+    void SaveScore()
+    {
+        //Debug.Log("Rondas " + round);
+        PlayerPrefs.SetInt("rounds", round);
+        PlayerPrefs.SetInt("kills", kills);
+    }
+
+    void OnDestroy()
+    {
+        SaveScore();
     }
 }
