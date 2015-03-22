@@ -9,6 +9,10 @@ public class RedWoman : MonoBehaviour {
     public Transform startPosition;
     public Transform finishPosition;
 
+
+    public AudioSource[] sonidos;
+
+
     public GameObject[] items;
 
     public float speed = 0.001f;
@@ -28,6 +32,7 @@ public class RedWoman : MonoBehaviour {
         transform.position = startPosition.position;
         StartCoroutine("Wait");
         
+        
     }
 
     void Update()
@@ -40,6 +45,10 @@ public class RedWoman : MonoBehaviour {
                 if (Random.Range(0f, 1f) < dropRate * Time.deltaTime)
                 {
                     DropPresent();
+                    int i = Random.Range(0, 1);
+                    AudioSource j = sonidos[i];
+                    j.Play();
+                    
                 }    
             }
             
