@@ -14,22 +14,45 @@ public class Scores : MonoBehaviour
      * 
      */
 
-    public Text score;
+    public GameJoltAPIManager GJManager;
+
     public GameObject newScoreText;
 
-    public Text score1;
-    public Text score2;
-    public Text score3;
+    public Text player1;
+    public Text rounds1;
+    public Text kills1;
 
-    public Text yourScore;
+    public Text player2;
+    public Text rounds2;
+    public Text kills2;
+
+    public Text player3;
+    public Text rounds3;
+    public Text kills3;
+
+    public Text yourPlayer;
+    public Text yourRounds;
+    public Text yourKills;
 
     public bool newScore;
 
+    int lastHS;
+    int rounds;
+    int kills;
+
+    public bool verified;
+
     void Start()
     {
-        int lastHS = 0;
-        int rounds = 0;
-        int kills = 0;
+        GJManager = GameObject.FindGameObjectWithTag("GJAPI").GetComponent<GameJoltAPIManager>();
+        if (GJManager != null)
+        {
+            verified = GJManager.verified;
+        }
+        
+        lastHS = 0;
+        rounds = 0;
+        kills = 0;
 
         if (PlayerPrefs.HasKey("lastHS"))
         {
@@ -61,11 +84,12 @@ public class Scores : MonoBehaviour
         {
             newScoreText.SetActive(false);
         }
-
-        GJAPI.Scores.Add(kills.ToString(), (uint)kills);
-
-        GJAPI.Scores.Get();
-        GJAPI.Scores.GetMultipleCallback += OnReceivedHighScore;
+        if (verified)
+        {
+            GJAPI.Scores.Get();
+            GJAPI.Scores.GetMultipleCallback += OnReceivedHighScore;    
+        }
+        
 
         //score.text = "HIGHSCORE: " + lastHS + "\nROUNDS: " + rounds + "\nKILLS: " + kills;
 
@@ -75,11 +99,31 @@ public class Scores : MonoBehaviour
 
     void OnReceivedHighScore(GJScore[] scores)
     {
-        score1.text = "User " + scores[0].Username + " Score " + scores[0].Score;
-        score2.text = "User " + scores[1].Username + " Score " + scores[1].Score;
-        score3.text = "User " + scores[2].Username + " Score " + scores[2].Score;
+        GJAPI.Scores.Add(rounds.ToString(), (uint)kills);
+        if (scores.Length > 0)
+        {
+            player1.text = scores[0].Username;
+            rounds1.text = scores[0].Score;
+            kills1.text = scores[0].Sort.ToString();
+        }
 
-        yourScore.text = "User " + GJAPI.User.Name + " Score " + kills;
+        if (scores.Length > 1)
+        {
+            player2.text = scores[1].Username;
+            rounds2.text = scores[1].Score;
+            kills2.text = scores[1].Sort.ToString();
+        }
+
+        if (scores.Length > 2)
+        {
+            player3.text = scores[2].Username;
+            rounds3.text = scores[2].Score;
+            kills3.text = scores[2].Sort.ToString();
+        }
+
+        yourPlayer.text = GJAPI.User.Name;
+        yourRounds.text = rounds.ToString();
+        yourKills.text = kills.ToString();
     }
 
 
