@@ -22,6 +22,9 @@ public class EnemySpawner : MonoBehaviour {
     public int kills = 0;
 
 
+    public AudioSource roundFinished;
+
+
 	// Use this for initialization
 	void Start () {
         kills = 0;
@@ -61,6 +64,8 @@ public class EnemySpawner : MonoBehaviour {
         enemiesCurrentRound = difficultyVariable * round;
         SpawnWave();
         timeNextWave = Time.time + timeBetweenWaves;
+
+        roundFinished.Play();
     }
 
     public void SpawnWave()
