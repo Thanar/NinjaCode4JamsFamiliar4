@@ -453,7 +453,7 @@ public class PlayerController : Character {
     public void flai()
     {
         Time.timeScale = 1f;
-        rigidbody.AddForce(Vector3.up * 10,ForceMode.VelocityChange);
+        rigidbody.AddForce(Vector3.up * 100,ForceMode.VelocityChange);
     }
 
     public void loadGameOver()
