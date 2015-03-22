@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyAI : Character {
 
 
-    public AudioSource[] DeadAudioSource;
+    //public AudioSource[] DeadAudioSource;
     
 
 
@@ -178,9 +178,9 @@ public class EnemyAI : Character {
     public override void Die()
     {
 
-        int r = Random.Range(0, DeadAudioSource.Length);
-        AudioSource j = DeadAudioSource[r];
-        j.Play();
+        //int r = Random.Range(0, DeadAudioSource.Length);
+        //AudioSource j = DeadAudioSource[r];
+        //j.Play();
         //Debug.Log("R: " + r);
         //if (r == 1)
         //{
