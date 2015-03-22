@@ -22,6 +22,7 @@ public class IntroGameController : MonoBehaviour {
         if(playerController.Chosing == 3)
         {
             CameraAnimator.SetTrigger("Good Election");
+            playerController.animator.SetTrigger("PirulaCorrecta");
         }else if (playerController.Chosing == 4)
         {
             CameraAnimator.SetTrigger("Bad Election");
