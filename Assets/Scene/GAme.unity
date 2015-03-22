@@ -6501,7 +6501,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: db4e761aa50629e4d924b3e87d6866f1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .409999996
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8410,7 +8410,7 @@ RectTransform:
   - {fileID: 160594179}
   - {fileID: 1472738297}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -9697,7 +9697,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: e27988215d52bcb4c8c7c6f613229ddb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .100000001
+  m_Volume: .5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12454,7 +12454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!82 &566045671
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24243,7 +24243,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 79966fdd0e8840349abf6b80411ca6c4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .409999996
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
