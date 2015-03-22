@@ -81,6 +81,23 @@ public class PlayerController : Character {
         LockRotation = true;
     }
 
+
+
+    public AudioSource LookLollipoop;
+    public AudioSource AcceptLollipoop;
+
+
+    public void PlayLookLollipop()
+    {
+        LookLollipoop.Play();
+    }
+    public void PlayAcceptLollipop()
+    {
+        AcceptLollipoop.Play();
+    }
+
+
+
 	// Use this for initialization
 	void Start () {
         Time.timeScale = 1f;
@@ -213,6 +230,7 @@ public class PlayerController : Character {
                 animator.SetTrigger("Roja");
 
                 Chosing = 1;
+
             }
 
             if (Input.GetKey(KeyCode.D))

@@ -15,9 +15,15 @@ public class CameraAnimatorCaller : MonoBehaviour {
         playerController.introGameController.ChooseYet();
 
         this.GetComponent<Animator>().enabled = false;
+
+        
+
     }
 
-
+    public void PlayPlayerAcceptLollipoop()
+    {
+        playerController.PlayAcceptLollipop();
+    }
     public void FinishBadElectionAnimation()
     {
         Application.LoadLevel(2);
