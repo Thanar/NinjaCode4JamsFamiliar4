@@ -130,7 +130,7 @@ MonoBehaviour:
   damage: 20
   armorPenetration: 100
   explosionTime: 0
-  explosionPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47, type: 2}
+  explosionPrefab: {fileID: 103484, guid: 847841df468e0b347ac2281f5dcf5de1, type: 2}
 --- !u!136 &13676788
 CapsuleCollider:
   m_ObjectHideFlags: 1
