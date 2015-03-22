@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Grenade : MonoBehaviour {
 
+    public AudioSource granadeClinkAudio;
+    public AudioSource granadeExplosionAudio;
+
+
     public float damage = 20;
     public float armorPenetration = 100;
 
@@ -24,6 +28,9 @@ public class Grenade : MonoBehaviour {
 	void Update () {
         if (explosionTime < Time.time)
         {
+
+            granadeExplosionAudio.Play();
+
             Character auxCharacter;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             foreach (Collider c in Physics.OverlapSphere(transform.position, 2.5f))
@@ -46,4 +53,11 @@ public class Grenade : MonoBehaviour {
             Destroy(this.gameObject);
         }
 	}
+
+
+
+    public void OnCollisionEnter(Collision other)
+    {
+        granadeClinkAudio.Play();
+    }
 }
