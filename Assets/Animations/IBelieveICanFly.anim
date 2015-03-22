@@ -10443,4 +10443,11 @@ AnimationClip:
     path: TorsoSupController/Head
     classID: 4
     script: {fileID: 0}
-  m_Events: []
+  m_Events:
+  - time: .0833333358
+    functionName: DisableRotation
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

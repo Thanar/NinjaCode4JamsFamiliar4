@@ -83,6 +83,8 @@ public class PlayerController : Character {
 
 	// Use this for initialization
 	void Start () {
+        Time.timeScale = 1f;
+
         ICanMove = false;
         Chosing = 0;
 
@@ -422,8 +424,16 @@ public class PlayerController : Character {
 
     public override void Die()
     {
+        Time.timeScale = 0.3f;
         animator.SetTrigger("Fin");
     }
+
+    public void flai()
+    {
+        Time.timeScale = 1f;
+        Push(Vector3.up * 100);
+    }
+
     public void loadGameOver()
     {
         Application.LoadLevel("GameOver");
