@@ -666,7 +666,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.0680504, y: 1, z: 8.47867584}
+  m_LocalPosition: {x: -7.21842766, y: -1.72557998, z: 6.74956465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 445552}
@@ -2116,9 +2116,6 @@ MonoBehaviour:
   fistsArmorPenetration: 0
   fistAttackEffectPrefab: {fileID: 100000, guid: 57572ea9bf8e036409d3fee8cb4338c8,
     type: 2}
-  DeadAudioSource1: {fileID: 8257028}
-  DeadAudioSource2: {fileID: 8298470}
-  DeadAudioSource3: {fileID: 8281976}
   ragdoll: {fileID: 145496, guid: 21fbbf40878ec4845991db8b3732dc70, type: 2}
   player: {fileID: 0}
   weapon: {fileID: 0}
@@ -2134,7 +2131,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .230000004
+  m_Radius: .300000012
   m_Height: 1.72000003
   m_Direction: 1
   m_Center: {x: 0, y: -.189999998, z: 0}
