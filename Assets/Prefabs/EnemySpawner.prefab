@@ -37,7 +37,7 @@ AudioSource:
   m_GameObject: {fileID: 106454}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6e41eb05b1ee38248b7f2a2df06cdb80, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -117,7 +117,7 @@ MonoBehaviour:
   enemiesOnScreen: 0
   ui: {fileID: 0}
   kills: 0
-  roundFinished: {fileID: 0}
+  roundFinished: {fileID: 8291416}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
