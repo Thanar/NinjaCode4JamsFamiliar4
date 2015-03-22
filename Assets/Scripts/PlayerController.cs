@@ -188,12 +188,12 @@ public class PlayerController : Character {
                         auxCharacter = c.GetComponent<EnemyAI>();
                         if (auxCharacter)
                         {
-                            auxCharacter.Damage(fistsDamage * 5, fistsArmorPenetration * 2);
                             //auxCharacter.rigidbody.AddForce((transform.forward.normalized) * 8, ForceMode.VelocityChange);
                             pushDirection = (auxCharacter.transform.position - transform.position);
                             pushDirection.y = 0;
                             pushDirection = pushDirection.normalized * 30;
                             auxCharacter.Push(pushDirection);
+                            auxCharacter.Damage(fistsDamage * 5, fistsArmorPenetration * 2);
                         }
                         else
                         {

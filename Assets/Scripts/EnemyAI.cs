@@ -181,7 +181,7 @@ public class EnemyAI : Character {
             }
 
             EnemyRagdollController erc = (Instantiate(ragdoll, transform.position, transform.rotation) as GameObject).GetComponent<EnemyRagdollController>();
-            erc.mainRigidbody.velocity = rigidbody.velocity;
+            erc.mainRigidbody.velocity = rigidbody.velocity+pushForce*3;
             es.enemyDied();
             GameObject.Destroy(this.gameObject);
             died = true;
