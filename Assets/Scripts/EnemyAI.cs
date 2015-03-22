@@ -4,9 +4,8 @@ using System.Collections;
 public class EnemyAI : Character {
 
 
-    public AudioSource DeadAudioSource1;
-    public AudioSource DeadAudioSource2;
-    public AudioSource DeadAudioSource3;
+    //public AudioSource[] DeadAudioSource;
+    
 
 
     public GameObject ragdoll;
@@ -179,20 +178,22 @@ public class EnemyAI : Character {
     public override void Die()
     {
 
-        int r = Random.Range(1, 4);
-        Debug.Log("R: " + r);
-        if (r == 1)
-        {
-            DeadAudioSource1.Play();
-        }
-        else if (r == 2)
-        {
-            DeadAudioSource2.Play();
-        }
-        else if (r == 3)
-        {
-            DeadAudioSource3.Play();
-        }
+        //int r = Random.Range(0, DeadAudioSource.Length);
+        //AudioSource j = DeadAudioSource[r];
+        //j.Play();
+        //Debug.Log("R: " + r);
+        //if (r == 1)
+        //{
+        //    DeadAudioSource1.Play();
+        //}
+        //else if (r == 2)
+        //{
+        //    DeadAudioSource2.Play();
+        //}
+        //else if (r == 3)
+        //{
+        //    DeadAudioSource3.Play();
+        //}
 
 
         //base.Die();

@@ -29,6 +29,11 @@ public class PlayerController : Character {
     public GameObject lollipopRed;
     public GameObject lollipopBlue;
 
+    public AudioSource punch;
+    public AudioSource punchHit;
+
+    public AudioSource tiempoBala;
+
     public void DisableLollipops()
     {
         lollipopBlue.SetActive(false);
@@ -172,11 +177,13 @@ public class PlayerController : Character {
                 {
                     if (fistsTimeReady < Time.time)
                     {
+                        punch.Play();
                         foreach (Collider c in Physics.OverlapSphere(fistsPosition.position, 0.5f))
                         {
                             auxCharacter = c.GetComponent<EnemyAI>();
                             if (auxCharacter)
                             {
+                                punchHit.Play();
                                 Instantiate(fistAttackEffectPrefab, fistsPosition.position, fistsPosition.rotation);
                                 fistsTimeReady = Time.time + fistsCooldown;
                                 auxCharacter.Damage(fistsDamage, fistsArmorPenetration);
@@ -370,6 +377,8 @@ public class PlayerController : Character {
         movementForceScale = 1.7f;
 
         focusEffect.SetActive(true);
+
+        tiempoBala.Play();
     }
 
     public void DeactivateFocus()
@@ -380,6 +389,8 @@ public class PlayerController : Character {
 
         Time.timeScale = 1f;
         movementForceScale = 1f;
+
+        tiempoBala.Stop();
     }
 
     void UpdateStatus()
