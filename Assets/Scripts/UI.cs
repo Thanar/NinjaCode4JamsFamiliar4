@@ -6,6 +6,8 @@ public class UI : MonoBehaviour {
 
     public Image health;
     public Image focus;
+    public Image damageImage;
+    public Color damageImageColor;
     public GameObject ammoObject;
     public Text ammo;
     public GameObject reloading;
@@ -16,6 +18,16 @@ public class UI : MonoBehaviour {
 
     public PlayerController player;
 
+    public bool damageDecreasing;
+    public float damageDecreasingRate = 0.5f;
+
+    void Start()
+    {
+        damageDecreasing = false;
+        damageImageColor = damageImage.color;
+        damageImageColor.a = 0f;
+        damageImage.color = damageImageColor;
+    }
 
     public void SetRound(EnemySpawner es)
     {
@@ -60,6 +72,13 @@ public class UI : MonoBehaviour {
         reloading.SetActive(false);
     }
 
+    public void DamageReceived()
+    {
+        damageDecreasing = true;
+        damageImageColor.a = 1f;
+        damageImage.color = damageImageColor;
+    }
+
     public void Update()
     {
         if (player.Chosing < 3)
@@ -71,6 +90,17 @@ public class UI : MonoBehaviour {
         {
             InfoInGame.SetActive(true);
             ChoseLolipop.SetActive(false);
+        }
+
+        if (damageDecreasing)
+        {
+            damageImageColor.a = Mathf.Lerp(damageImageColor.a, 0f, damageDecreasingRate * Time.deltaTime);
+            damageImage.color = damageImageColor;
+
+            if (damageImageColor.a <= 0.0001f)
+            {
+                damageDecreasing = false;
+            }
         }
 
     }

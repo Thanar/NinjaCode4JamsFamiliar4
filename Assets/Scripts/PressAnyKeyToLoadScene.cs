@@ -3,14 +3,14 @@ using System.Collections;
 
 public class PressAnyKeyToLoadScene : MonoBehaviour {
 
-    public int LevelToLoad = 1;
+    public string levelName = "menu";
 
 	// Update is called once per frame
 	void Update () {
 
         if (Input.anyKeyDown)
         {
-            Application.LoadLevel(LevelToLoad);
+            Application.LoadLevel(levelName);
         }
 
 	}

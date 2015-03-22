@@ -415,6 +415,7 @@ public class PlayerController : Character {
     public override void Damage(float damage, float armorPenetration = 0)
     {
         base.Damage(damage, armorPenetration);
+        ui.DamageReceived();
         ui.SetHealth();
     }
 

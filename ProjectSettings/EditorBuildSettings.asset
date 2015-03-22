@@ -12,10 +12,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/BlueFinal.unity
   - enabled: 1
-    path: Assets/Scene/GAme Mechanics Testing.unity
-  - enabled: 1
     path: Assets/Scene/GameOver.unity
-  - enabled: 1
-    path: Assets/Scene/modeling.unity
-  - enabled: 1
-    path: Assets/Scene/molona de angel.unity
