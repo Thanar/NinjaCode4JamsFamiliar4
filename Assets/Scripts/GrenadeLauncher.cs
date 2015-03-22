@@ -21,7 +21,7 @@ public class GrenadeLauncher : Weapon {
         shootSound.Play();
         myBullet.damage = this.damage;
         myBullet.armorPenetration = this.armorPenetration;
-        myBullet.explosionTime = Time.time + 5;
+        myBullet.explosionTime = Time.time + 3f;
         myBullet.rigidbody.velocity = bulletSpawnPoint.forward.normalized * 10 + Vector3.up;
 
         nextTimeReady = Time.time + cooldown + Random.Range(0,0.1f);
