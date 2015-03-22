@@ -17,6 +17,12 @@ public class Scores : MonoBehaviour
     public Text score;
     public GameObject newScoreText;
 
+    public Text score1;
+    public Text score2;
+    public Text score3;
+
+    public Text yourScore;
+
     public bool newScore;
 
     void Start()
@@ -56,10 +62,26 @@ public class Scores : MonoBehaviour
             newScoreText.SetActive(false);
         }
 
-        score.text = "HIGHSCORE: " + lastHS + "\nROUNDS: " + rounds + "\nKILLS: " + kills;
+        GJAPI.Scores.Add(kills.ToString(), (uint)kills);
 
+        GJAPI.Scores.Get();
+        GJAPI.Scores.GetMultipleCallback += OnReceivedHighScore;
+
+        //score.text = "HIGHSCORE: " + lastHS + "\nROUNDS: " + rounds + "\nKILLS: " + kills;
 
     }
+
+    
+
+    void OnReceivedHighScore(GJScore[] scores)
+    {
+        score1.text = "User " + scores[0].Username + " Score " + scores[0].Score;
+        score2.text = "User " + scores[1].Username + " Score " + scores[1].Score;
+        score3.text = "User " + scores[2].Username + " Score " + scores[2].Score;
+
+        yourScore.text = "User " + GJAPI.User.Name + " Score " + kills;
+    }
+
 
     void OnDestroy()
     {
