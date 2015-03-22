@@ -32,6 +32,8 @@ public class PlayerController : Character {
     public AudioSource punch;
     public AudioSource punchHit;
 
+    public AudioSource tiempoBala;
+
     public void DisableLollipops()
     {
         lollipopBlue.SetActive(false);
@@ -375,6 +377,8 @@ public class PlayerController : Character {
         movementForceScale = 1.7f;
 
         focusEffect.SetActive(true);
+
+        tiempoBala.Play();
     }
 
     public void DeactivateFocus()
@@ -385,6 +389,8 @@ public class PlayerController : Character {
 
         Time.timeScale = 1f;
         movementForceScale = 1f;
+
+        tiempoBala.Stop();
     }
 
     void UpdateStatus()
