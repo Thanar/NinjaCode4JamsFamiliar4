@@ -431,7 +431,7 @@ public class PlayerController : Character {
     public void flai()
     {
         Time.timeScale = 1f;
-        Push(Vector3.up * 100);
+        rigidbody.AddForce(Vector3.up * 10,ForceMode.VelocityChange);
     }
 
     public void loadGameOver()

@@ -8309,7 +8309,7 @@ RectTransform:
   - {fileID: 596567658}
   - {fileID: 160594179}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -9956,7 +9956,7 @@ Transform:
   - {fileID: 1789464796}
   - {fileID: 901390021}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!135 &495924603
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11989,7 +11989,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
 --- !u!1 &570250660
 GameObject:
   m_ObjectHideFlags: 0
@@ -37754,6 +37754,10 @@ Prefab:
       propertyPath: ui
       value: 
       objectReference: {fileID: 417818226}
+    - target: {fileID: 11476424, guid: 1e4ad62def0875a4a87e2c2e36884c90, type: 2}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e4ad62def0875a4a87e2c2e36884c90, type: 2}
   m_RootGameObject: {fileID: 499497895}
