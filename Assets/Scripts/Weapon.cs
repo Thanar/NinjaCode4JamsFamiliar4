@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour {
 
+    public AudioSource shootSound;
+    public AudioSource reloadingSound;
+
     public float damage = 10;
     public float armorPenetration = 0;
     public DropWeapon dropWeapon;
@@ -67,6 +70,8 @@ public class Weapon : MonoBehaviour {
         }
         if (currentBullets > 0)
         {
+            shootSound.Play();
+
             Bullet myBullet = ((GameObject)Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation)).GetComponent<Bullet>();
 
             myBullet.damage = this.damage;
@@ -82,6 +87,7 @@ public class Weapon : MonoBehaviour {
 
             if (bulletsTotal > 0)
             {
+                reloadingSound.Play();
                 reloading = true;
                 StartCoroutine(FinishReloading(reloadTime));
                 if (bulletsTotal < 0)
