@@ -266,6 +266,7 @@ public class PlayerController : Character {
 
                     //rigidbody.velocity = -Vector3.right.normalized * maxSpeed + pushForce;
                     finalVelocity.x -= maxSpeed;
+                    animator.SetTrigger("Moving");
 
                     if (Input.GetKey(KeyCode.Space))
                     {
