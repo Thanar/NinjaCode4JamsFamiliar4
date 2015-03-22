@@ -26,10 +26,16 @@ public class Grenade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (explosionTime < Time.time + 0.3)
+        {
+            if (!granadeExplosionAudio.isPlaying)
+            granadeExplosionAudio.Play();
+        }
+
+
         if (explosionTime < Time.time)
         {
 
-            granadeExplosionAudio.Play();
 
             Character auxCharacter;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
