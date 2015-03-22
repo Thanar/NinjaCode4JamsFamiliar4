@@ -90,7 +90,7 @@ public class PlayerController : Character {
 
     public AudioSource LookLollipoop;
     public AudioSource AcceptLollipoop;
-
+    public AudioSource jumpsSound;
 
     public void PlayLookLollipop()
     {
@@ -507,6 +507,10 @@ public class PlayerController : Character {
     {
 
         // A + Space
+
+        jumpsSound.Play();
+
+
         Push(Vector3.left);
         // Adelante
         if (gameObject.transform.rotation.eulerAngles.y >= 315 || gameObject.transform.rotation.eulerAngles.y <= 45)
@@ -537,6 +541,8 @@ public class PlayerController : Character {
     public void RightJumpAnimation()
     {
         // D + Space
+
+        jumpsSound.Play();
         Push(Vector3.right);
         // Adelante
         if (gameObject.transform.rotation.eulerAngles.y >= 315 || gameObject.transform.rotation.eulerAngles.y <= 45)
@@ -569,6 +575,8 @@ public class PlayerController : Character {
 
         // S + Space
 
+
+        jumpsSound.Play();
         Push(Vector3.back);
         // Adelante
         if (gameObject.transform.rotation.eulerAngles.y >= 315 || gameObject.transform.rotation.eulerAngles.y <= 45)
@@ -601,6 +609,8 @@ public class PlayerController : Character {
         
         // W + Space
 
+
+        jumpsSound.Play();
         Push(Vector3.forward);
         // Adelante
         if (gameObject.transform.rotation.eulerAngles.y >= 315 || gameObject.transform.rotation.eulerAngles.y <= 45)
