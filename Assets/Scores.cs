@@ -51,6 +51,10 @@ public class Scores : MonoBehaviour
         {
             newScoreText.SetActive(true);
         }
+        else
+        {
+            newScoreText.SetActive(false);
+        }
 
         score.text = "HIGHSCORE: " + lastHS + "\nROUNDS: " + rounds + "\nKILLS: " + kills;
 
