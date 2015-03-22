@@ -18,7 +18,7 @@ public class GrenadeLauncher : Weapon {
         }
 
         Grenade myBullet = ((GameObject)Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation)).GetComponent<Grenade>();
-
+        shootSound.Play();
         myBullet.damage = this.damage;
         myBullet.armorPenetration = this.armorPenetration;
         myBullet.explosionTime = Time.time + 5;
