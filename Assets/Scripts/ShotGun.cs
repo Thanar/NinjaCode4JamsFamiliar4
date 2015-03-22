@@ -13,7 +13,10 @@ public class ShotGun : Weapon {
         }
         if (currentBullets > 0)
         {
-            
+
+
+            shootSound.Play();
+
 
             for (int i = 0; i < 5; i++)
             {
@@ -32,6 +35,9 @@ public class ShotGun : Weapon {
         {
             if (bulletsTotal > 0)
             {
+
+                reloadingSound.Play();
+
                 reloading = true;
                 StartCoroutine(FinishReloading(reloadTime));
                 bulletsTotal -= bulletsPerCharge;

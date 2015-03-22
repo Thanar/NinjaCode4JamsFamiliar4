@@ -98,8 +98,8 @@ GameObject:
   - 82: {fileID: 8241862}
   - 82: {fileID: 8241860}
   - 82: {fileID: 8277970}
-  - 82: {fileID: 8277972}
   - 82: {fileID: 8277974}
+  - 81: {fileID: 8188566}
   m_Layer: 0
   m_Name: pj 1
   m_TagString: Player
@@ -831,7 +831,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .50999999, z: -.389999986}
+  m_LocalPosition: {x: .214121133, y: .372999996, z: -.555172086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 410354}
@@ -2189,6 +2189,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!81 &8188566
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110372}
+  m_Enabled: 1
 --- !u!82 &8241860
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2429,7 +2436,7 @@ AudioSource:
   m_GameObject: {fileID: 110372}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 0db257e47a92398408ceea80e6e3e1e7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4f307f0e035d01d44b8dc2758bad3188, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2690,7 +2697,7 @@ MonoBehaviour:
   lollipopBlue: {fileID: 124018}
   punch: {fileID: 8241862}
   punchHit: {fileID: 8241860}
-  tiempoBala: {fileID: 0}
+  tiempoBala: {fileID: 8277970}
   ICanMove: 0
   Chosing: 0
   specialAttackEffectPrefab: {fileID: 103484, guid: 830994664799aae4c98b52e2a455dc47,
@@ -2698,8 +2705,8 @@ MonoBehaviour:
   focusEffect: {fileID: 164818}
   TypeJump: 0
   LockRotation: 0
-  LookLollipoop: {fileID: 8277972}
-  AcceptLollipoop: {fileID: 8277970}
+  LookLollipoop: {fileID: 8241864}
+  AcceptLollipoop: {fileID: 8241866}
   jumpsSound: {fileID: 8277974}
 --- !u!135 &13524024
 SphereCollider:
