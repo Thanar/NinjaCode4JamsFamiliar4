@@ -89,8 +89,10 @@ public class Scores : MonoBehaviour
             GJAPI.Scores.Get();
             GJAPI.Scores.GetMultipleCallback += OnReceivedHighScore;    
         }
-        
 
+        yourPlayer.text = GJAPI.User.Name;
+        yourRounds.text = rounds.ToString();
+        yourKills.text = kills.ToString();
         //score.text = "HIGHSCORE: " + lastHS + "\nROUNDS: " + rounds + "\nKILLS: " + kills;
 
     }
@@ -99,6 +101,7 @@ public class Scores : MonoBehaviour
 
     void OnReceivedHighScore(GJScore[] scores)
     {
+
         GJAPI.Scores.Add(rounds.ToString(), (uint)kills);
         if (scores.Length > 0)
         {
@@ -121,9 +124,7 @@ public class Scores : MonoBehaviour
             kills3.text = scores[2].Sort.ToString();
         }
 
-        yourPlayer.text = GJAPI.User.Name;
-        yourRounds.text = rounds.ToString();
-        yourKills.text = kills.ToString();
+
     }
 
 
