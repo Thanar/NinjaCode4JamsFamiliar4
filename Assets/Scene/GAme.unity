@@ -10020,6 +10020,7 @@ GameObject:
   - 114: {fileID: 495924606}
   - 135: {fileID: 495924603}
   - 114: {fileID: 495924604}
+  - 120: {fileID: 495924607}
   m_Layer: 0
   m_Name: RealGun 1
   m_TagString: Untagged
@@ -10081,6 +10082,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 140786, guid: 8ff93ab23c6ff6448b546056c5b365fd, type: 2}
   reloading: 0
   depleted: 0
+  laserSight: {fileID: 495924607}
+  laserSightActivate: 0
 --- !u!114 &495924605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10110,6 +10113,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iAmDropped: 1
   w: {fileID: 0}
+--- !u!120 &495924607
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12090648, guid: dc944b4f29ec3d944bc9e2a2b56197bb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1506305765}
+  m_GameObject: {fileID: 495924601}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 91e428861c0cfbc40b26c14305976536, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  m_Parameters:
+    startWidth: .100000001
+    endWidth: .100000001
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 1
 --- !u!1 &498707613
 GameObject:
   m_ObjectHideFlags: 0
@@ -10251,7 +10288,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &499497900
 CapsuleCollider:
   m_ObjectHideFlags: 0
