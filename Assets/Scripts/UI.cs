@@ -19,7 +19,7 @@ public class UI : MonoBehaviour {
 
     public void SetRound(EnemySpawner es)
     {
-        currentRound.text = "Round: " + es.round + "Enemies On Screen: "+es.enemiesOnScreen;
+        currentRound.text = "Round: " + es.round + "\nEnemies On Screen: "+es.enemiesOnScreen;
     }
 
     public void SetHealth()

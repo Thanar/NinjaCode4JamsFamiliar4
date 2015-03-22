@@ -12,11 +12,15 @@ public class EnemyAI : Character {
 
     public Transform weaponTransform;
 
+    bool died = false;
+
 
     Vector3 newRotation = new Vector3(0, 0, 0);
     Vector3 player2DDirection = new Vector3(0,0,0);
 
     Vector3 auxVector = new Vector3(0, 0, 0);
+
+    public EnemySpawner es;
 
 
     public void Push(Vector3 direction)
@@ -158,7 +162,7 @@ public class EnemyAI : Character {
 
     public void MoveTowardsPlayer()
     {
-        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y)+rigidbody.velocity*0.01f;
+        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y)+rigidbody.velocity*0.05f;
     }
 
     public void MoveAlongPlayer()
@@ -174,15 +178,18 @@ public class EnemyAI : Character {
     public override void Die()
     {
         //base.Die();
-
-        if (hasWeapon)
+        if (!died)
         {
-            DropWeapon();
+            if (hasWeapon)
+            {
+                DropWeapon();
+            }
+
+            EnemyRagdollController erc = (Instantiate(ragdoll, transform.position, transform.rotation) as GameObject).GetComponent<EnemyRagdollController>();
+            erc.mainRigidbody.velocity = rigidbody.velocity;
+            es.enemyDied();
+            GameObject.Destroy(this.gameObject);
+            died = true;
         }
-
-        EnemyRagdollController erc =  (Instantiate(ragdoll, transform.position, transform.rotation) as GameObject).GetComponent<EnemyRagdollController>();
-        erc.mainRigidbody.velocity = rigidbody.velocity;
-
-        GameObject.Destroy(this.gameObject);
     }
 }

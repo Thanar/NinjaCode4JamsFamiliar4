@@ -33,21 +33,30 @@ public class EnemySpawner : MonoBehaviour {
             {
                 //NextRound();
                 timeNextWave = int.MaxValue;
+                if (enemiesOnScreen <= 0)
+                {
+                    NextRound();
+                }
             }
+            else
+            {
 
-            SpawnWave();
-            timeNextWave = Time.time + timeBetweenWaves;
+                SpawnWave();
+                timeNextWave = Time.time + timeBetweenWaves;
+            }
             
         }
 	}
 
     public void NextRound()
     {
+        Debug.Log("next Round");
         wave = 1;
         round++;
         ui.SetRound(this);
         enemiesCurrentRound = difficultyVariable * round;
         SpawnWave();
+        timeNextWave = Time.time + timeBetweenWaves;
     }
 
     public void SpawnWave()
@@ -56,7 +65,8 @@ public class EnemySpawner : MonoBehaviour {
         {
             int enemyID = Random.Range(0,enemies.Length);
             int spawnPointID = Random.Range(0,spawnPoints.Length);
-            Instantiate(enemies[enemyID], spawnPoints[spawnPointID].position + (Vector3.right * Random.Range(-1f, 1f)) + (Vector3.forward * Random.Range(-1f, 1f)), spawnPoints[spawnPointID].rotation);
+            EnemyAI enemy = ((GameObject)Instantiate(enemies[enemyID], spawnPoints[spawnPointID].position + (Vector3.right * Random.Range(-1f, 1f)) + (Vector3.forward * Random.Range(-1f, 1f)), spawnPoints[spawnPointID].rotation)).GetComponent<EnemyAI>();
+            enemy.es = this;
             enemiesOnScreen++;
             ui.SetRound(this);
         }
@@ -66,7 +76,7 @@ public class EnemySpawner : MonoBehaviour {
     {
         enemiesOnScreen--;
         ui.SetRound(this);
-        if (enemiesOnScreen == 0 && wave > wavesPerRound)
+        if (enemiesOnScreen <= 0 && wave > wavesPerRound)
         {
             NextRound();
         }
