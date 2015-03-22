@@ -10129,7 +10129,7 @@ MonoBehaviour:
   lollipopBlue: {fileID: 1003699598}
   ICanMove: 0
   Chosing: 0
-  specialAttackEffectPrefab: {fileID: 173264, guid: 830994664799aae4c98b52e2a455dc47,
+  specialAttackEffectPrefab: {fileID: 103484, guid: 830994664799aae4c98b52e2a455dc47,
     type: 2}
   focusEffect: {fileID: 904052895}
   TypeJump: 0
