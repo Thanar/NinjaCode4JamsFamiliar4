@@ -46,6 +46,7 @@ GameObject:
   - 114: {fileID: 11420098}
   - 135: {fileID: 13560934}
   - 114: {fileID: 11460934}
+  - 120: {fileID: 12041166}
   m_Layer: 0
   m_Name: Uzi
   m_TagString: Untagged
@@ -382,6 +383,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 140786, guid: 8ff93ab23c6ff6448b546056c5b365fd, type: 2}
   reloading: 0
   depleted: 0
+  laserSight: {fileID: 12041166}
 --- !u!114 &11460934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -395,6 +397,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iAmDropped: 1
   w: {fileID: 0}
+--- !u!120 &12041166
+LineRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138918}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 91e428861c0cfbc40b26c14305976536, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  m_Parameters:
+    startWidth: .100000001
+    endWidth: .100000001
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 1
 --- !u!135 &13560934
 SphereCollider:
   m_ObjectHideFlags: 1

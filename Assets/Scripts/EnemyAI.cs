@@ -23,11 +23,6 @@ public class EnemyAI : Character {
     public EnemySpawner es;
 
 
-    public void Push(Vector3 direction)
-    {
-        pushForce = direction + direction.normalized * maxSpeed;
-    }
-
 	void Start () {
         if (player == null)
         {

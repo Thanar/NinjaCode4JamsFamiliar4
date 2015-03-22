@@ -4,16 +4,6 @@ using System.Collections;
 public class ShotGun : Weapon {
 
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     public override void Attack()
     {
         //base.Attack();

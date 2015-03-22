@@ -402,7 +402,7 @@ public class PlayerController : Character {
             //weapon.transform.localRotation = Quaternion.identity;
             weapon.transform.rotation = firstWeapon.transform.rotation;
             //weapon.transform.eulerAngles = new Vector3(0, -90, 0);
-
+            weapon.laserSightActivate = true;
             
 
 
@@ -416,6 +416,7 @@ public class PlayerController : Character {
             weapon.Dropped();
             weapon.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
             weapon.transform.position -= transform.forward;
+            weapon.laserSightActivate = false;
             weapon = null;
             hasWeapon = false;
             ui.ToggleAmmo(false);
@@ -441,6 +442,7 @@ public class PlayerController : Character {
     public void RemoveWeapon()
     {
         hasWeapon = false;
+        weapon.laserSightActivate = false;
         Destroy(weapon.gameObject);
         weapon = null;
     }
