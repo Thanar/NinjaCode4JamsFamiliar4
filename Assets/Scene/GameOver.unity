@@ -1319,7 +1319,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'After this battle you choose to try to win another one. '
+  m_Text: 'You are almost defeated. You could scape the battle to recover
+
+'
 --- !u!222 &1128687442
 CanvasRenderer:
   m_ObjectHideFlags: 0
