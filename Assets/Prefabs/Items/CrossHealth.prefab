@@ -17,7 +17,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &100664
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -85,6 +85,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &178332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 478332}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400662
 Transform:
   m_ObjectHideFlags: 1
@@ -92,11 +107,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.20846319, y: .5, z: 6.72330666}
+  m_LocalPosition: {x: -1.08886456, y: .5, z: -2.22220516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400664}
   - {fileID: 429884}
+  - {fileID: 478332}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400664
@@ -106,12 +121,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .319999993, z: 0}
+  m_LocalPosition: {x: 0, y: .299999952, z: 0}
   m_LocalScale: {x: 3.24094439, y: 3.24094248, z: 3.24094248}
   m_Children:
   - {fileID: 400666}
   - {fileID: 400668}
-  m_Father: {fileID: 400662}
+  m_Father: {fileID: 478332}
   m_RootOrder: 0
 --- !u!4 &400666
 Transform:
@@ -147,6 +162,19 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.27999997, z: 0}
   m_LocalScale: {x: 1.59937501, y: 1.59937596, z: 1.59937596}
   m_Children: []
+  m_Father: {fileID: 400662}
+  m_RootOrder: 0
+--- !u!4 &478332
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400664}
   m_Father: {fileID: 400662}
   m_RootOrder: 1
 --- !u!23 &2300662
