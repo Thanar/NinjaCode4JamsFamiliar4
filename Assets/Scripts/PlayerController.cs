@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerController : Character {
 
+    public InputController inputController;
+
     public Animator animator;
     public IntroGameController introGameController;
 
@@ -145,7 +147,7 @@ public class PlayerController : Character {
             }
             UpdateStatus();
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (inputController.bulletTime > 0)
             {
                 if (onFocus)
                 {
@@ -157,14 +159,14 @@ public class PlayerController : Character {
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Q) && hasWeapon)
+            if (inputController.drop > 0 && hasWeapon)
             {
                 DropActualWeapon();
             }
 
             pushForce = Vector3.Lerp(pushForce, Vector3.zero, 0.05f);
 
-            if (Input.GetMouseButton(0))
+            if (inputController.shoot > 0)
             {
 
                 //Debug.Log("PJ Mouse 0");
@@ -208,7 +210,7 @@ public class PlayerController : Character {
 
             }
 
-            if (Input.GetMouseButtonDown(1))
+            if (inputController.force > 0)
             {
                 if (focus > 0.2f)
                 {
@@ -242,7 +244,7 @@ public class PlayerController : Character {
         }
         else if(Chosing == 0)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (inputController.left >0)
             {
                 animator.SetTrigger("Roja");
 
@@ -250,7 +252,7 @@ public class PlayerController : Character {
 
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (inputController.right > 0)
             {
                 animator.SetTrigger("Azul");
                 Chosing = 2;
@@ -259,20 +261,20 @@ public class PlayerController : Character {
         else if (Chosing == 1 || Chosing == 2)
         {
 
-            if (Input.GetKey(KeyCode.A))
+            if (inputController.left > 0)
             {
                 animator.SetTrigger("Roja");
 
                 Chosing = 1;
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (inputController.right > 0)
             {
                 animator.SetTrigger("Azul");
                 Chosing = 2;
             }
 
-            if (Input.GetKey(KeyCode.Space))
+            if (inputController.jump > 0)
             {
                 //Debug.Log("SPAAAACE");
                 Chosing += 2;
@@ -301,7 +303,7 @@ public class PlayerController : Character {
             {
 
                 finalVelocity.Set(0, 0, 0);
-                if (Input.GetKey(KeyCode.A))
+                if (inputController.left > 0)
                 {
                     //if (Vector3.Project(rigidbody.velocity, -Vector3.right).magnitude < maxSpeed)
                     //{
@@ -311,15 +313,15 @@ public class PlayerController : Character {
                     //rigidbody.velocity = -Vector3.right.normalized * maxSpeed + pushForce;
                     finalVelocity.x -= maxSpeed;
                     animator.SetTrigger("Moving");
-                    
 
-                    if (Input.GetKey(KeyCode.Space))
+
+                    if (inputController.jump > 0)
                     {
                         LeftJumpAnimation();
                     }
                 }
 
-                if (Input.GetKey(KeyCode.D))
+                if (inputController.right > 0)
                 {
                     //if (Vector3.Project(rigidbody.velocity, Vector3.right).magnitude < maxSpeed)
                     //{
@@ -331,13 +333,13 @@ public class PlayerController : Character {
                     animator.SetTrigger("Moving");
 
 
-                    if (Input.GetKey(KeyCode.Space))
+                    if (inputController.jump > 0)
                     {
                         RightJumpAnimation();
                     }
                 }
 
-                if (Input.GetKey(KeyCode.W))
+                if (inputController.forward > 0)
                 {
                     //if (Vector3.Project(rigidbody.velocity, Vector3.forward).magnitude < maxSpeed)
                     //{
@@ -349,14 +351,14 @@ public class PlayerController : Character {
                     animator.SetTrigger("Moving");
 
 
-                    if (Input.GetKey(KeyCode.Space))
+                    if (inputController.jump > 0)
                     {
                         Debug.Log("JUMP!");
                         ForwardJumpAnimation();
                     }
                 }
 
-                if (Input.GetKey(KeyCode.S))
+                if (inputController.backward > 0)
                 {
                     //if (Vector3.Project(rigidbody.velocity, -Vector3.forward).magnitude < maxSpeed)
                     //{
@@ -368,7 +370,7 @@ public class PlayerController : Character {
                     animator.SetTrigger("Moving");
 
 
-                    if (Input.GetKey(KeyCode.Space))
+                    if (inputController.jump > 0)
                     {
                         BackJumpAnimation();
                     }

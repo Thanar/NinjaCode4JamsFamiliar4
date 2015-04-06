@@ -101,6 +101,7 @@ GameObject:
   - 82: {fileID: 8277974}
   - 82: {fileID: 8207872}
   - 81: {fileID: 8188566}
+  - 114: {fileID: 11443206}
   m_Layer: 0
   m_Name: pj 1
   m_TagString: Player
@@ -2717,6 +2718,27 @@ TrailRenderer:
       rgba: 16777215
   m_MinVertexDistance: .00999999978
   m_Autodestruct: 0
+--- !u!114 &11443206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73b52350fa369945bef586a133dd5fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forward: 0
+  backward: 0
+  left: 0
+  right: 0
+  jump: 0
+  force: 0
+  bulletTime: 0
+  shoot: 0
+  drop: 0
+  sceneZoom: 0
 --- !u!114 &11476424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2740,6 +2762,7 @@ MonoBehaviour:
   fistsArmorPenetration: 0
   fistAttackEffectPrefab: {fileID: 100000, guid: 57572ea9bf8e036409d3fee8cb4338c8,
     type: 2}
+  inputController: {fileID: 11443206}
   animator: {fileID: 9576424}
   introGameController: {fileID: 0}
   ui: {fileID: 0}
