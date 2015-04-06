@@ -90,9 +90,9 @@ public class Scores : MonoBehaviour
             GJAPI.Scores.GetMultipleCallback += OnReceivedHighScore;    
         }
 
-        yourPlayer.text = GJAPI.User.Name;
         yourRounds.text = rounds.ToString();
         yourKills.text = kills.ToString();
+        yourPlayer.text = GJAPI.User.Name;
         //score.text = "HIGHSCORE: " + lastHS + "\nROUNDS: " + rounds + "\nKILLS: " + kills;
 
     }
