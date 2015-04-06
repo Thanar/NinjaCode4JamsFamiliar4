@@ -135,13 +135,23 @@ public class PlayerController : Character {
             // Si no está bloqueada la rotación
             if (LockRotation == false)
             {
-                RaycastHit hit;
-                rayVector = Input.mousePosition;
-                rayVector.z = 10000;
-                Ray ray = Camera.main.ScreenPointToRay(rayVector);
-                if (Physics.Raycast(ray, out hit, 1000f, LayerMask.GetMask("Floor")))
+
+                if (inputController.mouseX == 0 && inputController.mouseY == 0)
                 {
-                    newRotation.y = Quaternion.LookRotation(hit.point - transform.position).eulerAngles.y;
+                    RaycastHit hit;
+                    rayVector = Input.mousePosition;
+                    rayVector.z = 10000;
+                    Ray ray = Camera.main.ScreenPointToRay(rayVector);
+                    if (Physics.Raycast(ray, out hit, 1000f, LayerMask.GetMask("Floor")))
+                    {
+                        newRotation.y = Quaternion.LookRotation(hit.point - transform.position).eulerAngles.y;
+                        transform.eulerAngles = newRotation;
+                    }
+                }
+                else
+                {
+                    Vector3 v = new Vector3(inputController.mouseX, inputController.mouseY, 0);
+                    newRotation.y = Quaternion.LookRotation(v).eulerAngles.y;
                     transform.eulerAngles = newRotation;
                 }
             }
