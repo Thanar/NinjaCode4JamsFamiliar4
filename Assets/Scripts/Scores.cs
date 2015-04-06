@@ -87,12 +87,12 @@ public class Scores : MonoBehaviour
         if (verified)
         {
             GJAPI.Scores.Get();
-            GJAPI.Scores.GetMultipleCallback += OnReceivedHighScore;    
+            GJAPI.Scores.GetMultipleCallback += OnReceivedHighScore;
+            yourPlayer.text = GJAPI.User.Name; 
         }
 
         yourRounds.text = rounds.ToString();
         yourKills.text = kills.ToString();
-        yourPlayer.text = GJAPI.User.Name;
         //score.text = "HIGHSCORE: " + lastHS + "\nROUNDS: " + rounds + "\nKILLS: " + kills;
 
     }
