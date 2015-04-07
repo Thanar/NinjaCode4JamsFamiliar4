@@ -31,6 +31,6 @@ public class CameraAnimatorCaller : MonoBehaviour {
 
     void Update()
     {
-        transform.position += transform.forward * Input.GetAxis("MouseWheel") * sensitivity;
+        transform.position += transform.forward * playerController.inputController.screenZoom * sensitivity;
     }
 }

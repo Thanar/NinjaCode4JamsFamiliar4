@@ -136,7 +136,7 @@ public class PlayerController : Character {
             if (LockRotation == false)
             {
 
-                if (inputController.mouseX == 0 && inputController.mouseY == 0)
+                if (inputController.mouseX == 0 && inputController.mouseY == 0 && !inputController.usingJoystick )
                 {
                     RaycastHit hit;
                     rayVector = Input.mousePosition;
@@ -150,9 +150,14 @@ public class PlayerController : Character {
                 }
                 else
                 {
-                    Vector3 v = new Vector3(inputController.mouseX, inputController.mouseY, 0);
-                    newRotation.y = Quaternion.LookRotation(v).eulerAngles.y;
-                    transform.eulerAngles = newRotation;
+                    if (!(inputController.mouseX == 0 && inputController.mouseY == 0))
+                    {
+                        inputController.usingJoystick = true;
+
+                        Vector3 v = new Vector3(inputController.mouseX, 0, -inputController.mouseY);
+                        newRotation.y = Quaternion.LookRotation(v).eulerAngles.y;
+                        transform.eulerAngles = newRotation;
+                    }
                 }
             }
             UpdateStatus();

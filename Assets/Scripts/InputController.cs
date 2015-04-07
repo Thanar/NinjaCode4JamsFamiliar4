@@ -7,6 +7,8 @@ public class InputController : MonoBehaviour
 
     public Text infoInputText;
 
+    public bool usingJoystick = false;
+
     public float forward;
     public float backward;
     public float left;
@@ -30,7 +32,6 @@ public class InputController : MonoBehaviour
     {
        
         forward =   Input.GetKey(KeyCode.W) ? 1 :  Input.GetAxis("Vertical") > 0   ?  Input.GetAxis("Vertical")  : 0;
-        Debug.Log(forward);
         backward =  Input.GetKey(KeyCode.S) ? 1 : -Input.GetAxis("Vertical") > 0   ? -Input.GetAxis("Vertical")  : 0;
         left =      Input.GetKey(KeyCode.A) ? 1 : -Input.GetAxis("Horizontal") > 0 ? -Input.GetAxis("Horizontal"): 0;
         right =     Input.GetKey(KeyCode.D) ? 1 :  Input.GetAxis("Horizontal") > 0 ?  Input.GetAxis("Horizontal"): 0;
@@ -61,7 +62,7 @@ public class InputController : MonoBehaviour
 
         if (screenZoom == 0)
         {
-            screenZoom = Input.GetAxis("ScreenZoom");
+            screenZoom = Input.GetAxis("ScreenZoom") * 1000;
         }
 
         mouseX = Input.GetAxis("MouseX");
