@@ -40,6 +40,7 @@ public class InputController : MonoBehaviour
 
         force = Input.GetMouseButton(1) ? 1 : Input.GetButton("Force") ? 1 : 0;
         bulletTime = Input.GetKeyDown(KeyCode.F) ? 1 : Input.GetButton("BulletTime") ? 1 : 0;
+
         shoot = Input.GetMouseButton(0) ? 1 : Input.GetButton("Shoot") ? 1 : 0;
 
         drop = Input.GetKeyDown(KeyCode.Q) ? 1 : Input.GetButton("Drop") ? 1 : 0;

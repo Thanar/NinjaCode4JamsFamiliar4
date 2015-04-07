@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerController : Character {
 
+    private float bulletTimeLast = 0;
+    private float jumpLast = 0;
     public InputController inputController;
 
     public Animator animator;
@@ -161,19 +163,22 @@ public class PlayerController : Character {
                 }
             }
             UpdateStatus();
-
-            if (inputController.bulletTime > 0)
+            if (inputController.bulletTime != bulletTimeLast)
             {
-                if (onFocus)
+                bulletTimeLast = inputController.bulletTime;
+                if (inputController.bulletTime > 0)
                 {
-                    DeactivateFocus();
-                }
-                else
-                {
-                    ActivateFocus();
+                    
+                    if (onFocus)
+                    {
+                        DeactivateFocus();
+                    }
+                    else
+                    {
+                        ActivateFocus();
+                    }
                 }
             }
-
             if (inputController.drop > 0 && hasWeapon)
             {
                 DropActualWeapon();
@@ -288,11 +293,14 @@ public class PlayerController : Character {
                 animator.SetTrigger("Azul");
                 Chosing = 2;
             }
-
-            if (inputController.jump > 0)
+            if (jumpLast != inputController.jump)
             {
-                //Debug.Log("SPAAAACE");
-                Chosing += 2;
+                jumpLast = inputController.jump;
+                if (inputController.jump > 0)
+                {
+                    //Debug.Log("SPAAAACE");
+                    Chosing += 2;
+                }
             }
         }
         else if (Chosing == 3 || Chosing == 4)
@@ -329,10 +337,13 @@ public class PlayerController : Character {
                     finalVelocity.x -= maxSpeed;
                     animator.SetTrigger("Moving");
 
-
-                    if (inputController.jump > 0)
+                    if (jumpLast != inputController.jump)
                     {
-                        LeftJumpAnimation();
+                        jumpLast = inputController.jump;
+                        if (inputController.jump > 0)
+                        {
+                            LeftJumpAnimation();
+                        }
                     }
                 }
 
@@ -347,10 +358,13 @@ public class PlayerController : Character {
 
                     animator.SetTrigger("Moving");
 
-
-                    if (inputController.jump > 0)
+                    if (jumpLast != inputController.jump)
                     {
-                        RightJumpAnimation();
+                        jumpLast = inputController.jump;
+                        if (inputController.jump > 0)
+                        {
+                            RightJumpAnimation();
+                        }
                     }
                 }
 
@@ -365,11 +379,14 @@ public class PlayerController : Character {
 
                     animator.SetTrigger("Moving");
 
-
-                    if (inputController.jump > 0)
+                    if (jumpLast != inputController.jump)
                     {
-                        Debug.Log("JUMP!");
-                        ForwardJumpAnimation();
+                        jumpLast = inputController.jump;
+                        if (inputController.jump > 0)
+                        {
+                            Debug.Log("JUMP!");
+                            ForwardJumpAnimation();
+                        }
                     }
                 }
 
@@ -384,10 +401,13 @@ public class PlayerController : Character {
 
                     animator.SetTrigger("Moving");
 
-
-                    if (inputController.jump > 0)
+                    if (jumpLast != inputController.jump)
                     {
-                        BackJumpAnimation();
+                        jumpLast = inputController.jump;
+                        if (inputController.jump > 0)
+                        {
+                            BackJumpAnimation();
+                        }
                     }
                 }
 
