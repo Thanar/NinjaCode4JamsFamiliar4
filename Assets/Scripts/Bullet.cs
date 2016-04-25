@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Destroy(this.gameObject, 5);
+
 	}
 	
 	// Update is called once per frame
@@ -18,17 +19,16 @@ public class Bullet : MonoBehaviour {
 	    
 	}
 
-    void OnCollisionEnter(Collision collision)
-    {
+    void OnCollisionEnter(Collision collision)//en este caso existe fuego amigo para los enemigos
+    {	
         Character other = collision.gameObject.GetComponent<Character>();
         int i = Random.Range(0, sounds.Length);
         sounds[i].Play();
         if (other)
         {
-            other.Damage(damage, armorPenetration);
-
-            Destroy(this.gameObject);
+            other.Damage(damage, armorPenetration);   
 
         }
+	//	Destroy(this.gameObject);//BALA DE NO REBOTE 
     }
 }

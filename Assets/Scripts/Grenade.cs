@@ -50,9 +50,9 @@ public class Grenade : MonoBehaviour {
                 }
                 else
                 {
-                    if (c.rigidbody && !c.rigidbody.isKinematic)
+                    if (c.GetComponent<Rigidbody>() && !c.GetComponent<Rigidbody>().isKinematic)
                     {
-                        c.rigidbody.velocity = ((c.transform.position - transform.position).normalized * 10);
+                        c.GetComponent<Rigidbody>().velocity = ((c.transform.position - transform.position).normalized * 10);
                     }
                 }
             }

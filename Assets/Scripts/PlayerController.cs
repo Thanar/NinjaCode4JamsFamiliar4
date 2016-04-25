@@ -19,13 +19,17 @@ public class PlayerController : Character {
     public Weapon weapon;
     public bool hasWeapon=false;
 
+
     Vector3 newRotation = new Vector3(0,0,0);
 
     Vector3 rayVector = new Vector3();
     
 
     public float movementForceScale=1f;
-
+	public float nextTimeReady=0;
+	public float reloadBulletTime=14f;//tiempo para recargar el focus
+	private bool firstTimeUseBulletTime=true;
+	private bool firstTimeUseForce=true;
     public Transform fistsPosition;
     public Transform firstWeapon;
 
@@ -163,22 +167,44 @@ public class PlayerController : Character {
                 }
             }
             UpdateStatus();
-            if (inputController.bulletTime != bulletTimeLast)
-            {
-                bulletTimeLast = inputController.bulletTime;
-                if (inputController.bulletTime > 0)
-                {
-                    
+
+			if (inputController.bulletTime != bulletTimeLast )
+			{
+
+				bulletTimeLast = inputController.bulletTime;
+
+				if (inputController.bulletTime > 0 )
+				{	
                     if (onFocus)
-                    {
-                        DeactivateFocus();
+					{	nextTimeReady=0;
+						DeactivateFocus();
+
+
                     }
                     else
                     {
-                        ActivateFocus();
+						Debug.Log("bullettime 1ªVEZ:"+nextTimeReady);
+						Debug.Log("firstTimeUseBulletTime 1ªVEZ:"+firstTimeUseBulletTime);
+
+						if (nextTimeReady >  reloadBulletTime || firstTimeUseBulletTime) {
+
+						
+						Debug.Log("firstTimeUseBulletTime DEMAS:"+firstTimeUseBulletTime);
+						firstTimeUseBulletTime=false;
+						
+				
+							nextTimeReady=0;
+							ActivateFocus();
+
+
+						}
                     }
                 }
             }
+
+			nextTimeReady+=Time.deltaTime;
+
+		
             if (inputController.drop > 0 && hasWeapon)
             {
                 DropActualWeapon();
@@ -191,19 +217,38 @@ public class PlayerController : Character {
 
                 //Debug.Log("PJ Mouse 0");
                 if (hasWeapon)
-                {
-                    weapon.Attack();
-                    ui.SetAmmo(weapon);
-                    if (weapon.depleted)
-                    {
-                        RemoveWeapon();
-                    }else
-                    if ((weapon).reloading)
-                    {
-                        ui.SetReloading((weapon).reloadTime);
-                        (weapon).reloading = false;
-                    }
-                }
+				{
+					if(weapon.dropWeapon.name.Equals("Disc")){//se distinguen solo dos tipos de formas de ataque por ahora:con disco y con armas de fuego
+						weapon.AttackDisc();
+					//	weapon.dropWeapon.gameObject.GetComponent<BoxCollider>().isTrigger=true;
+
+						DropActualWeapon();
+
+
+
+					}
+					else{
+								
+							weapon.Attack();
+
+						ui.SetAmmo(weapon);//Se refresca el canvas de recarga de balas justo cuando se clicka el boton de recarga
+
+	                    if (weapon.depleted)
+	                    {
+	                        RemoveWeapon();
+	                    }else
+	                  
+							if ((weapon).reloading)
+	                    {
+	                        ui.SetReloading((weapon).reloadTime);
+	                        (weapon).reloading = false;
+	                    }
+
+					}
+
+
+
+				}
                 else
                 {
                     if (fistsTimeReady < Time.time)
@@ -229,16 +274,30 @@ public class PlayerController : Character {
                 }
 
             }
+			if (inputController.recharge > 0 && hasWeapon)//se llama a la recarga y se muestra al instante
+			{	weapon.RechargeBullets();
+				ui.SetAmmo(weapon);
 
-            if (inputController.force > 0)
-            {
+			}
+
+
+			if (inputController.force > 0 )//mirar funcionamiento del tiempo¿?
+			{		Debug.Log("fuerza seg:"+nextTimeReady);
+
+				if (nextTimeReady >  reloadBulletTime || firstTimeUseForce ) {
+					firstTimeUseForce=false;
+
                 if (focus > 0.2f)
-                {
+					{Debug.Log("activateFORCE!");
+
+					
                     focus -= 0.2f;
                     ui.SetFocus();
                     Instantiate(specialAttackEffectPrefab, transform.position, Quaternion.identity);
                     Vector3 pushDirection;
                     sonidoPulso.Play();
+					
+						nextTimeReady=0;
                     foreach (Collider c in Physics.OverlapSphere(transform.position, 5f))
                     {
                         auxCharacter = c.GetComponent<EnemyAI>();
@@ -253,15 +312,24 @@ public class PlayerController : Character {
                         }
                         else
                         {
-                            if (c.rigidbody && !c.rigidbody.isKinematic)
+                            if (c.GetComponent<Rigidbody>() && !c.GetComponent<Rigidbody>().isKinematic)
                             {
-                                c.rigidbody.AddForce((c.transform.position - transform.position) * 10, ForceMode.VelocityChange);
+                                c.GetComponent<Rigidbody>().AddForce((c.transform.position - transform.position) * 10, ForceMode.VelocityChange);
                             }
                         }
                     }
                 }
+			
+				}
+
             }
+
+
+
+
+
         }
+
         else if(Chosing == 0)
         {
             if (inputController.left >0)
@@ -298,8 +366,9 @@ public class PlayerController : Character {
                 jumpLast = inputController.jump;
                 if (inputController.jump > 0)
                 {
-                    //Debug.Log("SPAAAACE");
+                    Debug.Log("SPAAAACE");
                     Chosing += 2;
+
                 }
             }
         }
@@ -418,13 +487,13 @@ public class PlayerController : Character {
 
                 finalVelocity = finalVelocity.normalized * maxSpeed * movementForceScale;
 
-                rigidbody.velocity = finalVelocity + pushForce + rigidbody.velocity.y*Vector3.up;
+                GetComponent<Rigidbody>().velocity = finalVelocity + pushForce + GetComponent<Rigidbody>().velocity.y*Vector3.up;
             }
         }
     }
 
     public void ActivateFocus()
-    {
+	{
         onFocus = true;
 
         Time.timeScale = 0.3f;
@@ -500,7 +569,15 @@ public class PlayerController : Character {
             ui.SetAmmo(weapon);
             weapon.transform.parent = firstWeapon;
             weapon.transform.localPosition = Vector3.zero;
-            weapon.transform.localScale = Vector3.one;
+
+			if (weapon.name.Equals("Disc")){
+			
+				weapon.transform.localScale=new Vector3(1f,1f,1.5f);
+			}
+			else
+            weapon.transform.localScale = Vector3.one; //te reescala todas las armas al cogerlas a escala de 1.
+
+
             //weapon.transform.localRotation = Quaternion.identity;
             weapon.transform.rotation = firstWeapon.transform.rotation;
             //weapon.transform.eulerAngles = new Vector3(0, -90, 0);
@@ -518,6 +595,7 @@ public class PlayerController : Character {
         {
             weapon.Dropped();
             weapon.transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+			weapon.transform.localScale = Vector3.one;
             weapon.transform.position -= transform.forward;
             weapon.laserSightActivate = false;
             weapon = null;
@@ -538,7 +616,7 @@ public class PlayerController : Character {
     public void flai()
     {
         Time.timeScale = 1f;
-        rigidbody.AddForce(Vector3.up * 100,ForceMode.VelocityChange);
+        GetComponent<Rigidbody>().AddForce(Vector3.up * 100,ForceMode.VelocityChange);
     }
 
     public void loadGameOver()
@@ -561,7 +639,7 @@ public class PlayerController : Character {
     public void LeftJumpAnimation()
     {
 
-        // A + Space
+        // A + Space 
 
         jumpsSound.Play();
 
@@ -572,6 +650,7 @@ public class PlayerController : Character {
         {
             //Push(Vector3.left);
             animator.SetTrigger("LeftJump");
+		//	gameObject.transform.Translate(new Vector3(-1,gameObject.transform.position.y,gameObject.transform.position.z));
         }
         // Derecha
         else if (gameObject.transform.rotation.eulerAngles.y >= 45 && gameObject.transform.rotation.eulerAngles.y <= 135)

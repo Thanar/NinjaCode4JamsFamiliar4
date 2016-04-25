@@ -145,7 +145,7 @@ public class EnemyAI : Character {
 
     public void MoveAwayFromPlayer()
     {
-        rigidbody.velocity = -(player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y);
+        GetComponent<Rigidbody>().velocity = -(player2DDirection * maxSpeed + pushForce) + (Vector3.up * GetComponent<Rigidbody>().velocity.y);
     }
 
     public void MoveAwayFromPlayerDodging()
@@ -157,12 +157,12 @@ public class EnemyAI : Character {
 
         player2DDirection.Normalize();
 
-        rigidbody.velocity = (-player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y);
+        GetComponent<Rigidbody>().velocity = (-player2DDirection * maxSpeed + pushForce) + (Vector3.up * GetComponent<Rigidbody>().velocity.y);
     }
 
     public void MoveTowardsPlayer()
     {
-        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y)+rigidbody.velocity*0.05f;
+        GetComponent<Rigidbody>().velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * GetComponent<Rigidbody>().velocity.y)+GetComponent<Rigidbody>().velocity*0.05f;
     }
 
     public void MoveAlongPlayer()
@@ -171,7 +171,7 @@ public class EnemyAI : Character {
         player2DDirection.x = player2DDirection.z;
         player2DDirection.z = -aux;
         player2DDirection.Normalize();
-        rigidbody.velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * rigidbody.velocity.y);
+        GetComponent<Rigidbody>().velocity = (player2DDirection * maxSpeed + pushForce) + (Vector3.up * GetComponent<Rigidbody>().velocity.y);
     }
 
 
@@ -205,7 +205,7 @@ public class EnemyAI : Character {
             }
 
             EnemyRagdollController erc = (Instantiate(ragdoll, transform.position, transform.rotation) as GameObject).GetComponent<EnemyRagdollController>();
-            erc.mainRigidbody.velocity = rigidbody.velocity+pushForce*3;
+            erc.mainRigidbody.velocity = GetComponent<Rigidbody>().velocity+pushForce*3;
             es.enemyDied();
             GameObject.Destroy(this.gameObject);
             died = true;

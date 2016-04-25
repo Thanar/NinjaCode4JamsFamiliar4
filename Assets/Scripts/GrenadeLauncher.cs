@@ -22,7 +22,7 @@ public class GrenadeLauncher : Weapon {
         myBullet.damage = this.damage;
         myBullet.armorPenetration = this.armorPenetration;
         myBullet.explosionTime = Time.time + 3f;
-        myBullet.rigidbody.velocity = bulletSpawnPoint.forward.normalized * 10 + Vector3.up;
+        myBullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward.normalized * 10 + Vector3.up;
 
         nextTimeReady = Time.time + cooldown + Random.Range(0,0.1f);
     }

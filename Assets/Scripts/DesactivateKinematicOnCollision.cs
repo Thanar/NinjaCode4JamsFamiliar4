@@ -17,7 +17,7 @@ public class DesactivateKinematicOnCollision : MonoBehaviour {
                 CrashSound.Play();
             }
 
-            this.rigidbody.isKinematic = false;
+            this.GetComponent<Rigidbody>().isKinematic = false;
 
         }
 
